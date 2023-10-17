@@ -29,12 +29,6 @@ function Drink(name, picture, ingredients, garnish) {
             .image-container {
                 padding-bottom: 20px;
             }
-    
-            .image-container img {
-                max-width: 50%;
-                min-width: 50%;
-                height: auto;
-            }
         </style>
 
         <h1>${name}</h2>
