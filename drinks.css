@@ -5,14 +5,14 @@
     background-color: #3d583d; 
   }
 
-@media screen and (orientation:portrait) {
+@media (orientation: portrait){
   .image-container img {
     width: 100%;
     height: auto;
   }
 }
 
-@media screen and (orientation:landscape) {
+@media (orientation: landscape){
   .image-container img {
     width: 50%;
     height: auto;
