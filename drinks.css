@@ -4,3 +4,17 @@
     border: 2px solid #659165;
     background-color: #3d583d; 
   }
+
+@media screen and (orientation:portrait) {
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  .image-container img {
+    width: 50%;
+    height: auto;
+  }
+}
