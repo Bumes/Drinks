@@ -40,7 +40,7 @@ function Drink(name, picture, ingredients, garnish) {
         <h1>${name}</h2>
 
         <div class="image-container">
-            <img src="${picture}" alt="Drink Image">
+            <img src="pictures/${picture}" alt="Drink Image">
         </div>
 
         <p1>Ingredients:</p1>
