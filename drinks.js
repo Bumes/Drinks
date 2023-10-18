@@ -1,48 +1,38 @@
 
-/*const avaible_ingredients= {
-    "beer": true,
-
-    "vodka": true,
-    "gin": true,
-    "white_rum": true,
-    "brown_rum": true,
-
-    "lillet": true,
-    "aperol": true,
-    "dry_vermouth": false,
-    "secco": true,
-
-    "sparkling_water": true,
-    "wild_berry": true,
-    "ginger_ale": true,
-    "ginger_beer": false,
-    "coca_cola": false,
-    "soda_stream_cola": true,
-    "sprite": false,
-    "soda_stream_sprite": true,
-    
-    "lime": false,
-    "lime_juice": true,
-    "mint_leaves": false,
-    "orange": false,
-    "brown_sugar": true
-};*/
-
+// #region JSON 
 
 // Load JSON data from a file using fetch
-fetch('https://server.com/data.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+let available_ingredients;
 
+async function fetchAndStoreIngredients() {
+    try {
+        available_ingredients = await fetchIngredients();
+        // You can now use `available_ingredients` throughout your code.
+    } catch (error) {
+        console.error(error);
+    }
+}
+  
+function fetchIngredients() {
+    return fetch('https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json')
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+        });
+}
+
+// #endregion
 
 function Drink(name, picture, ingredients, garnish) {
     
     for (let i = 0; i < ingredients.length; i++) {
         let ingredient = ingredients[i];
         formatted_ingredient = ingredient.toLowerCase().replace(/[\d½]+(ml|g)? /, '').replace(/ /g, '_')
-        if (!avaible_ingredients[formatted_ingredient]){
+        if (!available_ingredients[formatted_ingredient]){
             doreturn = true
-            if (formatted_ingredient == "lime" && avaible_ingredients["lime_juice"]) { 
+            if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
                 ingredients[i] = ingredient.replace("½", ".5").replace("Lime", "")*30+"ml Lime Juice"; 
                 doreturn = false
             }
@@ -50,7 +40,7 @@ function Drink(name, picture, ingredients, garnish) {
                 ingredients[i] = "NO MINT LEAVES"
                 doreturn = false
             }
-            else if (formatted_ingredient == "coca_cola" && avaible_ingredients["soda_stream_cola"]){
+            else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
                 ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
                 doreturn = false
             }
@@ -130,9 +120,16 @@ function Drink(name, picture, ingredients, garnish) {
 }
 
 
-Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint Leaves", "Sparkling Water"], "Mint Leaves");
-Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
-Drink("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
-Drink("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-Drink("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-  
+
+async function start() {
+    await fetchAndStoreIngredients();
+
+    Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint Leaves", "Sparkling Water"], "Mint Leaves");
+    Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
+    Drink("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
+    Drink("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Drink("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+      
+}
+
+start()
