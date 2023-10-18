@@ -31,11 +31,11 @@ function Drink(name, picture, ingredients, garnish) {
     
     for (let i = 0; i < ingredients.length; i++) {
         let ingredient = ingredients[i];
-        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½]+(ml|g)? /, '').replace(/ /g, '_')
+        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')
         if (!available_ingredients[formatted_ingredient]){
             doreturn = true
             if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
-                ingredients[i] = ingredient.replace("½", ".5").replace("Lime", "")*30+"ml Lime Juice"; 
+                ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
                 doreturn = false
             }
             else if (formatted_ingredient == "mint"){
@@ -47,6 +47,7 @@ function Drink(name, picture, ingredients, garnish) {
                 doreturn = false
             }
             if (doreturn){
+                console.log(formatted_ingredient + ": " + available_ingredients[formatted_ingredient])
                 return; 
             }
         }

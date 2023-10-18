@@ -22,7 +22,9 @@
 
     "lime": false,
     "lime_juice": true,
-    "mint_leaves": false,
+    "mint": false,
     "orange": false,
-    "brown_sugar": true
+    "brown_sugar": true,
+
+    "elderflower_sirup": true
 }
