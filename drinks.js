@@ -70,7 +70,9 @@ function Drink(name, picture, ingredients, garnish) {
 }
 
 
-Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15ml Simple Syrup", "1/2 Lime", "Fresh Mint Leaves", "Sparkling Water"], "Mint Leaves");
-Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "30ml Lime Juice", "CocaCola"], "Lime");
-Drink("Martini", "martini.jpg", ["2oz Gin or Vodka", "0.5oz Dry Vermouth"], "Lemon Twist or Olives");
+Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Fresh Mint Leaves", "Sparkling Water"], "Mint Leaves");
+Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
+Drink("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
+Drink("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+Drink("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
   
