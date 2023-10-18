@@ -50,6 +50,7 @@ function Drink(name, picture, ingredients, garnish) {
 }
 
 
-Drink("Mojito", "mojito.jpg", ["1.5oz White Rum", "0.5oz Simple Syrup", "0.75oz Lime Juice", "6-8 Fresh Mint Leaves", "Soda Water"], "Mint Leaves");
+Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15ml Simple Syrup", "1/2 Lime", "Fresh Mint Leaves", "Sparkling Water"], "Mint Leaves");
+Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "30ml Lime Juice", "CocaCola"], "Lime");
 Drink("Martini", "martini.jpg", ["2oz Gin or Vodka", "0.5oz Dry Vermouth"], "Lemon Twist or Olives");
   
