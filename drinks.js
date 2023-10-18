@@ -45,7 +45,7 @@ function Drink(name, picture, ingredients, garnish) {
         <p2>Garnish: ${garnish}</p2>
     `;
 
-    // Add the drink to the menu
+    // Add the drink to the menu 
     menu.appendChild(drinkDiv);
 }
 
