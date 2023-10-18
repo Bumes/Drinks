@@ -1,5 +1,5 @@
 
-const avaible_ingredients= {
+/*const avaible_ingredients= {
     "beer": true,
 
     "vodka": true,
@@ -16,34 +16,47 @@ const avaible_ingredients= {
     "wild_berry": true,
     "ginger_ale": true,
     "ginger_beer": false,
-    "coca_cola": true,
+    "coca_cola": false,
+    "soda_stream_cola": true,
+    "sprite": false,
+    "soda_stream_sprite": true,
     
-    "lime": true,
+    "lime": false,
     "lime_juice": true,
-    "mint_leaves": true,
+    "mint_leaves": false,
     "orange": false,
     "brown_sugar": true
-};
+};*/
 
-/*function processJSON(data) {
-    const available_ingredients = data;
-}
 
-fetch('available-ingredients.json')
-    .then(response => response.json())
-    .then(processJSON) // Call the function with the JSON data
-    .catch(error => {
-        console.error('Error reading the JSON file:', error);
-    }
-);*/
+// Load JSON data from a file using fetch
+fetch('https://server.com/data.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
 
 function Drink(name, picture, ingredients, garnish) {
     
-    for (ingredient of ingredients) {
+    for (let i = 0; i < ingredients.length; i++) {
+        let ingredient = ingredients[i];
         formatted_ingredient = ingredient.toLowerCase().replace(/[\d½]+(ml|g)? /, '').replace(/ /g, '_')
         if (!avaible_ingredients[formatted_ingredient]){
-            console.log(formatted_ingredient + ": " + avaible_ingredients[formatted_ingredient])
-            return;
+            doreturn = true
+            if (formatted_ingredient == "lime" && avaible_ingredients["lime_juice"]) { 
+                ingredients[i] = ingredient.replace("½", ".5").replace("Lime", "")*30+"ml Lime Juice"; 
+                doreturn = false
+            }
+            else if (formatted_ingredient == "mint_leaves"){
+                ingredients[i] = "NO MINT LEAVES"
+                doreturn = false
+            }
+            else if (formatted_ingredient == "coca_cola" && avaible_ingredients["soda_stream_cola"]){
+                ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
+                doreturn = false
+            }
+            if (doreturn){
+                return; 
+            }
         }
     }
 
