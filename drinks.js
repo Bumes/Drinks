@@ -7,7 +7,7 @@ let available_ingredients;
 async function fetchAndStoreIngredients() {
     try {
         available_ingredients = await fetchIngredients();
-        // You can now use `available_ingredients` throughout your code.
+        console.log(available_ingredients)
     } catch (error) {
         console.error(error);
     }
