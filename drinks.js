@@ -38,7 +38,7 @@ function Drink(name, picture, ingredients, garnish) {
                 ingredients[i] = ingredient.replace("½", ".5").replace("Lime", "")*30+"ml Lime Juice"; 
                 doreturn = false
             }
-            else if (formatted_ingredient == "mint_leaves"){
+            else if (formatted_ingredient == "mint"){
                 ingredients[i] = "NO MINT LEAVES"
                 doreturn = false
             }
@@ -126,9 +126,10 @@ function Drink(name, picture, ingredients, garnish) {
 async function start() {
     await fetchAndStoreIngredients();
 
-    Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint Leaves", "Sparkling Water"], "Mint Leaves");
+    Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint Leaves");
     Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
     Drink("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
+    Drink("Hugo", "hugo.png", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
     Drink("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     Drink("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
       
