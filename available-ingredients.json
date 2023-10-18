@@ -3,7 +3,7 @@
 
     "vodka": true,
     "gin": true,
-    "white_rum": true,
+    "white_rum": false,
     "brown_rum": true,
 
     "lillet": true,
