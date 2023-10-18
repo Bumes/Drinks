@@ -17,14 +17,17 @@ function Drink(name, picture, ingredients, garnish) {
             }
             ul {
                 color: white;
+                font-size: 20px;
             }
             p1 {
                 color: white;
                 padding-left: 10px;
+                font-weight: bold;
+                font-size: 24px;
             }
             p2 {
                 color: white;
-                padding-left: 10px;
+                font-size: 24px;
             }
 
             img {
@@ -57,7 +60,7 @@ function Drink(name, picture, ingredients, garnish) {
                 ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
                 </ul>
 
-                <p2>Garnish: ${garnish}</p2>
+                <p1>Garnish:</p1><p2> ${garnish}</p2>
             </div>
         </div>
     `;
