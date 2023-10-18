@@ -14,7 +14,7 @@ async function fetchAndStoreIngredients() {
 }
   
 function fetchIngredients() {
-    return fetch('https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v=' + new Date().getTime())
+    return fetch('https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v=' + Date().now())
         .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
