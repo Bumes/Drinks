@@ -5,6 +5,9 @@ function Drink(name, picture, ingredients, garnish) {
     const drinkDiv = document.createElement("div");
     drinkDiv.classList.add("drink");
 
+    const horizontal = window.innerHeight < window.innerWidth ? "-horizontal" : "";
+    console.log("horizontal")
+
     // Populate the drink container
     drinkDiv.innerHTML = `
         <style>
@@ -31,20 +34,35 @@ function Drink(name, picture, ingredients, garnish) {
             .image-container {
                 padding-bottom: 20px;
             }
+
+            .image-ingredient-area {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .image-ingredient-area-horizontal {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         </style>
 
         <h1>${name}</h2>
 
-        <div class="image-container">
-            <img src="pictures/${picture}" alt="Drink Image">
+        <div class="image-ingredient-area${horizontal}">
+
+            <div class="image-container">
+                <img src="pictures/${picture}" alt="Drink Image">
+            </div>
+
+            <p1>Ingredients:</p1>
+            <ul>
+            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+            </ul>
+
+            <p2>Garnish: ${garnish}</p2>
+
         </div>
-
-        <p1>Ingredients:</p1>
-        <ul>
-        ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-        </ul>
-
-        <p2>Garnish: ${garnish}</p2>
     `;
 
     // Add the drink to the menu 
