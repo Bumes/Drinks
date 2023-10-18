@@ -17,9 +17,11 @@ function Drink(name, picture, ingredients, garnish) {
             }
             p1 {
                 color: white;
+                padding-left: 20px;
             }
             p2 {
                 color: white;
+                padding-left: 20px;
             }
 
             img {
