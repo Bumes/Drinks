@@ -27,28 +27,29 @@ function fetchIngredients() {
 
 
 
-function Drink(category, name, picture, ingredients, garnish) {
-    
-    for (let i = 0; i < ingredients.length; i++) {
-        let ingredient = ingredients[i];
-        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
-        if (!available_ingredients[formatted_ingredient]){
-            doreturn = true
-            if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
-                ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
-                doreturn = false
-            }
-            else if (formatted_ingredient == "mint"){
-                ingredients[i] = "NO MINT LEAVES"
-                doreturn = false
-            }
-            else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
-                ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
-                doreturn = false
-            }
-            if (doreturn){
-                console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
-                return; 
+function Drink(category, name, picture, ingredients=[], garnish="") {
+    if (ingredients.length != 0){
+        for (let i = 0; i < ingredients.length; i++) {
+            let ingredient = ingredients[i];
+            formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+            if (!available_ingredients[formatted_ingredient]){
+                doreturn = true
+                if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
+                    ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
+                    doreturn = false
+                }
+                else if (formatted_ingredient == "mint"){
+                    ingredients[i] = "NO MINT LEAVES"
+                    doreturn = false
+                }
+                else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
+                    ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
+                    doreturn = false
+                }
+                if (doreturn){
+                    console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
+                    return; 
+                }
             }
         }
     }
@@ -112,6 +113,7 @@ function Drink(category, name, picture, ingredients, garnish) {
                 <img src="pictures/${picture}" alt="Drink Image">
             </div>
 
+            ${ingredients.length != 0 ? `
             <div class="ingredients${horizontal}">
                 <p1>Ingredients:</p1>
                 <ul>
@@ -120,7 +122,7 @@ function Drink(category, name, picture, ingredients, garnish) {
                 
                 ${garnish ? `<p1>Garnish: </p1><p2>${garnish}</p2>` : ''}
 
-            </div>
+            </div>` : ''}
         </div>
     `;
 
@@ -139,6 +141,7 @@ function Coffee(name, picture, ingredients, garnish) {
 async function start() {
     await fetchAndStoreIngredients();
 
+    Cocktail("Edelstoff", "edelstoff.png")
     Cocktail("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
     Cocktail("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
     Cocktail("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")

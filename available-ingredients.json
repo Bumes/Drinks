@@ -7,7 +7,7 @@
     "vodka": true,
     "gin": true,
     "white_rum": true,
-    "brown_rum": true,
+    "brown_rum": false,
 
     "lillet": true,
     "aperol": true,
@@ -26,8 +26,8 @@
     "elderflower_sirup": true,
     "lime_juice": true,
 
-    "lime": false,
-    "mint": false,
+    "lime": true,
+    "mint": true,
     "orange": false,
     "brown_sugar": true,
     "honey": true,
