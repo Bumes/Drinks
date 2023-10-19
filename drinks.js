@@ -31,7 +31,7 @@ function Drink(category, name, picture, ingredients, garnish) {
     
     for (let i = 0; i < ingredients.length; i++) {
         let ingredient = ingredients[i];
-        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace("(|)", "")
+        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
         if (!available_ingredients[formatted_ingredient]){
             doreturn = true
             if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
@@ -47,7 +47,7 @@ function Drink(category, name, picture, ingredients, garnish) {
                 doreturn = false
             }
             if (doreturn){
-                console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '') + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
+                console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
                 return; 
             }
         }
