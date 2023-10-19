@@ -60,6 +60,7 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
     }
 
     const drinks_menu = document.getElementById("drinks_menu");
+    const coffee_menu = document.getElementById("coffee_menu");
 
     // Create a drink container
     const drinkDiv = document.createElement("div");
@@ -127,7 +128,11 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
     `;
 
     // Add the drink to the drinks-menu 
-    drinks_menu.appendChild(drinkDiv);
+    if (category == 0){
+        drinks_menu.appendChild(drinkDiv);
+    } else if (category == 1) {
+        coffee_menu.appendChild(drinkDiv);
+    }
 }
 
 function Cocktail(name, picture, ingredients, garnish) {

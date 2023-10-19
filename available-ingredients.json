@@ -1,9 +1,11 @@
 {
-    "Augustiner": false,
-    "Edelstoff": true,
-    "Urtyp": false,
-    "Kloster Gold": false,
+    "augustiner": false,
+    "edelstoff": true,
+    "urtyp": false,
+    "kloster_gold": false,
 
+
+    
     "vodka": true,
     "gin": true,
     "white_rum": true,
@@ -22,12 +24,13 @@
     "soda_stream_cola": true,
     "sprite": false,
     "soda_stream_sprite": true,
+    "tonic_water": false,
 
     "elderflower_sirup": true,
     "lime_juice": true,
 
-    "lime": true,
-    "mint": true,
+    "lime": false,
+    "mint": false,
     "orange": false,
     "brown_sugar": true,
     "honey": true,
