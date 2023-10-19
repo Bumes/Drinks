@@ -21,6 +21,24 @@ h1 {
 }
 
 
+.tab_button {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: transparent;
+  border-radius: 0px;
+  border-bottom-color: #3d583d;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+
+
+
 
 .drink {
   margin: 10px;

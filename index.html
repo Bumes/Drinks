@@ -2,21 +2,33 @@
 <html lang="en">
   
    <!-- Metadata for the page -->
-   <head>
-        <!-- Title of webpage in the browser -->
-        <title>Drinks</title>
-        <meta charset="UTF-8">
+     <head>
+          <!-- Title of webpage in the browser -->
+          <title>Drinks</title>
+          <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="drinks.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-   </head>
+          <link rel="stylesheet" type="text/css" href="drinks.css">
+          <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+     </head>
   
-   <body>
-        <header>
-            <h1>Drinks</h1>
-        </header>    
-        <div class="menu" id="menu">
-        </div>
-        <script src="drinks.js"></script>
-   </body>
+     <body>
+          <header>
+               <button class="tab_button" onclick="showTab('drinks_menu')">Drinks</button>
+               <button class="tab_button" onclick="showTab('coffee_menu')">Coffee</button>
+          </header>    
+          <div id="drinks_menu" class="menu">
+          </div>
+          <div id="coffee_menu" class="menu">
+          </div>
+          <script src="drinks.js"></script>
+          <script>
+               function showTab(tabId) {
+                    var tabs = document.getElementsByClassName("menu");
+                    for (var i = 0; i < tabs.length; i++) {
+                         tabs[i].style.display = "none";
+                    }
+                    document.getElementById(tabId).style.display = "block";
+               }
+          </script>
+     </body>
 </html>

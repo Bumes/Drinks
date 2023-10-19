@@ -1,5 +1,8 @@
 {
-    "beer": true,
+    "Augustiner": false,
+    "Edelstoff": true,
+    "Urtyp": false,
+    "Kloster Gold": false,
 
     "vodka": true,
     "gin": true,
@@ -20,11 +23,24 @@
     "sprite": false,
     "soda_stream_sprite": true,
 
-    "lime": false,
+    "elderflower_sirup": true,
     "lime_juice": true,
+
+    "lime": false,
     "mint": false,
     "orange": false,
     "brown_sugar": true,
+    "honey": true,
 
-    "elderflower_sirup": true
+
+
+    "espresso": true,
+    "cold_brew": false,
+
+    "chocolate_powder": true,
+    "matcha_powder": true,
+
+    "milk": true,
+    "soya_milk": true,
+    "almond_milk": true
 }

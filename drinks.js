@@ -27,11 +27,11 @@ function fetchIngredients() {
 
 
 
-function Drink(name, picture, ingredients, garnish) {
+function Drink(category, name, picture, ingredients, garnish) {
     
     for (let i = 0; i < ingredients.length; i++) {
         let ingredient = ingredients[i];
-        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')
+        formatted_ingredient = ingredient.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace("(|)", "")
         if (!available_ingredients[formatted_ingredient]){
             doreturn = true
             if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
@@ -47,13 +47,18 @@ function Drink(name, picture, ingredients, garnish) {
                 doreturn = false
             }
             if (doreturn){
-                console.log(formatted_ingredient + ": " + available_ingredients[formatted_ingredient])
+                console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '') + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
                 return; 
             }
         }
     }
 
-    const menu = document.getElementById("menu");
+    if (!available_ingredients[garnish.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')] && (garnish.split(' ').length<2)){
+        console.log(garnish + " is missing for Garnish")
+        garnish = "";
+    }
+
+    const drinks_menu = document.getElementById("drinks_menu");
 
     // Create a drink container
     const drinkDiv = document.createElement("div");
@@ -112,28 +117,36 @@ function Drink(name, picture, ingredients, garnish) {
                 <ul>
                 ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
                 </ul>
+                
+                ${garnish ? `<p1>Garnish: </p1><p2>${garnish}</p2>` : ''}
 
-                <p1>Garnish:</p1><p2> ${garnish}</p2>
             </div>
         </div>
     `;
 
-    // Add the drink to the menu 
-    menu.appendChild(drinkDiv);
+    // Add the drink to the drinks-menu 
+    drinks_menu.appendChild(drinkDiv);
 }
 
+function Cocktail(name, picture, ingredients, garnish) {
+    Drink(0, name, picture, ingredients, garnish)
+}
 
+function Coffee(name, picture, ingredients, garnish) {
+    Drink(1, name, picture, ingredients, garnish)
+}
 
 async function start() {
     await fetchAndStoreIngredients();
 
-    Drink("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint Leaves");
-    Drink("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
-    Drink("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
-    Drink("Hugo", "hugo.png", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
-    Drink("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-    Drink("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-      
+    Cocktail("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
+    Cocktail("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
+    Cocktail("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
+    Cocktail("Hugo", "hugo.png", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
+    Cocktail("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Cocktail("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    
+    Coffee("Espresso", "espresso.png", ["30ml Espresso", "(Brown Sugar)"], "Amaretti")
 }
 
 start()
