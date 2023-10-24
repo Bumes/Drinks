@@ -3,4 +3,4 @@ print every ingredient missing in list possible replacements
 categories
 comments in garnish and ingredients
 ()
-"and"/"or" -> check
+"and"/"or" in garnish -> check
