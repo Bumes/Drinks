@@ -32,7 +32,7 @@ function Drink(category, name, ingredients=[], garnish="") {
         garnish = garnish.split("//")[0]
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
-            formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '').replace(/([^ ])_+([^ ])/g, (match, group1, group2) => group1 + group2);
+            formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '').replace(/^_+|_+$/g, '');
             ingredient = ingredient.replace("//", "").replace("  ", " ")
 
 
