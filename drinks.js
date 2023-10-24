@@ -157,6 +157,13 @@ async function start() {
     Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liquor", "15ml Vodka"], "Coffee Beans")
     
+    Cocktail("Negroni", ["30ml Gin", "30ml sweet Vermouth", "30ml Campari"], "Orange")
+    Cocktail("Margarita", ["50ml White Tequila", "30ml Triple Sec", "30ml Lime Juice"], "Orange")
+    Cocktail("Daiquiri", ["60ml White Rum", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
+    Cocktail("Penicillin", ["60ml Scotch", "30ml Lemon Juice", "30ml Honey Sirup", "Ginger"], "candied ginger")
+    Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer", "½ Lime"], "Lime")
+    Cocktail("Pisco Sour", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup", "(Egg White)"], "")
+    
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
     Coffee("Cappuccino", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
@@ -164,6 +171,15 @@ async function start() {
     Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
     Coffee("Hot Chocolate", ["Chocolate Powder", "Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
+
+    /* 
+    Simple Syrup -> Sugar
+    Scotch -> Whiskey
+    sweet/dry Vermouth -> Lillet
+    scotch -> Whiskey (Scotch)
+    lemon (juice) -> lime
+    honey sirup -> honey -> simple syrup
+    */
 }
 
 start()

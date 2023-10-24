@@ -10,10 +10,16 @@
     "gin": true,
     "white_rum": true,
     "brown_rum": false,
+    "silver_tequila": false,
+    "brown_tequila": false,
+    "whiskey": false,
+    "scotch": false,
+    "pisco": false,
 
     "lillet": true,
-    "aperol": true,
+    "sweet_vermouth": false,
     "dry_vermouth": false,
+    "aperol": true,
     "secco": true,
     "coffee_liquor": true,
 
