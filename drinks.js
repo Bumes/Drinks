@@ -161,7 +161,7 @@ async function start() {
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
     Coffee("Cappuccino", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
-    Coffee("Cococcino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
+    Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
     Coffee("Hot Chocolate", ["Chocolate Powder", "Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 }
