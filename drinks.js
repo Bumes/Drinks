@@ -104,7 +104,7 @@ function Drink(category, name, ingredients=[], garnish="") {
                 if (doreturn){
                     text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
                     if (missing.has(text)) {
-                        missing.append(text)
+                        missing.add(text)
                     }
                     return; 
                 }
