@@ -154,7 +154,11 @@ async function start() {
     Cocktail("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     Cocktail("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     
-    Coffee("Espresso", "espresso.png", ["30ml Espresso", "(Brown Sugar)"], "Amaretti")
+    Coffee("Espresso", "espresso.png", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
+    Coffee("Espresso Macchiato", "espresso_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
+    Coffee("Cappuccino", "cappuccino.png", ["Double Espresso", "Hot Milk", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Latte Macchiato", "latte_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Dalgona Coffee", "dalgona_coffee.png", ["Double Espresso", "Brown Sugar", "Milk"])
 }
 
 start()
