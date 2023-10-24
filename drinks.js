@@ -47,7 +47,7 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
                     doreturn = false
                 }
                 if (doreturn){
-                    console.log(formatted_ingredient + " is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
+                    console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
                     return; 
                 }
             }
