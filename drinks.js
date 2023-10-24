@@ -55,8 +55,10 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
     }
 
     if (!available_ingredients[garnish.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')] && (garnish.split(' ').length<2)){
-        console.log(garnish + " is missing for Garnish")
-        garnish = "";
+        if (garnish != ""){
+            console.log(garnish + " is missing for Garnish")
+            garnish = "";
+        }
     }
 
     const drinks_menu = document.getElementById("drinks_menu");
@@ -153,6 +155,7 @@ async function start() {
     Cocktail("Hugo", "hugo.png", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
     Cocktail("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     Cocktail("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Cocktail("Espresso Martini", "espresso-martini.png", ["Double Espresso", "30ml Coffee Liquor", "15ml Vodka"], "Coffee Beans")
     
     Coffee("Espresso", "espresso.png", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", "espresso_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
