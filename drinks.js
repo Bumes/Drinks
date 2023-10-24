@@ -34,11 +34,64 @@ function Drink(category, name, ingredients=[], garnish="") {
             let ingredient = ingredients[i];
             formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
             ingredient = ingredient.replace("//", "").replace("  ", " ")
+
+
+    /* 
+    blended rum -> white rum <-> brown rum
+    *** Gin -> Gin
+    egg white -> egg
+    lemon/lime juice -> lemon/lime
+    Pineapple leave -> pineapple
+    vodka citron -> vodka + lemon
+    x Dashes -> 
+    x tsp ->
+    */
+
             if (!available_ingredients[formatted_ingredient]){
                 doreturn = true
                 if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
                     ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
                     doreturn = false
+                }
+                else if (formatted_ingredient == "lemon") {
+                    if (available_ingredients["Lemon Juice"]){
+                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lemon", "")*30+"ml Lemon Juice"; 
+                        doreturn = false
+                    } else if (available_ingredients["lime"]){
+                        ingredients[i] = ingredient.replace("Lemon", "Lime")
+                        doreturn = false
+                    } else if (available_ingredients["lime_juice"]) { 
+                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
+                        doreturn = false
+                    }
+                }
+                else if ((formatted_ingredient == "simple_sirup" || formatted_ingredient == "brown_sugar") && available_ingredients["white_sugar"]) {
+                    ingredients[i] = ingredient.replace("ml", "g").replace("Simple Sirup", "White Sugar").replace("Brown", "White");
+                    doreturn = false;
+                }
+                else if (formatted_ingredient == "scotch" && available_ingredients["whiskey"]) {
+                    ingredients[i] = ingredient.replace("Scotch", "Whiskey")
+                    doreturn = false;
+                }
+                else if (formatted_ingredient == "honey_sirup") {
+                    if (available_ingredients["honey"]) {
+                        ingredients[i] = ingredient.split("ml")[0]/2 + "ml Honey";
+                        doreturn = false;
+                    } else if (available_ingredients["simple_sirup"]) {
+                        ingredients[i] = ingredient.replace("Honey Sirup", "Simple Sirup");
+                        doreturn = false;
+                    } else if (available_ingredients["white_sugar"]) {
+                        ingredients[i] = ingredient.replace("ml", "g").replace("Honey Sirup", "White Sugar");
+                        doreturn = false;
+                    }
+                }
+                else if (formatted_ingredient == "blanco_tequila" && available_ingredients["silver_tequila"]){
+                    ingredients[i] = ingredient.replace("Blanco Tequila", "Silver Tequila");
+                    doreturn = false;
+                }
+                else if ((formatted_ingredient == "sweet_vermouth" || formatted_ingredient == "dry_vermouth") && available_ingredients["lillet"]) {
+                    ingredient = ingredient.split(" ")[0] + " Lillet"
+                    doreturn = false;
                 }
                 else if (formatted_ingredient == "mint"){
                     ingredients[i] = "NO MINT LEAVES"
@@ -194,24 +247,6 @@ async function start() {
     Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
-    /* 
-    Simple Syrup -> White Sugar
-    Scotch -> Whiskey
-    sweet/dry Vermouth -> Lillet
-    scotch -> Whiskey (Scotch)
-    lemon (juice) -> lime
-    honey sirup -> honey -> simple syrup
-    blanco tequila -> silver tequila
-    blended rum -> white rum <-> brown rum
-    *** Gin -> Gin
-    egg white -> egg
-    lemon/lime juice -> lemon/lime
-    Pineapple leave -> pineapple
-    vodka citron -> vodka + lemon
-    x Dashes -> 
-    x tsp ->
-
-    */
 }
 
 start()
