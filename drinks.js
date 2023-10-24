@@ -156,7 +156,7 @@ async function start() {
     
     Coffee("Espresso", "espresso.png", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", "espresso_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
-    Coffee("Cappuccino", "cappuccino.png", ["Double Espresso", "Hot Milk", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Cappuccino", "cappuccino.png", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Latte Macchiato", "latte_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Cococcino", "cappuccino.png", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
     Coffee("Dalgona Coffee", "dalgona_coffee.png", ["Double Espresso", "Brown Sugar", "Milk"])
