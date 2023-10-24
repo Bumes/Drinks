@@ -25,7 +25,7 @@ function fetchIngredients() {
 
 // #endregion
 
-missing = set()
+missing = new Set()
 
 function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
