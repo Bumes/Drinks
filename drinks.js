@@ -32,7 +32,7 @@ function Drink(category, name, ingredients=[], garnish="") {
         garnish = garnish.split("//")[0]
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
-            formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+            formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '').replace(/[^ ]_+[^ ]/g, match => match.replace(/_/g, ''));
             ingredient = ingredient.replace("//", "").replace("  ", " ")
 
 
@@ -213,7 +213,7 @@ async function start() {
     Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liqueur", "15ml Vodka"], "Coffee Beans")
     
     Cocktail("Negroni", ["30ml Gin", "30ml sweet Vermouth", "30ml Campari"], "Orange")
-    Cocktail("Margarita", ["50ml White Tequila", "30ml Triple Sec", "30ml Lime Juice"], "Orange")
+    Cocktail("Margarita", ["50ml Silver Tequila", "30ml Triple Sec", "30ml Lime Juice"], "Orange")
     Cocktail("Daiquiri", ["60ml White Rum", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
     Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice", "30ml Honey Sirup", "Ginger"], "candied ginger")
     Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer", "½ Lime"], "Lime")
