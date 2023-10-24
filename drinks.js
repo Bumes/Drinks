@@ -113,7 +113,7 @@ function Drink(category, name, ingredients=[], garnish="") {
         <div class="image-area${horizontal}">
 
             <div class="image-container">
-                <img src="pictures/${name.toLowerCase().replace(" ", "-")}" alt="Drink Image">
+                <img src="pictures/${name.toLowerCase().replace(" ", "-")}" alt="${name + " Picture"}">
             </div>
 
             ${ingredients.length != 0 ? `
