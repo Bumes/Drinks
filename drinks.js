@@ -31,7 +31,7 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
     if (ingredients.length != 0){
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
-            formatted_ingredient = ingredient.toLowerCase().replace("double ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+            formatted_ingredient = ingredient.toLowerCase().replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
             if (!available_ingredients[formatted_ingredient]){
                 doreturn = true
                 if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
