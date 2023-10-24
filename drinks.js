@@ -29,6 +29,7 @@ function fetchIngredients() {
 
 function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
+        garnish = garnish.split("//")[0]
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
             formatted_ingredient = ingredient.toLowerCase().split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
@@ -156,30 +157,60 @@ async function start() {
     Cocktail("Hugo", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
     Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
     Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-    Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liquor", "15ml Vodka"], "Coffee Beans")
+    Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liqueur", "15ml Vodka"], "Coffee Beans")
     
     Cocktail("Negroni", ["30ml Gin", "30ml sweet Vermouth", "30ml Campari"], "Orange")
     Cocktail("Margarita", ["50ml White Tequila", "30ml Triple Sec", "30ml Lime Juice"], "Orange")
     Cocktail("Daiquiri", ["60ml White Rum", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
-    Cocktail("Penicillin", ["60ml Scotch", "30ml Lemon Juice", "30ml Honey Sirup", "Ginger"], "candied ginger")
+    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice", "30ml Honey Sirup", "Ginger"], "candied ginger")
     Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer", "½ Lime"], "Lime")
-    Cocktail("Pisco Sour", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup", "(Egg White)"], "")
+    Cocktail("Pisco Sour", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup", "(1 Egg White)"], "(Angostura Bitters)")
+    Cocktail("Paloma", ["60ml Blanco Tequila", "30ml Lime Juice", "Grapefruit Soda", "Salt"], "Lime")
+    Cocktail("French 75", ["30ml Gin", "½ Lemon", "30ml Simple Sirup", "90ml Secco"], "Lemon")
+    Cocktail("The Last Word", ["30ml Gin", "30ml Chartreuse", "30ml Lime Juice"])
+    Cocktail("Mai Tai", ["60ml Blended Rum", "30ml Lime Juice", "30ml Orgeat Sirup", "15ml Orange Liqueur", "Mint"], "Mint")
+    Cocktail("Gimlet", ["60ml London Dry Gin", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
+    Cocktail("Clover Club", ["50ml Gin", "30ml Lemon", "30ml Raspberry Sirup", "1 Egg White"])
+    Cocktail("Amaretto Sour", ["50ml Amaretto", "30ml Lemon Juice", "15ml Simple Sirup", "1 Egg White"], "Cocktail Cherry and Angostura Bitters")
+    Cocktail("Jungle Bird", ["50ml Brown Rum", "20ml Campari", "15ml Lime Juice", "15ml Simple Sirup", "50ml Pineapple Juice"])
+    Cocktail("Gin Fizz", ["50ml Gin", "60ml Lemon Juice", "30ml Simple Sirup", "Sparkling Water"], "Lemon")
+    Cocktail("Piña Colada", ["60ml White Rum", "60ml Coconut Cream", "60ml Pineapple Juice"], "Pineapple Leave")
+    Cocktail("Corpse Reviver", ["30ml Gin", "30ml Triple Sec", "30ml Lemon Juice", "30ml Lillet", "Absinthe"], "Lemon")
+    Cocktail("Zombie", ["30ml White Rum", "30ml Brown Rum", "30ml Apricot Brandy", "15ml Falernum Liqueur", "30ml Lime Juice", "30ml Pineapple Juice", "10ml Grenadine"], "Pineapple and cocktail cherry")
+    Cocktail("Bee's Knees", ["60ml Gin", "30ml Lemon Juice", "30ml Honey Sirup"], "Lemon")
+    Cocktail("Gin Basil Smash", ["60ml Gin", "30ml Lemon Juice", "30ml Simple Sirup", "Basil"], "Basil")
+    Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet"], "Lemon and Orange")
+    Cocktail("Cosmopolitan", ["50ml Vodka Citron", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
+    Cocktail("Bramble", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup", "15ml Crème de mûre"], "Lemon and blackberries")
+    Cocktail("Old Cuban", ["50ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], "Mint")
+    Cocktail("Caipirinha", ["60ml Pitu", "1 Lime", "2tsp White Sugar"])
+    Cocktail("Southside", ["60ml Gin", "30ml Simple Sirup", "30ml Lime Juice", "Mint"], "Mint")
     
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
-    Coffee("Cappuccino", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Cappuccino", ["Double Espresso", "Milk // (Hot)", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
-    Coffee("Hot Chocolate", ["Chocolate Powder", "Milk"], "Chocolate Powder")
+    Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
     /* 
-    Simple Syrup -> Sugar
+    Simple Syrup -> White Sugar
     Scotch -> Whiskey
     sweet/dry Vermouth -> Lillet
     scotch -> Whiskey (Scotch)
     lemon (juice) -> lime
     honey sirup -> honey -> simple syrup
+    blanco tequila -> silver tequila
+    blended rum -> white rum <-> brown rum
+    *** Gin -> Gin
+    egg white -> egg
+    lemon/lime juice -> lemon/lime
+    Pineapple leave -> pineapple
+    vodka citron -> vodka + lemon
+    x Dashes -> 
+    x tsp ->
+
     */
 }
 

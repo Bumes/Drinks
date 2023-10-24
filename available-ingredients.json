@@ -7,6 +7,7 @@
 
     
     "vodka": true,
+    "vodka_citron": false,
     "gin": true,
     "white_rum": true,
     "brown_rum": false,
@@ -15,13 +16,20 @@
     "whiskey": false,
     "scotch": false,
     "pisco": false,
+    "angostura_bitters": true,
+    "absinthe": false,
 
     "lillet": true,
     "sweet_vermouth": false,
     "dry_vermouth": false,
     "aperol": true,
     "secco": true,
-    "coffee_liquor": true,
+    "coffee_liqueur": true,
+    "chartreuse": false,
+    "amaretto": false,
+    "apricot_brandy": false,
+    "falernum_liqueur": false,
+    "cointreau": false,
 
     "sparkling_water": true,
     "wild_berry": true,
@@ -32,16 +40,24 @@
     "sprite": false,
     "soda_stream_sprite": true,
     "tonic_water": false,
+    "grapefruit_soda": false,
+    "pineapple_juice": false,
+    "cranberry_juice": false,
 
     "elderflower_sirup": true,
     "lime_juice": true,
+    "orgeat_sirup": false,
+    "raspberry_sirup": false,
 
     "lime": false,
     "mint": false,
     "orange": false,
     "brown_sugar": true,
+    "white_sugar": true,
     "honey": true,
-
+    "salt": true,
+    "egg": true,
+    "egg_white": false,
 
 
     "espresso": true,
