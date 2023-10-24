@@ -27,7 +27,7 @@ function fetchIngredients() {
 
 
 
-function Drink(category, name, picture, ingredients=[], garnish="") {
+function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
@@ -113,7 +113,7 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
         <div class="image-area${horizontal}">
 
             <div class="image-container">
-                <img src="pictures/${picture}" alt="Drink Image">
+                <img src="pictures/${name.toLowerCase().replace(" ", "-")}" alt="Drink Image">
             </div>
 
             ${ingredients.length != 0 ? `
@@ -137,33 +137,33 @@ function Drink(category, name, picture, ingredients=[], garnish="") {
     }
 }
 
-function Cocktail(name, picture, ingredients, garnish) {
-    Drink(0, name, picture, ingredients, garnish)
+function Cocktail(name, ingredients, garnish) {
+    Drink(0, name, ingredients, garnish)
 }
 
-function Coffee(name, picture, ingredients, garnish) {
-    Drink(1, name, picture, ingredients, garnish)
+function Coffee(name, ingredients, garnish) {
+    Drink(1, name, ingredients, garnish)
 }
 
 async function start() {
     await fetchAndStoreIngredients();
 
-    Cocktail("Edelstoff", "edelstoff.png")
-    Cocktail("Mojito", "mojito.jpg", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
-    Cocktail("Cuba Libre", "cuba-libre.png", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
-    Cocktail("Aperol Spritz", "aperol-spritz.png", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
-    Cocktail("Hugo", "hugo.png", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
-    Cocktail("Martini", "martini.jpg", ["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-    Cocktail("Vodka Martini", "martini.jpg", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-    Cocktail("Espresso Martini", "espresso-martini.png", ["Double Espresso", "30ml Coffee Liquor", "15ml Vodka"], "Coffee Beans")
+    Cocktail("Edelstoff")
+    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
+    Cocktail("Cuba Libre", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
+    Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
+    Cocktail("Hugo", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
+    Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liquor", "15ml Vodka"], "Coffee Beans")
     
-    Coffee("Espresso", "espresso.png", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
-    Coffee("Espresso Macchiato", "espresso_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
-    Coffee("Cappuccino", "cappuccino.png", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
-    Coffee("Latte Macchiato", "latte_macchiato.png", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
-    Coffee("Cococcino", "cappuccino.png", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
-    Coffee("Hot Chocolate", "hot-chocolate.png", ["Chocolate Powder", "Milk"], "Chocolate Powder")
-    Coffee("Dalgona Coffee", "dalgona_coffee.png", ["Double Espresso", "Brown Sugar", "Milk"])
+    Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
+    Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
+    Coffee("Cappuccino", ["Double Espresso", "Milk", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
+    Coffee("Cococcino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
+    Coffee("Hot Chocolate", ["Chocolate Powder", "Milk"], "Chocolate Powder")
+    Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 }
 
 start()
