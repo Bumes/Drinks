@@ -25,7 +25,7 @@ function fetchIngredients() {
 
 // #endregion
 
-
+missing = set()
 
 function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
@@ -102,7 +102,10 @@ function Drink(category, name, ingredients=[], garnish="") {
                     doreturn = false
                 }
                 if (doreturn){
-                    console.log(ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"))
+                    text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
+                    if (missing.has(text)) {
+                        missing.append(text)
+                    }
                     return; 
                 }
             }
@@ -247,6 +250,7 @@ async function start() {
     Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
+    console.log(missing)
 }
 
 start()
