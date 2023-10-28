@@ -9,7 +9,7 @@
     "vodka": true,
     "vodka_citron": false,
     "gin": true,
-    "london_dry_gin": "idk",
+    "london_dry_gin": true,
     "white_rum": true,
     "brown_rum": false,
     "blended_rum": false,
