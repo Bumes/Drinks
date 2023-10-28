@@ -207,6 +207,8 @@ async function start() {
     await fetchAndStoreIngredients();
 
     Cocktail("Edelstoff")
+    Cocktail("Secco")
+    Cocktail("Mimosa", ["Secco", "Orange Juice"])
     Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
     Cocktail("Cuba Libre", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
     Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
