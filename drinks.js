@@ -33,11 +33,25 @@ function Drink(category, name, ingredients=[], garnish="") {
         for (let i = 0; i < ingredients.length; i++) {
             let ingredient = ingredients[i];
             formatted_ingredient = ingredient.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
-            ingredient = ingredient.replace("//", "").replace("  ", " ")
+            ingredient = ingredient.replace("//", "").replace("  ", " ").split(" ->")
+            console.log(ingredient)
+
+// categories: sweet, sour, tart, fruity, fresh, boozy
+// replacement: ->
+
+/* 
+blended rum -> white rum <-> brown rum
+*** Gin -> Gin
+egg white -> egg
+lemon/lime juice -> lemon/lime
+Pineapple leave -> pineapple
+vodka citron -> vodka + lemon
+x Dashes -> 
+x tsp ->
+*/
 
 
-
-            if (!available_ingredients[formatted_ingredient]){
+            /*if (!available_ingredients[formatted_ingredient]){
                 doreturn = true
                 if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
                     ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
@@ -89,7 +103,7 @@ function Drink(category, name, ingredients=[], garnish="") {
                 }
                 else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
                     ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
-                    doreturn = false
+                    doreturn = false*/
                 }
                 if (doreturn){
                     text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
@@ -193,24 +207,12 @@ function Coffee(name, ingredients, garnish) {
     Drink(1, name, ingredients, garnish)
 }
 
-// categories: sweet, sour, tart, fruity, fresh, boozy
-// replacement: ->
 
-/* 
-blended rum -> white rum <-> brown rum
-*** Gin -> Gin
-egg white -> egg
-lemon/lime juice -> lemon/lime
-Pineapple leave -> pineapple
-vodka citron -> vodka + lemon
-x Dashes -> 
-x tsp ->
-*/
 
 async function start() {
     await fetchAndStoreIngredients();
 
-    Cocktail("Edelstoff")
+    Cocktail("Edelstoff -> Urtyp")
     Cocktail("Secco")
     Cocktail("Mimosa", ["Secco", "Orange Juice"])
     Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
