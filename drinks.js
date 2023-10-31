@@ -169,37 +169,40 @@ function Coffee(name, ingredients, garnish) {
 async function start() {
     await fetchAndStoreIngredients();
 
-    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"], "Mint");
-    /*Cocktail("Edelstoff")
+    Cocktail("Edelstoff")
     Cocktail("Secco")
     Cocktail("Mimosa", ["Secco", "Orange Juice"])
+    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"], "Mint");
     Cocktail("Cuba Libre", ["60ml Brown Rum -> 60ml White Rum", "½ Lime -> 15ml Lime Juice", "Coca Cola -> Soda Stream Cola"], "Lime");
     Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
-    Cocktail("Hugo", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
-    Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
-    Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth"], "Lemon Twist or Olives");
+    Cocktail("Hugo", ["60ml Secco", "¼ Lime -> 10ml Lime Juice", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
+    Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"], "Lemon Twist or Olives");
+    Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"], "Lemon Twist or Olives");
     Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liqueur", "15ml Vodka"], "Coffee Beans")
     
-    Cocktail("Negroni", ["30ml Gin", "30ml sweet Vermouth", "30ml Campari"], "Orange")
+    Cocktail("Negroni", ["30ml Gin", "30ml Sweet Vermouth", "30ml Campari -> 30ml Aperol"], "Orange")
     Cocktail("Margarita", ["50ml Silver Tequila", "30ml Triple Sec", "30ml Lime Juice"], "Orange")
-    Cocktail("Daiquiri", ["60ml White Rum", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
-    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice", "30ml Honey Sirup", "Ginger"], "candied ginger")
-    Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer", "½ Lime"], "Lime")
-    Cocktail("Pisco Sour", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup", "(1 Egg White)"], "(Angostura Bitters)")
+    Cocktail("Daiquiri", ["60ml White Rum -> 60ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar"], "Lime")
+    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 15ml Honey -> 30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "Ginger"], "candied ginger")
+    Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer -> 90ml Ginger Ale", "½ Lime -> 15ml Lime Juice"], "Lime")
+    Cocktail("Pisco Sour", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "(1 Egg White)"], "(Angostura Bitters)")
     Cocktail("Paloma", ["60ml Blanco Tequila", "30ml Lime Juice", "Grapefruit Soda", "Salt"], "Lime")
-    Cocktail("French 75", ["30ml Gin", "½ Lemon", "30ml Simple Sirup", "90ml Secco"], "Lemon")
+    Cocktail("French 75", ["30ml Gin", "½ Lemon -> ½ Lime -> 15ml Lemon Juice -> 15ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "90ml Secco"], "Lemon")
     Cocktail("The Last Word", ["30ml Gin", "30ml Chartreuse", "30ml Lime Juice"])
-    Cocktail("Mai Tai", ["60ml Blended Rum", "30ml Lime Juice", "30ml Orgeat Sirup", "15ml Orange Liqueur", "Mint"], "Mint")
-    Cocktail("Gimlet", ["60ml London Dry Gin", "30ml Lime Juice", "30ml Simple Sirup"], "Lime")
-    Cocktail("Clover Club", ["50ml Gin", "30ml Lemon", "30ml Raspberry Sirup", "1 Egg White"])
-    Cocktail("Amaretto Sour", ["50ml Amaretto", "30ml Lemon Juice", "15ml Simple Sirup", "1 Egg White"], "Cocktail Cherry and Angostura Bitters")
-    Cocktail("Jungle Bird", ["50ml Brown Rum", "20ml Campari", "15ml Lime Juice", "15ml Simple Sirup", "50ml Pineapple Juice"])
-    Cocktail("Gin Fizz", ["50ml Gin", "60ml Lemon Juice", "30ml Simple Sirup", "Sparkling Water"], "Lemon")
+    Cocktail("Mai Tai", ["60ml Blended Rum -> 60ml Brown Rum -> 60ml White Rum", "30ml Lime Juice", "30ml Orgeat Sirup", "15ml Orange Liqueur", "Mint -> "], "Mint")
+    Cocktail("Gimlet", ["60ml London Dry Gin -> 60ml Gin", "30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar"], "Lime")
+    Cocktail("Clover Club", ["50ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Raspberry Sirup", "1 Egg White"])
+    Cocktail("Amaretto Sour", ["50ml Amaretto", "30ml Lemon Juice -> 30ml Lime Juice", "15ml Simple Sirup -> 15g White Sugar -> 15g Brown Sugar", "1 Egg White"], "Cocktail Cherry and Angostura Bitters")
+    Cocktail("Jungle Bird", ["50ml Brown Rum -> 50ml White Rum", "20ml Campari -> 20ml Aperol", "15ml Lime Juice", "15ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "50ml Pineapple Juice"])
+    Cocktail("Gin Fizz", ["50ml Gin", "60ml Lemon Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "Sparkling Water"], "Lemon")
     Cocktail("Piña Colada", ["60ml White Rum", "60ml Coconut Cream", "60ml Pineapple Juice"], "Pineapple Leave")
-    Cocktail("Corpse Reviver", ["30ml Gin", "30ml Triple Sec", "30ml Lemon Juice", "30ml Lillet", "Absinthe"], "Lemon")
+    Cocktail("Corpse Reviver", ["30ml Gin", "30ml Triple Sec", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Lillet -> 30ml Sweet Vermouth", "Absinthe"], "Lemon")
     Cocktail("Zombie", ["30ml White Rum", "30ml Brown Rum", "30ml Apricot Brandy", "15ml Falernum Liqueur", "30ml Lime Juice", "30ml Pineapple Juice", "10ml Grenadine"], "Pineapple and cocktail cherry")
-    Cocktail("Bee's Knees", ["60ml Gin", "30ml Lemon Juice", "30ml Honey Sirup"], "Lemon")
-    Cocktail("Gin Basil Smash", ["60ml Gin", "30ml Lemon Juice", "30ml Simple Sirup", "Basil"], "Basil")
+    Cocktail("Bee's Knees", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 15ml Honey -> 30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar"], "Lemon")
+    Cocktail("Gin Basil Smash", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "Basil"], "Basil")
+
+
+    
     Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet"], "Lemon and Orange")
     Cocktail("Cosmopolitan", ["50ml Vodka Citron", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
     Cocktail("Bramble", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup", "15ml Crème de mûre"], "Lemon and blackberries")
@@ -216,7 +219,7 @@ async function start() {
     Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
-    console.log(missing)*/
+    console.log(missing)
 }
 
 start()
