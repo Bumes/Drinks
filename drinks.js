@@ -31,13 +31,21 @@ function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
         garnish = garnish.split("//")[0]
         for (let i = 0; i < ingredients.length; i++) {
+            doreturn = true;
             let ingredient = ingredients[i];
-            formatted_ingredient = ingredient.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
-            ingredient = ingredient.replace("//", "").replace("  ", " ").split(" ->")
-            console.log(ingredient)
+            formatted_ingredient = ingredient.split(" -> ")
+            let j
+            for (j=0; j < formatted_ingredient.length; j++) {
+                formatted_ingredient[j] = formatted_ingredient[j].toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+                if (available_ingredients[formatted_ingredient[j]] || formatted_ingredient[j] == "") {
+                    doreturn = false
+                    break
+                }
+            }
+
 
 // categories: sweet, sour, tart, fruity, fresh, boozy
-// replacement: ->
+// Missing with what
 
 /* 
 blended rum -> white rum <-> brown rum
@@ -49,69 +57,17 @@ vodka citron -> vodka + lemon
 x Dashes -> 
 x tsp ->
 */
-
-
-            /*if (!available_ingredients[formatted_ingredient]){
-                doreturn = true
-                if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
-                    ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
-                    doreturn = false
+            
+            if (doreturn){
+                console.log("doreturn")
+                // wrong
+                text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
+                if (!missing.has(text)) {
+                    missing.add(text)
                 }
-                else if (formatted_ingredient == "lemon") {
-                    if (available_ingredients["Lemon Juice"]){
-                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lemon", "")*30+"ml Lemon Juice"; 
-                        doreturn = false
-                    } else if (available_ingredients["lime"]){
-                        ingredients[i] = ingredient.replace("Lemon", "Lime")
-                        doreturn = false
-                    } else if (available_ingredients["lime_juice"]) { 
-                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
-                        doreturn = false
-                    }
-                }
-                else if ((formatted_ingredient == "simple_sirup" || formatted_ingredient == "brown_sugar") && available_ingredients["white_sugar"]) {
-                    ingredients[i] = ingredient.replace("ml", "g").replace("Simple Sirup", "White Sugar").replace("Brown", "White");
-                    doreturn = false;
-                }
-                else if (formatted_ingredient == "scotch" && available_ingredients["whiskey"]) {
-                    ingredients[i] = ingredient.replace("Scotch", "Whiskey")
-                    doreturn = false;
-                }
-                else if (formatted_ingredient == "honey_sirup") {
-                    if (available_ingredients["honey"]) {
-                        ingredients[i] = ingredient.split("ml")[0]/2 + "ml Honey";
-                        doreturn = false;
-                    } else if (available_ingredients["simple_sirup"]) {
-                        ingredients[i] = ingredient.replace("Honey Sirup", "Simple Sirup");
-                        doreturn = false;
-                    } else if (available_ingredients["white_sugar"]) {
-                        ingredients[i] = ingredient.replace("ml", "g").replace("Honey Sirup", "White Sugar");
-                        doreturn = false;
-                    }
-                }
-                else if (formatted_ingredient == "blanco_tequila" && available_ingredients["silver_tequila"]){
-                    ingredients[i] = ingredient.replace("Blanco Tequila", "Silver Tequila");
-                    doreturn = false;
-                }
-                else if ((formatted_ingredient == "sweet_vermouth" || formatted_ingredient == "dry_vermouth") && available_ingredients["lillet"]) {
-                    ingredient = ingredient.split(" ")[0] + " Lillet"
-                    doreturn = false;
-                }
-                else if (formatted_ingredient == "mint"){
-                    ingredients[i] = "NO MINT LEAVES"
-                    doreturn = false
-                }
-                else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
-                    ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
-                    doreturn = false*/
-                }
-                if (doreturn){
-                    text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
-                    if (!missing.has(text)) {
-                        missing.add(text)
-                    }
-                    return; 
-                }
+                return; 
+            } else {
+                ingredients[i] = ingredient.split("//")[0].replace("  ", " ").split(" -> ")[j]
             }
         }
     }
@@ -182,8 +138,9 @@ x tsp ->
             <div class="ingredients${horizontal}">
                 <p1>Ingredients:</p1>
                 <ul>
-                ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                ${ingredients.map(ingredient => `<li>${ingredient.trim() || 'Missing'}</li>`).join('')}
                 </ul>
+
                 
                 ${garnish ? `<p1>Garnish: </p1><p2>${garnish}</p2>` : ''}
 
@@ -212,11 +169,11 @@ function Coffee(name, ingredients, garnish) {
 async function start() {
     await fetchAndStoreIngredients();
 
-    Cocktail("Edelstoff -> Urtyp")
+    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"], "Mint");
+    /*Cocktail("Edelstoff")
     Cocktail("Secco")
     Cocktail("Mimosa", ["Secco", "Orange Juice"])
-    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime", "Mint", "Sparkling Water"], "Mint");
-    Cocktail("Cuba Libre", ["60ml Brown Rum", "½ Lime", "Coca Cola"], "Lime");
+    Cocktail("Cuba Libre", ["60ml Brown Rum -> 60ml White Rum", "½ Lime -> 15ml Lime Juice", "Coca Cola -> Soda Stream Cola"], "Lime");
     Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], "Orange")
     Cocktail("Hugo", ["60ml Secco", "¼ Lime", "15ml Elderflower sirup", "Sparkling Water"], "Mint")
     Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth"], "Lemon Twist or Olives");
@@ -259,7 +216,63 @@ async function start() {
     Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
-    console.log(missing)
+    console.log(missing)*/
 }
 
 start()
+
+
+/*if (!available_ingredients[formatted_ingredient]){
+                doreturn = true
+                if (formatted_ingredient == "lime" && available_ingredients["lime_juice"]) { 
+                    ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
+                    doreturn = false
+                }
+                else if (formatted_ingredient == "lemon") {
+                    if (available_ingredients["Lemon Juice"]){
+                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lemon", "")*30+"ml Lemon Juice"; 
+                        doreturn = false
+                    } else if (available_ingredients["lime"]){
+                        ingredients[i] = ingredient.replace("Lemon", "Lime")
+                        doreturn = false
+                    } else if (available_ingredients["lime_juice"]) { 
+                        ingredients[i] = ingredient.replace("½", ".5").replace("¼", ".25").replace("Lime", "")*30+"ml Lime Juice"; 
+                        doreturn = false
+                    }
+                }
+                else if ((formatted_ingredient == "simple_sirup" || formatted_ingredient == "brown_sugar") && available_ingredients["white_sugar"]) {
+                    ingredients[i] = ingredient.replace("ml", "g").replace("Simple Sirup", "White Sugar").replace("Brown", "White");
+                    doreturn = false;
+                }
+                else if (formatted_ingredient == "scotch" && available_ingredients["whiskey"]) {
+                    ingredients[i] = ingredient.replace("Scotch", "Whiskey")
+                    doreturn = false;
+                }
+                else if (formatted_ingredient == "honey_sirup") {
+                    if (available_ingredients["honey"]) {
+                        ingredients[i] = ingredient.split("ml")[0]/2 + "ml Honey";
+                        doreturn = false;
+                    } else if (available_ingredients["simple_sirup"]) {
+                        ingredients[i] = ingredient.replace("Honey Sirup", "Simple Sirup");
+                        doreturn = false;
+                    } else if (available_ingredients["white_sugar"]) {
+                        ingredients[i] = ingredient.replace("ml", "g").replace("Honey Sirup", "White Sugar");
+                        doreturn = false;
+                    }
+                }
+                else if (formatted_ingredient == "blanco_tequila" && available_ingredients["silver_tequila"]){
+                    ingredients[i] = ingredient.replace("Blanco Tequila", "Silver Tequila");
+                    doreturn = false;
+                }
+                else if ((formatted_ingredient == "sweet_vermouth" || formatted_ingredient == "dry_vermouth") && available_ingredients["lillet"]) {
+                    ingredient = ingredient.split(" ")[0] + " Lillet"
+                    doreturn = false;
+                }
+                else if (formatted_ingredient == "mint"){
+                    ingredients[i] = "NO MINT LEAVES"
+                    doreturn = false
+                }
+                else if (formatted_ingredient == "coca_cola" && available_ingredients["soda_stream_cola"]){
+                    ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
+                    doreturn = false
+                }*/
