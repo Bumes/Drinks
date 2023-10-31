@@ -36,16 +36,6 @@ function Drink(category, name, ingredients=[], garnish="") {
             ingredient = ingredient.replace("//", "").replace("  ", " ")
 
 
-    /* 
-    blended rum -> white rum <-> brown rum
-    *** Gin -> Gin
-    egg white -> egg
-    lemon/lime juice -> lemon/lime
-    Pineapple leave -> pineapple
-    vodka citron -> vodka + lemon
-    x Dashes -> 
-    x tsp ->
-    */
 
             if (!available_ingredients[formatted_ingredient]){
                 doreturn = true
@@ -203,6 +193,20 @@ function Coffee(name, ingredients, garnish) {
     Drink(1, name, ingredients, garnish)
 }
 
+// categories: sweet, sour, tart, fruity, fresh, boozy
+// replacement: ->
+
+/* 
+blended rum -> white rum <-> brown rum
+*** Gin -> Gin
+egg white -> egg
+lemon/lime juice -> lemon/lime
+Pineapple leave -> pineapple
+vodka citron -> vodka + lemon
+x Dashes -> 
+x tsp ->
+*/
+
 async function start() {
     await fetchAndStoreIngredients();
 
@@ -243,6 +247,7 @@ async function start() {
     Cocktail("Old Cuban", ["50ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], "Mint")
     Cocktail("Caipirinha", ["60ml Pitu", "1 Lime", "2tsp White Sugar"])
     Cocktail("Southside", ["60ml Gin", "30ml Simple Sirup", "30ml Lime Juice", "Mint"], "Mint")
+    Cocktail("2sian", ["30ml Coffee Sirup", "30ml Vodka", "15ml Cream"])
     
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
