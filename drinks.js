@@ -203,13 +203,13 @@ async function start() {
 
 
     
-    Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet"], "Lemon and Orange")
-    Cocktail("Cosmopolitan", ["50ml Vodka Citron", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
-    Cocktail("Bramble", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup", "15ml Crème de mûre"], "Lemon and blackberries")
-    Cocktail("Old Cuban", ["50ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], "Mint")
-    Cocktail("Caipirinha", ["60ml Pitu", "1 Lime", "2tsp White Sugar"])
-    Cocktail("Southside", ["60ml Gin", "30ml Simple Sirup", "30ml Lime Juice", "Mint"], "Mint")
-    Cocktail("2sian", ["30ml Coffee Sirup", "30ml Vodka", "15ml Cream"])
+    Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet -> 15ml Sweet Vermouth -> 15ml Dry Vermouth"], "Lemon and Orange")
+    Cocktail("Cosmopolitan", ["50ml Vodka Citron -> 50ml Vodka // (with citron)", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
+    Cocktail("Bramble", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup -> 15g White Sugar -> 15g Brown Sugar", "15ml Crème de mûre"], "Lemon and blackberries")
+    Cocktail("Old Cuban", ["50ml Brown Rum -> 50ml Blended Rum -> 50ml White Rum", "30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], "Mint")
+    Cocktail("Caipirinha", ["60ml Pitu", "1 Lime", "10g White Sugar -> 10ml Simple Sirup -> 10g Brown Sugar"])
+    Cocktail("Southside", ["60ml Gin", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "30ml Lime Juice", "Mint"], "Mint")
+    Cocktail("2sian", ["30ml Coffee Sirup", "30ml Vodka", "15ml Cream -> 15ml Milk"])
     
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
