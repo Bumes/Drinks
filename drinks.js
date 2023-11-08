@@ -37,14 +37,22 @@ function Drink(category, name, ingredients=[], garnish="") {
             let j
             for (j=0; j < current_ingredients.length; j++) {
                 formatted_ingredient = current_ingredients[j].toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+                while (formatted_ingredient[0] == "_"){
+                    formatted_ingredient = formatted_ingredient.substring(1, formatted_ingredient.length)
+                }
+                while (formatted_ingredient.slice(-1) == "_"){
+                    formatted_ingredient = formatted_ingredient.substring(0, formatted_ingredient.length-1)
+                } 
                 if (available_ingredients[formatted_ingredient]) {
                     doreturn = false
                     break
                 } else if (formatted_ingredient == ""){
                     j = j-1
-                    ingredients[i] = "Missing: " + current_ingredients[j]
                     doreturn = false
+                    ingredients[i] = "Missing: " + ingredient
                     break
+                } else {
+                    console.log("Missing: " + ingredient)
                 }
             }
 
