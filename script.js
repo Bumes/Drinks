@@ -348,7 +348,7 @@ start()
 
 function upload_new_data(event) {
                 
-    const githubToken = 'ghp_5ewV5uVGFNCmqmoME'
+    let githubToken = 'ghp_5ewV5uVGFNCmqmoME'
     githubToken = githubToken + '9Mt2rygyABqN430Tajr'
     const repoOwner = 'Bumes';
     const repoName = 'Drinks';
