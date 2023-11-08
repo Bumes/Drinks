@@ -357,51 +357,47 @@ function upload_new_data(event) {
     const newValue = event.target.checked; // Replace with the new value
 
     // Authenticate with GitHub API using your token
-const headers = {
+    const headers = {
     Authorization: `token ${githubToken}`,
     'Content-Type': 'application/json',
-  };
-  
-  // Fetch existing file content
-  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
+    };
+
+    // Fetch existing file content
+    fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
     method: 'GET',
     headers,
-  })
+    })
     .then(response => response.json())
     .then(data => {
-      // Decode the existing content from GitHub
-      const currentContent = atob(data.content);
-      const currentContentObj = JSON.parse(currentContent);
-  
-      // Modify the value of the existing key
-      currentContentObj[existingKey] = newValue;
-  
-      // Convert the modified object to a JSON string with newlines
-      const updatedContent = JSON.stringify(currentContentObj, null, 2);
-  
-      // Encode the updated content in base64
-      const updatedContentBase64 = btoa(updatedContent);
-  
-      // Push the changes back to the repository
-      fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
+        const currentContent = atob(data.content); // Decode base64 content
+        const currentContentObj = JSON.parse(currentContent);
+
+        // Modify the value of the existing key
+        currentContentObj[existingKey] = newValue;
+
+        // Update the content and encode it in base64
+        const updatedContentBase64 = btoa(JSON.stringify(currentContentObj));
+
+        // Push the changes back to the repository
+        fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
         method: 'PUT',
         headers,
         body: JSON.stringify({
-          message: 'Update file via API',
-          content: updatedContentBase64,
-          sha: data.sha,
+            message: 'Update file via API',
+            content: updatedContentBase64,
+            sha: data.sha,
         }),
-      })
+        })
         .then(response => response.json())
         .then(result => {
-          console.log('File updated on GitHub:', result);
+            console.log('File updated on GitHub:', result);
         })
         .catch(error => {
-          console.error('Error updating the file:', error);
+            console.error('Error updating the file:', error);
         });
     })
     .catch(error => {
-      console.error('Error fetching file content:', error);
+        console.error('Error fetching file content:', error);
     });
 }
 
