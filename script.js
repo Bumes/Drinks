@@ -1,40 +1,3 @@
-
-// #region lukas mode
-
-lukas_mode_allowed = false
-currently_lukas_mode = false
-
-document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
-    if (!lukas_mode_allowed){
-        var password = prompt("Please enter the password:");
-        if (password === "ilm") {
-            lukas_mode_allowed = true
-        } 
-        return
-    }
-
-    currently_lukas_mode = !currently_lukas_mode
-
-    var tabs = document.getElementsByClassName("menu");
-    for (var i = 0; i < tabs.length; i++) {
-            tabs[i].style.display = "none";
-    }
-    document.getElementById(currently_lukas_mode ? "lukas_mode" : "drinks_menu").style.display = "block";
-
-    /*const bcrypt = require('bcrypt');
-    const saltRounds = 10;
-    
-    bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
-        console.log(hash)
-    });*/
-    
-});
-
-
-// #endregion
-
-
-
 // #region Drink Creation
 
 // #region JSON 
@@ -165,8 +128,6 @@ x tsp ->
     drinkDiv.classList.add("drink");
 
     const horizontal = window.innerHeight < window.innerWidth ? "-horizontal" : "-portrait";
-
-    console.log(name.toLowerCase().replace(" ", "-").replace("'", "")+".png")
 
     // Populate the drink container
     drinkDiv.innerHTML = `
@@ -378,5 +339,134 @@ start()
                     ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
                     doreturn = false
                 }*/
+
+// #endregion
+
+
+
+// #region lukas mode
+
+function upload_new_data(event) {
+                
+    const githubToken = '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';
+    const repoOwner = 'Bumes';
+    const repoName = 'Drinks';
+    const filePath = 'available-ingredients.json';
+
+    const existingKey = event.currentTarget.my_ingredient; // Replace with your existing key
+    const newValue = event.target.checked; // Replace with the new value
+
+    // Authenticate with GitHub API using your token
+const headers = {
+    Authorization: `token ${githubToken}`,
+    'Content-Type': 'application/json',
+  };
+  
+  // Fetch existing file content
+  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
+    method: 'GET',
+    headers,
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Decode the existing content from GitHub
+      const currentContent = atob(data.content);
+      const currentContentObj = JSON.parse(currentContent);
+  
+      // Modify the value of the existing key
+      currentContentObj[existingKey] = newValue;
+  
+      // Convert the modified object to a JSON string with newlines
+      const updatedContent = JSON.stringify(currentContentObj, null, 2);
+  
+      // Encode the updated content in base64
+      const updatedContentBase64 = btoa(updatedContent);
+  
+      // Push the changes back to the repository
+      fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify({
+          message: 'Update file via API',
+          content: updatedContentBase64,
+          sha: data.sha,
+        }),
+      })
+        .then(response => response.json())
+        .then(result => {
+          console.log('File updated on GitHub:', result);
+        })
+        .catch(error => {
+          console.error('Error updating the file:', error);
+        });
+    })
+    .catch(error => {
+      console.error('Error fetching file content:', error);
+    });
+}
+
+lukas_mode_allowed = true
+currently_lukas_mode = false
+
+document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
+    if (!lukas_mode_allowed){
+        var password = prompt("Please enter the password:");
+        if (password === "ilm") {
+            lukas_mode_allowed = true
+        } 
+        return
+    }
+
+    currently_lukas_mode = !currently_lukas_mode
+
+    var tabs = document.getElementsByClassName("menu");
+    for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+    }
+    document.getElementById(currently_lukas_mode ? "lukas_mode" : "drinks_menu").style.display = "block";
+
+    /*const bcrypt = require('bcrypt');
+    const saltRounds = 10;
+    
+    bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
+        console.log(hash)
+    });*/
+    
+});
+
+lukas_mode_tab = document.getElementById("lukas_mode")
+
+async function create_lukas_mode_tab(){
+    await fetchAndStoreIngredients();
+    for (ingredient in available_ingredients) {
+        try {
+            const ingDiv = document.createElement("div");
+            ingDiv.innerHTML = `
+            <p1>${ingredient}</p1>
+            `
+            const checkbox = document.createElement("input")
+            checkbox.type = "checkbox";
+            checkbox.checked = available_ingredients[ingredient]
+            checkbox.addEventListener('change', upload_new_data, false)
+            checkbox.my_ingredient = ingredient
+
+            const wrapperDiv = document.createElement('div');
+            wrapperDiv.style.display = 'flex';
+
+            ingDiv.style.flex = '2';
+            checkbox.style.flex = '2';
+
+            // Append both saved_html and drinkDiv to the wrapper
+            wrapperDiv.appendChild(ingDiv);
+            wrapperDiv.appendChild(checkbox);
+
+            lukas_mode_tab.appendChild(wrapperDiv);
+        } catch {
+            return
+        }
+    }
+}
+
+create_lukas_mode_tab()
 
 // #endregion
