@@ -33,11 +33,16 @@ function Drink(category, name, ingredients=[], garnish="") {
         for (let i = 0; i < ingredients.length; i++) {
             doreturn = true;
             let ingredient = ingredients[i];
-            formatted_ingredient = ingredient.split(" -> ")
+            current_ingredients = ingredient.split(" -> ")
             let j
-            for (j=0; j < formatted_ingredient.length; j++) {
-                formatted_ingredient[j] = formatted_ingredient[j].toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
-                if (available_ingredients[formatted_ingredient[j]] || formatted_ingredient[j] == "") {
+            for (j=0; j < current_ingredients.length; j++) {
+                formatted_ingredient = current_ingredients[j].toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+                if (available_ingredients[formatted_ingredient]) {
+                    doreturn = false
+                    break
+                } else if (formatted_ingredient == ""){
+                    j = j-1
+                    ingredients[i] = "Missing: " + current_ingredients[j]
                     doreturn = false
                     break
                 }
@@ -59,7 +64,6 @@ x tsp ->
 */
             
             if (doreturn){
-                console.log("doreturn")
                 // wrong
                 text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
                 if (!missing.has(text)) {
@@ -67,7 +71,7 @@ x tsp ->
                 }
                 return; 
             } else {
-                ingredients[i] = ingredient.split("//")[0].replace("  ", " ").split(" -> ")[j]
+                ingredients[i] = ingredients[i].split("//")[0].replace("  ", " ").split(" -> ")[j]
             }
         }
     }
@@ -138,7 +142,7 @@ x tsp ->
             <div class="ingredients${horizontal}">
                 <p1>Ingredients:</p1>
                 <ul>
-                ${ingredients.map(ingredient => `<li>${ingredient.trim() || 'Missing'}</li>`).join('')}
+                ${ingredients.map(ingredient => `<li>${ingredient.trim()}</li>`).join('')}
                 </ul>
 
                 
@@ -200,9 +204,6 @@ async function start() {
     Cocktail("Zombie", ["30ml White Rum", "30ml Brown Rum", "30ml Apricot Brandy", "15ml Falernum Liqueur", "30ml Lime Juice", "30ml Pineapple Juice", "10ml Grenadine"], "Pineapple and cocktail cherry")
     Cocktail("Bee's Knees", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 15ml Honey -> 30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar"], "Lemon")
     Cocktail("Gin Basil Smash", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "Basil"], "Basil")
-
-
-    
     Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet -> 15ml Sweet Vermouth -> 15ml Dry Vermouth"], "Lemon and Orange")
     Cocktail("Cosmopolitan", ["50ml Vodka Citron -> 50ml Vodka // (with citron)", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
     Cocktail("Bramble", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup -> 15g White Sugar -> 15g Brown Sugar", "15ml Crème de mûre"], "Lemon and blackberries")
