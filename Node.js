@@ -9,7 +9,14 @@ document.getElementById("toggle_lukas_mode").addEventListener("click", function(
     } else {
         alert("Access denied.");
     }
-
+    const bcrypt = require('bcrypt');
+    const saltRounds = 10;
+    const plaintextPassword = 'user_input_password';
+    
+    bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
+        console.log(hash)
+    });
+    
 });
 
 
