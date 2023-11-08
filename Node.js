@@ -3,8 +3,8 @@
 
 document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
     
-    var password = prompt("Please enter the password:");
-    if (password === "gugifrugi55") {
+    var plaintextPassword = prompt("Please enter the password:");
+    if (plaintextPassword === "gugifrugi55") {
         alert("Access granted!");
     } else {
         alert("Access denied.");
