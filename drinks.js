@@ -1,4 +1,19 @@
 
+// #region lukas mode
+
+document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
+    
+    console.log("it worked")
+
+});
+
+
+// #endregion
+
+
+
+// #region Drink Creation
+
 // #region JSON 
 
 // Load JSON data from a file using fetch
@@ -25,7 +40,35 @@ function fetchIngredients() {
 
 // #endregion
 
-missing = new Set()
+
+
+let missing = new Set()
+let saved_html = ""
+
+
+function sortIngredients(arr) {
+    if (arr.length <= 1) {
+      return arr;
+    }
+  
+    const pivot = arr[0];
+    const left = [];
+    const right = [];
+  
+    for (let i = 1; i < arr.length; i++) {
+      if (parseInt(arr[i][1]) > parseInt(pivot[1])) {
+        left.push(arr[i]);
+      } else {
+        right.push(arr[i]);
+      }
+    }
+  
+    return [
+      ...sortIngredients(left),
+      pivot,
+      ...sortIngredients(right),
+    ];
+  }  
 
 function Drink(category, name, ingredients=[], garnish="") {
     if (ingredients.length != 0){
@@ -51,8 +94,6 @@ function Drink(category, name, ingredients=[], garnish="") {
                     doreturn = false
                     ingredients[i] = "Missing: " + ingredient
                     break
-                } else {
-                    console.log("Missing: " + ingredient)
                 }
             }
 
@@ -72,10 +113,10 @@ x tsp ->
 */
             
             if (doreturn){
-                // wrong
-                text=ingredient.replace(/^\d*½?\s*\w+\s*/, '').replace(/[()]/g, '') + " (" + formatted_ingredient + ") is " + String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home")
-                if (!missing.has(text)) {
-                    missing.add(text)
+                if (missing[formatted_ingredient] == undefined) {
+                    missing[formatted_ingredient] = [String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"), "in 1 recipe"]
+                  } else {
+                    missing[formatted_ingredient][1] = missing[formatted_ingredient][1].replace(/\d+/, match => (parseInt(match) + 1).toString())
                 }
                 return; 
             } else {
@@ -83,6 +124,8 @@ x tsp ->
             }
         }
     }
+
+    ingredients = sortIngredients(ingredients)
 
     if (!available_ingredients[garnish.toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')] && (garnish.split(' ').length<2)){
         if (garnish != ""){
@@ -99,6 +142,8 @@ x tsp ->
     drinkDiv.classList.add("drink");
 
     const horizontal = window.innerHeight < window.innerWidth ? "-horizontal" : "-portrait";
+
+    console.log(name.toLowerCase().replace(" ", "-").replace("'", "")+".png")
 
     // Populate the drink container
     drinkDiv.innerHTML = `
@@ -133,7 +178,7 @@ x tsp ->
             .image-area-horizontal {
                 display: grid;
                 align-items: center; 
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 column-gap: 5px;
             }
         </style>
@@ -143,7 +188,7 @@ x tsp ->
         <div class="image-area${horizontal}">
 
             <div class="image-container">
-                <img src="pictures/${name.toLowerCase().replace(" ", "-")+".png"}" alt="${name + " Picture"}">
+                <img src="pictures/${name.toLowerCase().replace(" ", "-").replace("'", "")+".png"}" alt="${name + " Picture"}">
             </div>
 
             ${ingredients.length != 0 ? `
@@ -157,12 +202,34 @@ x tsp ->
                 ${garnish ? `<p1>Garnish: </p1><p2>${garnish}</p2>` : ''}
 
             </div>` : ''}
-        </div>
     `;
 
     // Add the drink to the drinks-menu 
     if (category == 0){
-        drinks_menu.appendChild(drinkDiv);
+        if (horizontal == "-horizontal"){
+            if (saved_html == "") {
+                saved_html = drinkDiv
+            } else {
+                // Create a wrapper div to hold both saved_html and drinkDiv
+                const wrapperDiv = document.createElement('div');
+                wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
+
+                // Set flex property on saved_html to take up more space (adjust as needed)
+                saved_html.style.flex = '2';
+                drinkDiv.style.flex = '2';
+
+                // Append both saved_html and drinkDiv to the wrapper
+                wrapperDiv.appendChild(saved_html);
+                wrapperDiv.appendChild(drinkDiv);
+
+                drinks_menu.appendChild(wrapperDiv);
+
+                // Clear saved_html
+                saved_html = "";
+            }
+        } else {
+            drinks_menu.appendChild(drinkDiv)
+        }
     } else if (category == 1) {
         coffee_menu.appendChild(drinkDiv);
     }
@@ -288,3 +355,5 @@ start()
                     ingredients[i] = ingredient.replace("Coca Cola", "Cola (SodaStream)")
                     doreturn = false
                 }*/
+
+// #endregion
