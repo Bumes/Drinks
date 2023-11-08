@@ -348,7 +348,7 @@ start()
 
 function upload_new_data(event) {
                 
-    const githubToken = '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';
+    const githubToken = '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';
     const repoOwner = 'Bumes';
     const repoName = 'Drinks';
     const filePath = 'available-ingredients.json';
@@ -356,52 +356,58 @@ function upload_new_data(event) {
     const existingKey = event.currentTarget.my_ingredient; // Replace with your existing key
     const newValue = event.target.checked; // Replace with the new value
 
-    // Authenticate with GitHub API using your token
-    const headers = {
-    Authorization: `token ${githubToken}`,
-    'Content-Type': 'application/json',
-    };
-
-    // Fetch existing file content
+    // Load the existing content from GitHub
     fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-    method: 'GET',
-    headers,
+        method: 'GET',
+        headers: {
+        Authorization: `token ${githubToken}`,
+        'Content-Type': 'application/json',
+        },
     })
-    .then(response => response.json())
-    .then(data => {
-        const currentContent = atob(data.content); // Decode base64 content
-        const currentContentObj = JSON.parse(currentContent);
-
-        // Modify the value of the existing key
-        currentContentObj[existingKey] = newValue;
-
-        // Update the content and encode it in base64
-        const updatedContentBase64 = btoa(JSON.stringify(currentContentObj));
-
-        // Push the changes back to the repository
+        .then(response => response.json())
+        .then(data => {
+        // Decode the base64 content from GitHub
+        const currentContent = atob(data.content);
+    
+        // Parse the content into an object
+        const currentData = JSON.parse(currentContent);
+    
+        // Modify the value of an existing key in the object
+        currentData.existingKey = newValue; // Change 'existingKey' to the key you want to modify
+    
+        // Encode the updated content as JSON with indentation
+        const updatedContent = JSON.stringify(currentData, null, 2);
+    
+        // Encode the updated content as base64
+        const updatedContentBase64 = btoa(updatedContent);
+    
+        // Update the file on GitHub with the modified and formatted content
         fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-        method: 'PUT',
-        headers,
-        body: JSON.stringify({
+            method: 'PUT',
+            headers: {
+            Authorization: `token ${githubToken}`,
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
             message: 'Update file via API',
             content: updatedContentBase64,
             sha: data.sha,
-        }),
+            }),
         })
-        .then(response => response.json())
-        .then(result => {
+            .then(response => response.json())
+            .then(result => {
             console.log('File updated on GitHub:', result);
+            })
+            .catch(error => {
+            console.error('Error updating the file:', error);
+            });
         })
         .catch(error => {
-            console.error('Error updating the file:', error);
-        });
-    })
-    .catch(error => {
         console.error('Error fetching file content:', error);
-    });
+        });
 }
 
-lukas_mode_allowed = true
+lukas_mode_allowed = false
 currently_lukas_mode = false
 
 document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
@@ -410,7 +416,6 @@ document.getElementById("toggle_lukas_mode").addEventListener("click", function(
         if (password === "ilm") {
             lukas_mode_allowed = true
         } 
-        return
     }
 
     currently_lukas_mode = !currently_lukas_mode
