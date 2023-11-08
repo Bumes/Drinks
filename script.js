@@ -3,18 +3,20 @@
 
 document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
     
-    var plaintextPassword = prompt("Please enter the password:");
-    if (plaintextPassword === "gugifrugi55") {
+    var password = prompt("Please enter the password:");
+    if (password === "ilm") {
         alert("Access granted!");
     } else {
         alert("Access denied.");
     }
-    const bcrypt = require('bcrypt');
+
+
+    /*const bcrypt = require('bcrypt');
     const saltRounds = 10;
     
     bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
         console.log(hash)
-    });
+    });*/
     
 });
 
