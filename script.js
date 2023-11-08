@@ -1,15 +1,25 @@
 
 // #region lukas mode
 
+lukas_mode_allowed = false
+currently_lukas_mode = false
+
 document.getElementById("toggle_lukas_mode").addEventListener("click", function() {
-    
-    var password = prompt("Please enter the password:");
-    if (password === "ilm") {
-        alert("Access granted!");
-    } else {
-        alert("Access denied.");
+    if (!lukas_mode_allowed){
+        var password = prompt("Please enter the password:");
+        if (password === "ilm") {
+            lukas_mode_allowed = true
+        } 
+        return
     }
 
+    currently_lukas_mode = !currently_lukas_mode
+
+    var tabs = document.getElementsByClassName("menu");
+    for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+    }
+    document.getElementById(currently_lukas_mode ? "lukas_mode" : "drinks_menu").style.display = "block";
 
     /*const bcrypt = require('bcrypt');
     const saltRounds = 10;
