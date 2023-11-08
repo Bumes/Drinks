@@ -69,5 +69,5 @@
   "soya_milk": true,
   "almond_milk": true,
   "amaretti": true,
-  "existingKey": "new value"
+  "existingKey": false
 }
