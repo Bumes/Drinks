@@ -6,14 +6,16 @@ body {
   padding: 5px;
   margin: 5px;
 }
+
 header {
   background-color: #2d412d;
-
   min-height: 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 10fr 10fr 100fr 1fr;
+  column-gap: 5px;
 }
+
 h1 {
   color: white;
   padding-left: 20px;
@@ -36,9 +38,9 @@ h1 {
   border-top-color: transparent;
 }
 
-
-
-
+.toggle_lukas_mode {
+  margin-right: 20px;
+}
 
 .drink {
   margin: 10px;
