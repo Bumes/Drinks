@@ -450,10 +450,7 @@ async function create_lukas_mode_tab(){
             checkbox.type = "checkbox";
             checkbox.checked = available_ingredients[ingredient]
             checkbox.addEventListener('change', upload_new_data, false)
-            
-            (function (currentIngredient) {
-                checkbox.my_ingredient = currentIngredient;
-            })(ingredient);
+            checkbox.my_ingredient = ingredient
 
             const wrapperDiv = document.createElement('div');
             wrapperDiv.style.display = 'flex';
