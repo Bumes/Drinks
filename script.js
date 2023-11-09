@@ -354,7 +354,7 @@ function upload_new_data(event) {
     const repoName = 'Drinks';
     const filePath = 'available-ingredients.json';
 
-    const existingKey = event.currentTarget.my_ingredient; // Replace with your existing key
+    const existingKey = event.currentTarget.my_ingredient;
     const newValue = event.target.checked; // Replace with the new value
 
     console.log(exisitingKey + ": " + newValue)
@@ -452,21 +452,25 @@ async function create_lukas_mode_tab(){
             checkbox.type = "checkbox";
             checkbox.checked = available_ingredients[ingredient]
             checkbox.addEventListener('change', upload_new_data, false)
-            checkbox.my_ingredient = ingredient
-
+    
+            // Use a closure to capture the current value of ingredient
+            (function (currentIngredient) {
+                checkbox.my_ingredient = currentIngredient;
+            })(ingredient);
+    
             const wrapperDiv = document.createElement('div');
             wrapperDiv.style.display = 'flex';
-
+    
             ingDiv.style.flex = '2';
             checkbox.style.flex = '2';
-
-            // Append both saved_html and drinkDiv to the wrapper
+    
+            // Append both ingDiv and checkbox to the wrapper
             wrapperDiv.appendChild(ingDiv);
             wrapperDiv.appendChild(checkbox);
-
+    
             lukas_mode_tab.appendChild(wrapperDiv);
         } catch {
-            return
+            return;
         }
     }
 }
