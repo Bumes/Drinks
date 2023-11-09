@@ -357,6 +357,8 @@ function upload_new_data(event) {
     const existingKey = event.currentTarget.my_ingredient; // Replace with your existing key
     const newValue = event.target.checked; // Replace with the new value
 
+    console.log(exisitingKey + ": " + newValue)
+
     // Load the existing content from GitHub
     fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
         method: 'GET',
