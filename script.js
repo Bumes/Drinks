@@ -446,7 +446,7 @@ async function create_lukas_mode_tab(){
         try {
             const ingDiv = document.createElement("div");
             ingDiv.innerHTML = `
-            <p1>${ingredient}</p1>
+            <p>${ingredient}</p>
             `
             const checkbox = document.createElement("input")
             checkbox.type = "checkbox";
@@ -472,7 +472,7 @@ async function create_lukas_mode_tab(){
         } catch {
             return;
         }
-    }
+    }    
 }
 
 create_lukas_mode_tab()
