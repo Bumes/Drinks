@@ -42,7 +42,7 @@
   "tonic_water": false,
   "grapefruit_soda": false,
   "orange_juice": false,
-  "pineapple_juice": false,
+  "pineapple_juice": true,
   "cranberry_juice": false,
   "simple_sirup": false,
   "elderflower_sirup": true,
