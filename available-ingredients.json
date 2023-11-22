@@ -23,7 +23,7 @@
   "sweet_vermouth": false,
   "dry_vermouth": false,
   "aperol": true,
-  "secco": true,
+  "secco": false,
   "coffee_liqueur": true,
   "chartreuse": false,
   "amaretto": false,
