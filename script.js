@@ -57,6 +57,7 @@ function sortIngredients(arr) {
   }  
 
 function Drink(category, name, ingredients=[], garnish="") {
+    // passion fruit puree -> passion fruit in formatted ingredient
     if (ingredients.length != 0){
         garnish = garnish.split("//")[0]
         for (let i = 0; i < ingredients.length; i++) {
@@ -270,7 +271,7 @@ async function start() {
     Cocktail("Caipirinha", ["60ml Pitu", "1 Lime", "10g White Sugar -> 10ml Simple Sirup -> 10g Brown Sugar"])
     Cocktail("Southside", ["60ml Gin", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "30ml Lime Juice", "Mint"], "Mint")
     Cocktail("2sian", ["30ml Coffee Sirup", "30ml Vodka", "15ml Cream -> 15ml Milk"])
-    Cocktail("Pornstar Martini", ["50ml Vanilla Vodka -> 50ml Vodka", "15ml Passion Fruit Liqueur", "30ml Passion Fruit Purree", "15ml Lime Juice", "15ml Vanilla Simple Sirup", "60ml Secco"], "½ Passion Fruit")
+    Cocktail("Pornstar Martini", ["50ml Vanilla Vodka -> 50ml Vodka", "15ml Passion Fruit Liqueur", "30ml Passion Fruit Puree", "15ml Lime Juice", "15ml Vanilla Sirup", "60ml Secco"], "½ Passion Fruit")
     Cocktail("Dark 'N' Stormy", ["60ml Black Rum -> 60ml Brown Rum -> 60ml Blended Rum -> 60ml White Rum", "15ml Lime Juice", "150ml Ginger Beer"], "Lime")
     
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
