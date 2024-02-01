@@ -263,6 +263,7 @@ async function start() {
     Cocktail("Corpse Reviver", ["30ml Gin", "30ml Triple Sec", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Lillet -> 30ml Sweet Vermouth", "Absinthe"], "Lemon")
     Cocktail("Zombie", ["30ml White Rum", "30ml Brown Rum", "30ml Apricot Brandy", "15ml Falernum Liqueur", "30ml Lime Juice", "30ml Pineapple Juice", "10ml Grenadine"], "Pineapple and cocktail cherry")
     Cocktail("Bee's Knees", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 15ml Honey -> 30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar"], "Lemon")
+    Cocktail("Paperplane", ["30ml Bourbon -> Whiskey", "30ml Aperol", "30ml Amaro -> 30ml Orange Liqueur", "30ml Lemon Juice -> 30ml Lime Juice"], "Paper Plane")
     Cocktail("Gin Basil Smash", ["60ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar", "Basil"], "Basil")
     Cocktail("Vesper", ["60ml Gin", "30ml Vodka", "15ml Lillet -> 15ml Sweet Vermouth -> 15ml Dry Vermouth"], "Lemon and Orange")
     Cocktail("Cosmopolitan", ["50ml Vodka Citron -> 50ml Vodka // (with citron)", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], "Lemon")
