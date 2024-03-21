@@ -5,3 +5,5 @@ comments in garnish and ingredients
 ()
 "and"/"or" in garnish -> check
 leaving lukas mode - save
+
+"sweetener" -> available_sweetener
