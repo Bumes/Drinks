@@ -303,7 +303,7 @@ async function start() {
     Cocktail("Passion fruit skinny bitch (not made)", ["60ml Vodka", "30ml Lime Juice", "Passion Fruit", "Sparkling Water"], ["Passion Fruit"], ["Fruity", "Bubbly"])
     Cocktail("Cranberry gin fizz (not made)", ["60ml Strawberry Gin -> 60ml Gin", "Strawberry", "Sparkling Water"], ["Rosemary"], ["Fruity", "Bubbly", "Herbs"])
     Cocktail("Sex on the beach (not made)", ["40ml Vodka", "20ml Peach Liqueur", "15ml Cranberry Sirup", "15ml Grenadine Sirup", "½ Lime -> 15ml Lime Juice", "80ml Orange Juice"], ["Cocktail Cherry"], ["Fruity", "Sweet"])
-    Cocktail("Fence Hopper (not made)", ["30ml Whiskey // (Bourbon)", "30ml Apple Cider", "15ml Maple Sirup -> 15ml Honey Sirup -> 15ml Agave Sirup -> 10g Brown Sugar -> 10g White Sugar", "10ml Lemon Juice -> ½ Lemon -> ½ Lime -> 15ml Lime Juice",  "Angostura Bitters", "100ml IPA -> 100ml Beer"], ["Cinnamon Stick"], ["Fruity", "Cinnamon"])
+    Cocktail("Fence Hopper (not made)", ["30ml Whiskey // (Bourbon)", "30ml Apple Cider -> ", "15ml Maple Sirup -> 15ml Honey Sirup -> 15ml Agave Sirup -> 10g Brown Sugar -> 10g White Sugar", "10ml Lemon Juice -> ½ Lemon -> ½ Lime -> 15ml Lime Juice",  "Angostura Bitters", "100ml IPA -> 100ml Beer"], ["Cinnamon Stick"], ["Fruity", "Cinnamon"])
     Cocktail("Italien Mule", ["50ml Amaretto", "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice", "Ginger Beer"], ["Lemon Twist"], ["Nutty", "Citrus", "Ginger"])    
     Cocktail("Italien Mule (Aperol Version) (not made)", ["50ml Aperol", "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice", "Red Wine", "Ginger Beer"], ["Mint"], ["Citrus", "Ginger", "Mint"])
     Cocktail("Kigoi Koi (not made)", ["60ml Gin", "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice", "15ml Honey Sirup -> 15ml Agave Sirup -> 10ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar", "Secco"], [] ["Citrus", "Honey", "Bubbly"])
@@ -312,12 +312,12 @@ async function start() {
 
     // Shot("Liquid Cocain", ["Coldbrew", "Licor 43"])
 
-    Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], "Amaretti")
-    Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], "Amaretti")
+    Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], ["Amaretti"])
+    Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], ["Amaretti"])
     Coffee("Cappuccino", ["Double Espresso", "Milk // (Hot)", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
     Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
-    Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], "Chocolate Powder")
+    Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], ["Chocolate Powder"])
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
 
     console.log(missing)
