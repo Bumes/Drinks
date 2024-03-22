@@ -443,10 +443,14 @@ async function start() {
     Cocktail("43 Milk", ["50ml Licor 43", "50ml Milk"], ["(Chocolate Powder)"], ["Creamy"])
     add_odd_element(0)
 
-    Mocktail("Brazilian Lemonade", ["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], ["Lime"], ["Citrus", "Creamy"])
+    Mocktail("Brazilian Lemonade (not made)", ["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], ["Lime"], ["Citrus", "Creamy"])
+    Mocktail("Basil Lemonade (not made)", ["Lime", "Basil", "Mint"], ["Lime"], ["Herbs", "Citrus", "Minty"])
+    Mocktail("Matcha Tonic", ["30ml Matcha", "Tonic Water", "(White Sugar)"], [], ["Herbs", "Bitter", "Fresh"])
     add_odd_element(1)
 
-    Shot("Liquid Cocain", ["Licor 43", "Coldbrew"], [], "Licor 43")
+    Shot("Liquid Cocain (not made)", ["Licor 43", "Coldbrew"], [], "Licor 43")
+    Shot("Brain (not made)", ["10ml Vodka", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Baileys"], [], "Vodka")
+    Shot("Green Tea Shot", ["10ml Whiskey", "10ml Peach Schnapps -> 10ml Peach Liquer", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"])
     add_odd_element(2)
 
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], ["Amaretti"])
