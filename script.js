@@ -56,7 +56,9 @@ function sortIngredients(arr) {
     ];
   }  
 
-function Drink(category, name, ingredients=[], garnishes="", flavor_profile=[]) {
+added_flavor_profiles = []
+
+function Drink(category, name, ingredients=[], garnishes=[], flavor_profile=[]) {
     if (ingredients.length != 0){
         for (let g = 0; g < garnishes.length; g++) {
             garnishes[g] = garnishes[g].split("//")[0]
@@ -109,6 +111,21 @@ x tsp ->
                 return; 
             } else {
                 ingredients[i] = ingredients[i].split("//")[0].replace("  ", " ").split(" -> ")[j]
+            }
+
+            for (let f = 0; f < flavor_profile.length; f++) {
+                if (!(added_flavor_profiles.includes(flavor_profile[f]))) {
+                    added_flavor_profiles.push(flavor_profile[f]);
+                    const flavor_html = document.createElement("div");
+                    flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${flavor_profile[f]}')">${flavor_profile[f]}</button>`;
+                    flavor_html.style.flex = '1';
+                    const wrapperDiv = document.createElement("div");
+                    wrapperDiv.appendChild(flavor_html);
+                    wrapperDiv.style.flex = '1'; // Apply flex: 1; to distribute evenly
+                    wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
+            
+                    document.getElementById("category_area").appendChild(wrapperDiv);
+                }
             }
         }
     }
@@ -263,6 +280,13 @@ x tsp ->
             saved_html = "";
         }
     } else {
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
+
+        drinkDiv.style.flex = '1';
+
+        // Append both saved_html and drinkDiv to the wrapper
+        wrapperDiv.appendChild(drinkDiv);
         if (category == 0){
             drinks_menu.appendChild(wrapperDiv);
         }
@@ -349,9 +373,9 @@ async function start() {
     Cocktail("Negroni", ["30ml Gin", "30ml Sweet Vermouth", "30ml Campari -> 30ml Aperol"], ["Orange"], ["Strong", "Bitter"])
     Cocktail("Margarita (not made)", ["50ml Silver Tequila", "30ml Triple Sec", "30ml Lime Juice"], ["Orange"], ["Strong", "Sour"])
     Cocktail("Daiquiri", ["60ml White Rum -> 60ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"], ["Lime"], ["Strong", "Citrus"])
-    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar", "Ginger"], "candied ginger", ["Whiskey", "Honey", "Ginger"])
+    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar", "Ginger"], ["Candied Ginger"], ["Whiskey", "Honey", "Ginger"])
     Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer -> 90ml Ginger Ale", "½ Lime -> 15ml Lime Juice"], ["Lime"], ["Ginger", "Citrus"])
-    Cocktail("Pisco Sour (not made)", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "(1 Egg White)"], "(Angostura Bitters)", ["Citrus", "Creamy (if wanted)"])
+    Cocktail("Pisco Sour (not made)", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "(1 Egg White)"], ["(Angostura Bitters)"], ["Citrus", "Creamy (if wanted)"])
     Cocktail("Paloma (not made)", ["60ml Blanco Tequila", "30ml Lime Juice", "Grapefruit Soda", "Salt"], ["Lime"], ["Strong", "Sour"])
     Cocktail("French 75", ["30ml Gin", "½ Lemon -> ½ Lime -> 15ml Lemon Juice -> 15ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "90ml Secco"], ["Lemon"], ["Citrus", "Bubbly"])
     Cocktail("The Last Word (not made)", ["30ml Gin", "30ml Chartreuse", "30ml Lime Juice"])
@@ -383,7 +407,7 @@ async function start() {
     Cocktail("Kojito (not made)", ["60ml White Rum", "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice", "30ml Orange Juice", "Ginger Ale -> Ginger Beer"], ["Mint"], ["Rum", "Fruity", "Ginger", "Mint"])
     Cocktail("Japan Mule (not made)", ["60ml Shochu", "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice", "Ginger Beer", "Yuzu"], ["Dried Citrus"], ["Strong", "Ginger", "Citrus", "Woody"])
     Cocktail("Original", ["50ml Gin -> 50ml Vodka", "50ml Elderflower Sirup", "50ml Lime Juice -> 50ml Lemon Juice", "Sparkling Water"], ["Lime"], ["Fresh", "Bubbly"])
-
+    Cocktail("43 Milk", ["50ml Licor 43", "50ml Milk"], ["(Chocolate Powder)"], ["Creamy"])
     add_odd_element(0)
 
 

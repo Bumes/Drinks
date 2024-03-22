@@ -7,3 +7,7 @@ comments in garnish and ingredients
 leaving lukas mode - save
 
 "sweetener" -> available_sweetener
+
+einkaufsliste
+
+milk alternatives

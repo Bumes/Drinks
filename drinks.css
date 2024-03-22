@@ -7,7 +7,7 @@ body {
   margin: 5px;
 }
 
-header {
+.tabs {
   background-color: #2d412d;
   min-height: 100px;
   display: grid;
@@ -22,6 +22,43 @@ h1 {
   font-size: 38px;
 }
 
+.filter {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search_label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.search_filter {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #2d412d;
+  color: white;
+}
+
+.category_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  size-adjust: "content";
+
+  background-color: #2d412d;
+  border-radius: 0px;
+}
+
+.category_area {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .tab_button {
   font-size: 38px;
