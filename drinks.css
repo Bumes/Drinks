@@ -48,16 +48,18 @@ h1 {
   color: white;
   padding-left: 20px;
   padding-right: 20px;
-  size-adjust: "content";
-
   background-color: #2d412d;
   border-radius: 0px;
+  flex-grow: 1; /* Allow buttons to grow to fill available space */
 }
 
 .category_area {
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .tab_button {

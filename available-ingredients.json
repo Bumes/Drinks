@@ -78,6 +78,7 @@
   "chocolate_powder": true,
   "matcha_powder": true,
   "milk": true,
+  "condensed_milk": true,
   "soy_milk": true,
   "almond_milk": false,
   "amaretti": true
