@@ -71,7 +71,7 @@
   "egg": true,
   "egg_white": false,
   "espresso": true,
-  "cold_brew": false,
+  "cold_brew": true,
   "chocolate_powder": true,
   "matcha_powder": true,
   "milk": true,
