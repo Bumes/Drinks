@@ -39,6 +39,8 @@
   "peach_liqueur": true,
   "cointreau": false,
   "triple_sec": false,
+  "water": true,
+  "hot_water": true,
   "sparkling_water": true,
   "wild_berry": true,
   "ginger_ale": false,

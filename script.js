@@ -56,8 +56,12 @@ function sortIngredients(arr) {
     ];
   }  
 
-added_flavor_profiles = []
-added_base_spirits = []
+drinks_added_flavor_profiles = []
+mocktails_added_flavor_profiles = []
+shots_added_flavor_profiles = []
+coffee_added_flavor_profiles = []
+
+drinks_added_base_spirits = []
 
 function Drink(category, name, ingredients=[], garnishes=[], base_spirit="Other", flavor_profile=[]) {
     if (ingredients.length != 0){
@@ -115,12 +119,26 @@ x tsp ->
             }
 
             for (let f = 0; f < flavor_profile.length; f++) {
-                if (!(added_flavor_profiles.includes(flavor_profile[f]))) {
-                    added_flavor_profiles.push(flavor_profile[f]);
+                if (category == 0) {
+                    if (!(drinks_added_flavor_profiles.includes(flavor_profile[f]))) {
+                        drinks_added_flavor_profiles.push(flavor_profile[f]);
+                    }
+                } else if (category == 1) {
+                    if (!(mocktails_added_flavor_profiles.includes(flavor_profile[f]))) {
+                        mocktails_added_flavor_profiles.push(flavor_profile[f]);
+                    }
+                } else if (category == 2) {
+                    if (!(shots_added_flavor_profiles.includes(flavor_profile[f]))) {
+                        shots_added_flavor_profiles.push(flavor_profile[f]);
+                    }
+                } else if (category == 3) {
+                    if (!(coffee_added_flavor_profiles.includes(flavor_profile[f]))) {
+                        coffee_added_flavor_profiles.push(flavor_profile[f]);
+                    }
                 }
             }
-            if (!(added_base_spirits.includes(base_spirit)) & base_spirit !== null) {
-                added_base_spirits.push(base_spirit);
+            if (!(drinks_added_base_spirits.includes(base_spirit)) & base_spirit !== null) {
+                drinks_added_base_spirits.push(base_spirit);
             }
         }
     }
@@ -305,8 +323,8 @@ function Mocktail(name, ingredients, garnishes, flavor_profile) {
     Drink(1, name, ingredients, garnishes, null, flavor_profile)
 }
 
-function Shot(name, ingredients, garnishes, base_spirit, flavor_profile) {
-    Drink(2, name, ingredients, garnishes, base_spirit, flavor_profile)
+function Shot(name, ingredients, garnishes, flavor_profile) {
+    Drink(2, name, ingredients, garnishes, null, flavor_profile)
 }
 
 function Coffee(name, ingredients, garnishes, flavor_profile) {
@@ -351,15 +369,15 @@ function add_odd_element(category){
 
 function add_all_base_spirits(){
     
-    added_base_spirits.sort()
-    const index = added_base_spirits.indexOf("Other");
+    drinks_added_base_spirits.sort()
+    const index = drinks_added_base_spirits.indexOf("Other");
     if (index !== -1) {
-        added_base_spirits.push(added_base_spirits.splice(index, 1)[0]);
+        drinks_added_base_spirits.push(drinks_added_base_spirits.splice(index, 1)[0]);
     }
 
-    for(let b=0; b < added_base_spirits.length; b++) {
+    for(let b=0; b < drinks_added_base_spirits.length; b++) {
         const flavor_html = document.createElement("div");
-        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${added_base_spirits[b]}')">${added_base_spirits[b]}</button>`;
+        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${drinks_added_base_spirits[b]}')">${drinks_added_base_spirits[b]}</button>`;
         flavor_html.style.flex = '1';
         const wrapperDiv = document.createElement("div");
         wrapperDiv.appendChild(flavor_html);
@@ -370,20 +388,36 @@ function add_all_base_spirits(){
     }
 }
 
-function add_all_categories(){
+function add_all_categories(category){
     
-    added_flavor_profiles.sort()
+    if (category == 0) {
+        drinks_added_flavor_profiles.sort()
+        flavor_profile = drinks_added_flavor_profiles
+        area = document.getElementById("drinks_category_area")
+    } else if (category == 1) {
+        mocktails_added_flavor_profiles.sort()
+        flavor_profile = mocktails_added_flavor_profiles
+        area = document.getElementById("mocktails_category_area")
+    } else if (category == 2) {
+        shots_added_flavor_profiles.sort()
+        flavor_profile = shots_added_flavor_profiles
+        area = document.getElementById("shots_category_area")
+    } else if (category == 3) {
+        coffee_added_flavor_profiles.sort()
+        flavor_profile = coffee_added_flavor_profiles
+        area = document.getElementById("coffee_category_area")
+    }
 
-    for(let f=0; f < added_flavor_profiles.length; f++) {
+    for(let f=0; f < flavor_profile.length; f++) {
         const flavor_html = document.createElement("div");
-        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${added_flavor_profiles[f]}')">${added_flavor_profiles[f]}</button>`;
+        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${flavor_profile[f]}')">${flavor_profile[f]}</button>`;
         flavor_html.style.flex = '1';
         const wrapperDiv = document.createElement("div");
         wrapperDiv.appendChild(flavor_html);
         wrapperDiv.style.flex = '1'; // Apply flex: 1; to distribute evenly
         wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
 
-        document.getElementById("drinks_category_area").appendChild(wrapperDiv);
+        area.appendChild(wrapperDiv);
     }
 }
 
@@ -442,28 +476,35 @@ async function start() {
     Cocktail("Original", ["50ml Gin -> 50ml Vodka", "50ml Elderflower Sirup", "50ml Lime Juice -> 50ml Lemon Juice", "Sparkling Water"], ["Lime"], "Vodka", ["Fresh", "Bubbly"])
     Cocktail("43 Milk", ["50ml Licor 43", "50ml Milk"], ["(Chocolate Powder)"], ["Creamy"])
     add_odd_element(0)
+    add_all_categories(0)
 
     Mocktail("Brazilian Lemonade (not made)", ["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], ["Lime"], ["Citrus", "Creamy"])
     Mocktail("Basil Lemonade (not made)", ["Lime", "Basil", "Mint"], ["Lime"], ["Herbs", "Citrus", "Minty"])
     Mocktail("Matcha Tonic", ["30ml Matcha", "Tonic Water", "(White Sugar)"], [], ["Herbs", "Bitter", "Fresh"])
     add_odd_element(1)
+    add_all_categories(1)
 
-    Shot("Liquid Cocain (not made)", ["Licor 43", "Coldbrew"], [], "Licor 43")
-    Shot("Brain (not made)", ["10ml Vodka", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Baileys"], [], "Vodka")
+    Shot("Liquid Cocain (not made)", ["Licor 43", "Coldbrew"])
+    Shot("Brain (not made)", ["10ml Vodka", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Baileys"])
     Shot("Green Tea Shot", ["10ml Whiskey", "10ml Peach Schnapps -> 10ml Peach Liquer", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"])
     add_odd_element(2)
+    add_all_categories(2)
 
-    Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], ["Amaretti"])
-    Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], ["Amaretti"])
-    Coffee("Cappuccino", ["Double Espresso", "Milk // (Hot)", "Steamed Milk", "(Brown Sugar)"])
-    Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"])
-    Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"])
-    Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], ["Chocolate Powder"])
-    Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"])
+    Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], ["Amaretti"], ["Coffee", "Strong"])
+    Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], ["Amaretti"], ["Coffee", "Strong", "Creamy"])
+    Coffee("Americano", ["Espresso", "Water"], ["Coffee"])
+    Coffee("Aeracano", ["Espresso", "Water"], ["Coffee", "Creamy"])
+    Coffee("Cappuccino", ["Double Espresso", "Milk // (Hot)", "Steamed Milk", "(Brown Sugar)"], ["Coffee", "Creamy"])
+    Coffee("Latte Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], ["Coffee", "Creamy", "Milky"])
+    Coffee("Adultuccino", ["Coffee", "Chocolate Powder", "Steamed Milk"], ["Coffee", "Chocolate", "Creamy"])
+    Coffee("Chococino", ["Double Espresso", "Chocolate Powder", "Steamed Milk"], ["Coffee", "Chocolate", "Creamy"])
+    Coffee("Hot Chocolate", ["Chocolate Powder", "(Steamed) Milk"], ["Chocolate Powder"], ["Chocolate", "Creamy"])
+    Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"], ["Coffee", "Sweet", "Creamy"])
+    Coffee("Creme Brule Coldbrew", ["Coldbrew", "Cream", "Milk", "Brown Sugar"], ["Coffee", "Sweet", "Creamy"])
     add_odd_element(3)
+    add_all_categories(3)
 
     add_all_base_spirits()
-    add_all_categories()
 
     console.log(missing)
 }
