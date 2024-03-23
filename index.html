@@ -27,10 +27,44 @@
                     <div class="search">
                          <label class="search_label">Search:</label>
                          <input class="search_filter"></input>
-                    </div>
-                    <div id="drinks_base_spirits_area" class="category_area">
-                    </div>
-                    <div id="drinks_category_area" class="category_area">
+
+                         <script>
+                              function toggleDropdown(dropdown_name) {
+                                   var dropdown = document.getElementById(dropdown_name);
+                                   if (dropdown !== null) {
+                                        dropdown.classList.toggle('open');
+                                   }
+                              }
+
+                              function closeDropdown(dropdown_name) {
+                                   var dropdown = document.getElementById(dropdown_name);
+                                   if (dropdown !== null) {
+                                        if (!dropdown.contains(document.activeElement)) {
+                                        dropdown.classList.remove('open');
+                                        }
+                                   }
+                              }
+                         </script>
+     
+                         <div class="dropdown" id="base-spirit-dropdown" tabindex="1"  onblur='closeDropdown("base-spirit-dropdown")'>
+                              <button onclick='toggleDropdown("base-spirit-dropdown")'>Base Spirit</button>
+                              <div class="dropdown-content" id="base-spirit-dropdown-content">
+                              </div>
+                         </div>
+                         
+                         <div class="dropdown" id="category-dropdown" tabindex="0"  onblur='closeDropdown("category-dropdown")'>
+                              <button onclick='toggleDropdown("category-dropdown")'>Category</button>
+                              <div class="dropdown-content" id="category-dropdown-content">
+                              </div>
+                         </div>
+
+                         <div class="dropdown" id="showing-options-dropdown" tabindex="2"  onblur='closeDropdown("showing-options-dropdown")'>
+                              <button onclick='toggleDropdown("showing-options-dropdown")'>Availability</button>
+                              <div class="dropdown-content" id="showing-options-dropdown-content">
+                                   <label><input type="checkbox" name="Available" checked="true">Available</input></label>
+                                   <label><input type="checkbox" name="Not Available">Not Available</input></label>
+                              </div>
+                         </div>
                     </div>
                </div>
           </div>

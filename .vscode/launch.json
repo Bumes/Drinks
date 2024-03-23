@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\Luck\\Desktop\\Programme\\Programmieren\\Getränkekarte\\Drinks\\index.html"
+            "file": "C:\\Users\\luk62\\Desktop\\Projekte\\Drinks\\index.html" //"c:\\Users\\Luck\\Desktop\\Programme\\Programmieren\\Getränkekarte\\Drinks\\index.html"
         }
     ]
 }

@@ -93,3 +93,28 @@ h1 {
   width: 100%;
   height: auto;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content label {
+  display: block;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}

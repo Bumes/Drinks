@@ -376,15 +376,9 @@ function add_all_base_spirits(){
     }
 
     for(let b=0; b < drinks_added_base_spirits.length; b++) {
-        const flavor_html = document.createElement("div");
-        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${drinks_added_base_spirits[b]}')">${drinks_added_base_spirits[b]}</button>`;
-        flavor_html.style.flex = '1';
-        const wrapperDiv = document.createElement("div");
-        wrapperDiv.appendChild(flavor_html);
-        wrapperDiv.style.flex = '1'; // Apply flex: 1; to distribute evenly
-        wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
-
-        document.getElementById("drinks_base_spirits_area").appendChild(wrapperDiv);
+        var newOption = document.createElement('label');
+        newOption.innerHTML = `<input type="checkbox" name="${drinks_added_base_spirits[b]}"> ${drinks_added_base_spirits[b]}`;
+        document.getElementById('base-spirit-dropdown-content').appendChild(newOption);
     }
 }
 
@@ -393,7 +387,7 @@ function add_all_categories(category){
     if (category == 0) {
         drinks_added_flavor_profiles.sort()
         flavor_profile = drinks_added_flavor_profiles
-        area = document.getElementById("drinks_category_area")
+        dropdownContent = document.getElementById("dropdown-content")
     } else if (category == 1) {
         mocktails_added_flavor_profiles.sort()
         flavor_profile = mocktails_added_flavor_profiles
@@ -408,16 +402,10 @@ function add_all_categories(category){
         area = document.getElementById("coffee_category_area")
     }
 
-    for(let f=0; f < flavor_profile.length; f++) {
-        const flavor_html = document.createElement("div");
-        flavor_html.innerHTML = `<button class="category_button" onclick="console.log('${flavor_profile[f]}')">${flavor_profile[f]}</button>`;
-        flavor_html.style.flex = '1';
-        const wrapperDiv = document.createElement("div");
-        wrapperDiv.appendChild(flavor_html);
-        wrapperDiv.style.flex = '1'; // Apply flex: 1; to distribute evenly
-        wrapperDiv.style.display = 'flex'; // Use flex layout to display them side by side
-
-        area.appendChild(wrapperDiv);
+    for(let f=0; f < flavor_profile.length; f++) { 
+        var newOption = document.createElement('label');
+        newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}"> ${flavor_profile[f]}`;
+        document.getElementById('category-dropdown-content').appendChild(newOption);
     }
 }
 
