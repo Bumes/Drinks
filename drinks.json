@@ -772,5 +772,52 @@
                 "Creamy"
             ]
         }
+    ],
+    "Mocktail": [
+        {
+            "name": "Brazilian Lemonade (not made)",
+            "ingredients": [
+                "1 Lime -> 30ml Lime Juice",
+                "15g Brown Sugar -> 15g White Sugar",
+                "100ml Condensed Milk"
+            ],
+            "garnishes": [
+                "Lime"
+            ],
+            "flavor_profile": [
+                "Citrus",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Basil Lemonade (not made)",
+            "ingredients": [
+                "Lime",
+                "Basil",
+                "Mint"
+            ],
+            "garnishes": [
+                "Lime"
+            ],
+            "flavor_profile": [
+                "Herbs",
+                "Citrus",
+                "Fresh"
+            ]
+        },
+        {
+            "name": "Matcha Tonic",
+            "ingredients": [
+                "30ml Matcha",
+                "Tonic Water",
+                "(White Sugar)"
+            ],
+            "garnishes": [],
+            "flavor_profile": [
+                "Herbs",
+                "Bitter",
+                "Fresh"
+            ]
+        }
     ]
 }
