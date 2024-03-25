@@ -554,6 +554,8 @@ async function create_all() {
 
     delete_all()
 
+    let idx = 0
+
     for (const category in drinks) {
         drinks[category].forEach(drink => {
             drink["category"] = category
@@ -564,6 +566,8 @@ async function create_all() {
         if (get_flavor_filter().size == 0) {
             add_all_categories(idx)
         }
+
+        idx++
     }
 
     /*Cocktail({name: "Edelstoff"})
