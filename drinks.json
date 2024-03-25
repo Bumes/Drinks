@@ -1,5 +1,5 @@
-{
-    "drinks": [
+
+[
         {
             "name": "Mojito",
             "ingredients": ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"],
@@ -50,4 +50,3 @@
             "flavor_profile": ["Strong", "Coffee"]
         }
     ]
-}
