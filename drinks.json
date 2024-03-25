@@ -1,19 +1,31 @@
 {
     "Cocktails": [
         {
-            "name": "Edelstoff"
+            "name": "Beer",
+            "options": [
+                "Edelstoff",
+                "Augustiner",
+                "Urtyp",
+                "Kloster Gold"
+            ]
         },
         {
             "name": "Secco",
-            "base_spirit": "Wine"
+            "base_spirit": "Wine",
+            "options": [
+                "Freixenet Cava Blanca",
+                "Freixenet"
+            ]
         },
         {
             "name": "Red Wine",
-            "base_spirit": "Wine"
+            "base_spirit": "Wine",
+            "options": []
         },
         {
             "name": "White Wine",
-            "base_spirit": "Wine"
+            "base_spirit": "Wine",
+            "options": []
         },
         {
             "name": "Mimosa",

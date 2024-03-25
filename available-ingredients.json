@@ -1,7 +1,7 @@
 {
   "beer": true,
   "augustiner": false,
-  "edelstoff": false,
+  "edelstoff": true,
   "urtyp": false,
   "kloster_gold": false,
   "vodka": true,
@@ -27,6 +27,8 @@
   "dry_vermouth": false,
   "aperol": true,
   "secco": true,
+  "freixenet": false,
+  "freixenet_cava_blanca": true,
   "white_wine": false,
   "red_wine": false,
   "apple_cider": false,
