@@ -828,7 +828,7 @@
     ],
     "Shots": [
         {
-            "name": "Liquid Cocain",
+            "name": "Liquid Cocaine",
             "ingredients": [
                 "Licor 43",
                 "Coldbrew"
@@ -895,9 +895,9 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
-                "soy_milk",
-                "almond_milk"
+                "Milk",
+                "Soy Milk",
+                "Almond Milkd"
             ]
         },
         {
@@ -938,8 +938,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         },
         {
@@ -956,8 +956,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         },
         {
@@ -974,8 +974,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         },
         {
@@ -992,8 +992,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         },
         {
@@ -1010,8 +1010,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         },
         {
@@ -1042,8 +1042,8 @@
             ],
             "options": [
                 "milk",
-                "soy_milk",
-                "almond_milk"
+                "Soy Milk",
+                "Almond Milk"
             ]
         }
     ]
