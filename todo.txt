@@ -4,6 +4,4 @@ print every ingredient missing in list possible replacements
 
 einkaufsliste
 
-make not available marked
-
 order option
