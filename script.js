@@ -197,6 +197,10 @@ x tsp ->
                 drinks_added_base_spirits.push(base_spirit);
             }
         }
+    } else {
+        if (available_ingredients[name.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')] == false) {
+            return
+        }
     }
        
     if (every_ingredient){
