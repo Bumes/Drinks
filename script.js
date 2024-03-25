@@ -559,6 +559,11 @@ async function create_all() {
             drink["category"] = category
             Drink(drink)
         });
+        
+        add_odd_element(idx)
+        if (get_flavor_filter().size == 0) {
+            add_all_categories(idx)
+        }
     }
 
     /*Cocktail({name: "Edelstoff"})
@@ -613,13 +618,12 @@ async function create_all() {
     Cocktail({name: "Japan Mule (not made)", ingredients: ["60ml Shochu", "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice", "Ginger Beer", "Yuzu"], garnishes: ["Dried Citrus"], base_spirit: "Other", flavor_profile: ["Strong", "Ginger", "Citrus", "Woody"]})
     Cocktail({name: "Original", ingredients: ["50ml Gin -> 50ml Vodka", "50ml Elderflower Sirup", "50ml Lime Juice -> 50ml Lemon Juice", "Sparkling Water"], garnishes: ["Lime"], base_spirit: "Vodka", flavor_profile: ["Fresh", "Bubbly"]})
     Cocktail({name: "43 Milk", ingredients: ["50ml Licor 43", "50ml Milk"], garnishes: ["(Chocolate Powder)"], base_spirit: "", flavor_profile: ["Creamy"]})
-    */
     add_odd_element(0)
     if (get_base_spirits_filter().size == 0) {
         add_all_categories(0)
     }
 
-    Mocktail({name: "Brazilian Lemonade (not made)", ingredients:["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], garnishes:["Lime"], base_spirit:[], flavor_profile:["Citrus", "Creamy"]})
+    /*Mocktail({name: "Brazilian Lemonade (not made)", ingredients:["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], garnishes:["Lime"], base_spirit:[], flavor_profile:["Citrus", "Creamy"]})
     Mocktail({name: "Basil Lemonade (not made)", ingredients:["Lime", "Basil", "Mint"], garnishes:["Lime"], base_spirit:[], flavor_profile:["Herbs", "Citrus", "Fresh"]})
     Mocktail({name: "Matcha Tonic", ingredients:["30ml Matcha", "Tonic Water", "(White Sugar)"], garnishes:[], base_spirit:[], flavor_profile:["Herbs", "Bitter", "Fresh"]})
     
@@ -652,7 +656,7 @@ async function create_all() {
     
     if (get_flavor_filter().size == 0) {
         add_all_categories(3)
-    }
+    }*/
 
     if (get_flavor_filter().size == 0) {
         add_all_base_spirits()

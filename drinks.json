@@ -773,7 +773,7 @@
             ]
         }
     ],
-    "Mocktail": [
+    "Mocktails": [
         {
             "name": "Brazilian Lemonade (not made)",
             "ingredients": [
@@ -817,6 +817,178 @@
                 "Herbs",
                 "Bitter",
                 "Fresh"
+            ]
+        }
+    ],
+    "Shots": [
+        {
+            "name": "Liquid Cocain (not made)",
+            "ingredients": [
+                "Licor 43",
+                "Coldbrew"
+            ]
+        },
+        {
+            "name": "Brain (not made)",
+            "ingredients": [
+                "10ml Vodka",
+                "10ml Lime Juice -> 10ml Lemon Juice",
+                "10ml Baileys"
+            ]
+        },
+        {
+            "name": "Green Tea Shot",
+            "ingredients": [
+                "10ml Whiskey",
+                "10ml Peach Schnapps -> 10ml Peach Liqueur",
+                "10ml Lime Juice -> 10ml Lemon Juice",
+                "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
+            ]
+        }
+    ],
+    "Coffee": [
+        {
+            "name": "Espresso",
+            "ingredients": [
+                "Double Espresso",
+                "(Brown Sugar)"
+            ],
+            "garnishes": [
+                "Amaretti"
+            ],
+            "flavor_profile": [
+                "Strong"
+            ]
+        },
+        {
+            "name": "Espresso Macchiato",
+            "ingredients": [
+                "Double Espresso",
+                "Steamed Milk",
+                "(Brown Sugar)"
+            ],
+            "garnishes": [
+                "Amaretti"
+            ],
+            "flavor_profile": [
+                "Strong",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Americano",
+            "ingredients": [
+                "Espresso",
+                "Water"
+            ],
+            "garnishes": [
+                "Coffee"
+            ]
+        },
+        {
+            "name": "Aeracano",
+            "ingredients": [
+                "Espresso",
+                "Water"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Cappuccino",
+            "ingredients": [
+                "Double Espresso",
+                "Milk // (Hot)",
+                "Steamed Milk",
+                "(Brown Sugar)"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Latte Macchiato",
+            "ingredients": [
+                "Double Espresso",
+                "Steamed Milk",
+                "(Brown Sugar)"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Creamy",
+                "Milky"
+            ]
+        },
+        {
+            "name": "Adultuccino",
+            "ingredients": [
+                "Double Espresso",
+                "Chocolate Powder",
+                "Steamed Milk"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Chocolate",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Chococino",
+            "ingredients": [
+                "Double Espresso",
+                "Chocolate Powder",
+                "Steamed Milk"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Chocolate",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Hot Chocolate",
+            "ingredients": [
+                "Chocolate Powder",
+                "(Steamed) Milk"
+            ],
+            "garnishes": [
+                "Chocolate Powder"
+            ],
+            "base_spirit": [
+                "Chocolate"
+            ],
+            "flavor_profile": [
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Dalgona Coffee",
+            "ingredients": [
+                "Double Espresso",
+                "Brown Sugar",
+                "Milk"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Sweet",
+                "Creamy"
+            ]
+        },
+        {
+            "name": "Creme Brule Coldbrew",
+            "ingredients": [
+                "Coldbrew",
+                "Cream",
+                "Milk",
+                "Brown Sugar"
+            ],
+            "garnishes": [
+                "Coffee",
+                "Sweet",
+                "Creamy"
             ]
         }
     ]
