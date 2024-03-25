@@ -1,5 +1,5 @@
 // #region Drink Creation
-
+console.log("aoiwdnawiodnawo")
 $(document).ready(function(){
     $.getJSON("https://ipinfo.io", function(data){
         var ip = data.ip;
@@ -7,6 +7,7 @@ $(document).ready(function(){
         // Do whatever you want with the IP address here
     });
 });
+console.log("äääääääääääää")
 
 // #region JSON 
 
