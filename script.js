@@ -4,6 +4,7 @@
 
 // Load JSON data from a file using fetch
 let available_ingredients;
+let current_frame = "drinks"
 
 async function fetchAndStoreIngredients() {
     try {
@@ -64,7 +65,56 @@ coffee_added_flavor_profiles = []
 drinks_added_base_spirits = []
 
 function Drink(category, name, ingredients=[], garnishes=[], base_spirit="Other", flavor_profile=[]) {
-    if (ingredients.length != 0){
+    if (name.search(document.getElementById(`${current_frame}-search-filter`).value) == -1) {
+        return
+    }
+    if (current_frame == "drinks") {
+        base_spirit_filter = get_base_spirits_filter()
+
+        let is_selected_base_spirit = false
+        let is_any_selected_base_spirit = false
+
+        for (const item of base_spirit_filter) {
+            if (item.name === base_spirit) {
+                if (item.value === true) {
+                    is_selected_base_spirit = true;
+                }
+            }
+            if (item.value === true) {       
+                is_any_selected_base_spirit = true
+            }
+        }
+        
+        if (is_selected_base_spirit !== is_any_selected_base_spirit) {
+            return
+        }
+    }
+
+    flavor_filter = get_flavor_filter()
+
+    let is_one_selected_flavor = false
+    let is_any_selected_flavor = false
+
+    for (const item of flavor_filter) {
+        for (let f=0; f < flavor_profile.length; f++) {
+            if (item.name == flavor_profile[f]) {
+                if (item.value === true) {
+                    is_one_selected_flavor = true;
+                }
+            }
+        }
+        if (item.value === true) {       
+            is_any_selected_flavor = true
+        }
+    }
+
+    if ((!is_one_selected_flavor) && is_any_selected_flavor) {
+        return
+    }
+
+    every_ingredient = true;
+
+    if (ingredients.length > 0){
         for (let g = 0; g < garnishes.length; g++) {
             garnishes[g] = garnishes[g].split("//")[0]
         }
@@ -92,6 +142,18 @@ function Drink(category, name, ingredients=[], garnishes=[], base_spirit="Other"
                 }
             }
 
+                    
+            if (doreturn){
+                every_ingredient = false
+                if (missing[formatted_ingredient] == undefined) {
+                    missing[formatted_ingredient] = [String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"), "in 1 recipe"]
+                } else {
+                    missing[formatted_ingredient][1] = missing[formatted_ingredient][1].replace(/\d+/, match => (parseInt(match) + 1).toString())
+                }
+            } else {
+                ingredients[i] = ingredients[i].split("//")[0].replace("  ", " ").split(" -> ")[j]
+            }
+
 
 // categories: sweet, sour, tart, fruity, fresh, boozy
 // Missing with what
@@ -106,17 +168,6 @@ vodka citron -> vodka + lemon
 x Dashes -> 
 x tsp ->
 */
-            
-            if (doreturn){
-                if (missing[formatted_ingredient] == undefined) {
-                    missing[formatted_ingredient] = [String(available_ingredients[formatted_ingredient]).replace("unavailable", "not defined in available-ingredients.json").replace("false", "not at home"), "in 1 recipe"]
-                  } else {
-                    missing[formatted_ingredient][1] = missing[formatted_ingredient][1].replace(/\d+/, match => (parseInt(match) + 1).toString())
-                }
-                return; 
-            } else {
-                ingredients[i] = ingredients[i].split("//")[0].replace("  ", " ").split(" -> ")[j]
-            }
 
             for (let f = 0; f < flavor_profile.length; f++) {
                 if (category == 0) {
@@ -140,6 +191,16 @@ x tsp ->
             if (!(drinks_added_base_spirits.includes(base_spirit)) & base_spirit !== null) {
                 drinks_added_base_spirits.push(base_spirit);
             }
+        }
+    }
+       
+    if (every_ingredient){
+        if (!document.getElementById(`${current_frame}-availability-dropdown`).checked) {
+            return
+        }
+    } else {
+        if (!document.getElementById(`${current_frame}-not-availability-dropdown`).checked) {
+            return
         }
     }
 
@@ -172,7 +233,7 @@ x tsp ->
     }
 
     const drinks_menu = document.getElementById("drinks_menu");
-    const mocktail_menu = document.getElementById("mocktail_menu");
+    const mocktail_menu = document.getElementById("mocktails_menu");
     const shots_menu = document.getElementById("shots_menu");
     const coffee_menu = document.getElementById("coffee_menu");
 
@@ -220,7 +281,7 @@ x tsp ->
             }
         </style>
 
-        <h1>${name}</h2>
+        <h1 class="image-header">${name}</h2>
 
         <div class="image-area${horizontal}">
 
@@ -337,7 +398,7 @@ function add_odd_element(category){
     if (saved_html !== "") {
 
         const drinks_menu = document.getElementById("drinks_menu");
-        const mocktail_menu = document.getElementById("mocktail_menu");
+        const mocktail_menu = document.getElementById("mocktails_menu");
         const shots_menu = document.getElementById("shots_menu");
         const coffee_menu = document.getElementById("coffee_menu");
 
@@ -377,50 +438,103 @@ function add_all_base_spirits(){
 
     for(let b=0; b < drinks_added_base_spirits.length; b++) {
         var newOption = document.createElement('label');
-        newOption.innerHTML = `<input type="checkbox" name="${drinks_added_base_spirits[b]}"> ${drinks_added_base_spirits[b]}`;
-        document.getElementById('base-spirit-dropdown-content').appendChild(newOption);
+        newOption.innerHTML = `<input type="checkbox" name="${drinks_added_base_spirits[b]}" onchange="create_all()"> ${drinks_added_base_spirits[b]}`;
+        // newOption.addEventListener('change', (event) => {create_all()})
+        document.getElementById('drinks-base-spirit-dropdown-content').appendChild(newOption);
     }
 }
 
-function add_all_categories(category){
+function get_base_spirits_filter() {
+    const checkboxSet = new Set();
+    const checkboxes = document.querySelectorAll(`#${current_frame}-base-spirit-dropdown-content input[type="checkbox"]`);
     
+    checkboxes.forEach(checkbox => {
+        checkboxSet.add({ name: checkbox.name, value: checkbox.checked });
+    });
+    
+    return checkboxSet;
+}
+
+function add_all_categories(category){
+    let my_element_id = null
     if (category == 0) {
         drinks_added_flavor_profiles.sort()
         flavor_profile = drinks_added_flavor_profiles
         dropdownContent = document.getElementById("dropdown-content")
+        my_element_id = 'drinks-category-dropdown-content'
     } else if (category == 1) {
         mocktails_added_flavor_profiles.sort()
         flavor_profile = mocktails_added_flavor_profiles
         area = document.getElementById("mocktails_category_area")
+        my_element_id = 'mocktails-category-dropdown-content'
     } else if (category == 2) {
         shots_added_flavor_profiles.sort()
         flavor_profile = shots_added_flavor_profiles
         area = document.getElementById("shots_category_area")
+        my_element_id = 'shots-category-dropdown-content'
     } else if (category == 3) {
         coffee_added_flavor_profiles.sort()
         flavor_profile = coffee_added_flavor_profiles
         area = document.getElementById("coffee_category_area")
+        my_element_id = 'coffee-category-dropdown-content'
     }
 
-    for(let f=0; f < flavor_profile.length; f++) { 
-        var newOption = document.createElement('label');
-        newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}"> ${flavor_profile[f]}`;
-        document.getElementById('category-dropdown-content').appendChild(newOption);
+    if (my_element_id !== null) {
+        for(let f=0; f < flavor_profile.length; f++) { 
+            var newOption = document.createElement('label');
+            newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${flavor_profile[f]}`;
+            document.getElementById(my_element_id).appendChild(newOption);
+        }
     }
 }
 
-async function start() {
+
+function get_flavor_filter() {
+    const checkboxSet = new Set();
+    const checkboxes = document.querySelectorAll(`#${current_frame}-category-dropdown-content input[type="checkbox"]`);
+    
+    checkboxes.forEach(checkbox => {
+        checkboxSet.add({ name: checkbox.name, value: checkbox.checked });
+    });
+    
+    return checkboxSet;
+}
+
+
+function delete_all() {
+    var header_elements = document.querySelectorAll('.image-header');
+    header_elements.forEach(function(element) {
+        element.remove();
+    });
+    var drink_area_elements = document.querySelectorAll('.drink');
+    drink_area_elements.forEach(function(element) {
+        element.remove();
+    });
+    var vertical_elements = document.querySelectorAll('.image-area');
+    vertical_elements.forEach(function(element) {
+        element.remove();
+    });
+    var horizontal_elements = document.querySelectorAll('.image-area-horizontal');
+    horizontal_elements.forEach(function(element) {
+        element.remove();
+    });
+}
+
+
+async function create_all() {
     await fetchAndStoreIngredients();
+
+    delete_all()
 
     Cocktail("Edelstoff", [], [], "Beer", [])
     Cocktail("Secco", [], [], "Wine", [])
     Cocktail("Red Wine", [], [], "Wine", [])
     Cocktail("White Wine", [], [], "Wine", [])
     Cocktail("Mimosa", ["Secco", "Orange Juice"], [], "Wine", [])
-    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"], ["Mint"], "Rum", ["Fresh", "Minty", "Citrus"]);
+    Cocktail("Mojito", ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"], ["Mint"], "Rum", ["Fresh", "Citrus"]);
     Cocktail("Cuba Libre", ["60ml Brown Rum -> 60ml White Rum", "½ Lime -> 15ml Lime Juice", "Coca Cola -> Soda Stream Cola"], ["Lime"], "Rum", ["Sweet", "Citrus"]);
-    Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], ["Orange"], "Wine", ["Fresh", "Bitter", "Fruity"])
-    Cocktail("Hugo", ["60ml Secco", "¼ Lime -> 10ml Lime Juice", "15ml Elderflower sirup", "Sparkling Water"], ["Mint"], "Wine", ["Sweet", "Elderflower", "Minty"])
+    Cocktail("Aperol Spritz", ["60ml Secco", "30ml Aperol", "Sparkling Water"], ["Orange"], "Aperol", ["Fresh", "Bitter", "Fruity"])
+    Cocktail("Hugo", ["60ml Secco", "¼ Lime -> 10ml Lime Juice", "15ml Elderflower sirup", "Sparkling Water"], ["Mint"], "Wine", ["Sweet", "Fresh"])
     Cocktail("Martini",["60ml Gin", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"], ["Lemon Twist or Olive"], "Gin", ["Strong"]);
     Cocktail("Vodka Martini", ["60ml Vodka", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"], ["Lemon Twist or Olive"], "Vodka", ["Strong"]);
     Cocktail("Espresso Martini", ["Double Espresso", "30ml Coffee Liqueur", "15ml Vodka"], ["Coffee Beans"], "Vodka", ["Strong", "Coffee"])
@@ -428,12 +542,12 @@ async function start() {
     Cocktail("Negroni", ["30ml Gin", "30ml Sweet Vermouth", "30ml Campari -> 30ml Aperol"], ["Orange"], "Gin", ["Strong", "Bitter"])
     Cocktail("Margarita (not made)", ["50ml Silver Tequila", "30ml Triple Sec", "30ml Lime Juice"], ["Orange"], "Tequila", ["Strong", "Sour"])
     Cocktail("Daiquiri", ["60ml White Rum -> 60ml Brown Rum", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"], ["Lime"], "Rum", ["Strong", "Citrus"])
-    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar", "Ginger"], ["Candied Ginger"], "Whiskey", ["Honey", "Ginger"])
+    Cocktail("Penicillin", ["60ml Whiskey // (Scotch)", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar", "Ginger"], ["Candied Ginger"], "Whiskey", ["Sweet", "Ginger"])
     Cocktail("Moscow Mule", ["60ml Vodka", "90ml Ginger Beer -> 90ml Ginger Ale", "½ Lime -> 15ml Lime Juice"], ["Lime"], "Vodka", ["Ginger", "Citrus"])
     Cocktail("Pisco Sour (not made)", ["60ml Pisco", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "(1 Egg White)"], ["(Angostura Bitters)"], ["Citrus", "Creamy (if wanted)"])
     Cocktail("Paloma (not made)", ["60ml Blanco Tequila", "30ml Lime Juice", "Grapefruit Soda", "Salt"], ["Lime"], "Tequila", ["Strong", "Sour"])
     Cocktail("French 75", ["30ml Gin", "½ Lemon -> ½ Lime -> 15ml Lemon Juice -> 15ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "90ml Secco"], ["Lemon"], "Gin", ["Citrus", "Bubbly"])
-    Cocktail("The Last Word (not made)", ["30ml Gin", "30ml Chartreuse", "30ml Lime Juice"])
+    Cocktail("Last Word (not made)", ["30ml Gin", "30ml Chartreuse", "30ml Lime Juice"])
     Cocktail("Mai Tai", ["60ml Blended Rum -> 60ml Brown Rum -> 60ml White Rum", "30ml Lime Juice", "30ml Orgeat Sirup", "15ml Orange Liqueur", "Mint -> "], ["Mint"], "Rum", ["Strong", "Fruity"])
     Cocktail("Gimlet (not made)", ["60ml London Dry Gin -> 60ml Gin", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"], ["Lime"], "Gin", ["Strong", "Citrus"])
     Cocktail("Clover Club", ["50ml Gin", "30ml Lemon Juice -> 30ml Lime Juice", "30ml Raspberry Sirup", "1 Egg White"], [], "Gin" ["Fruity", "Creamy"])
@@ -448,9 +562,9 @@ async function start() {
     Cocktail("Vesper (not made)", ["60ml Gin", "30ml Vodka", "15ml Lillet -> 15ml Sweet Vermouth -> 15ml Dry Vermouth"], ["Lemon", "Orange"], "Gin", ["Strong"])
     Cocktail("Cosmopolitan (not made)", ["50ml Vodka Citron -> 50ml Vodka // (with citron)", "30ml Cointreau", "30ml Lime Juice", "60ml Cranberry Juice"], ["Lemon"], "Vodka", ["Strong", "Citrus", "Fruity"])
     Cocktail("Bramble (not made)", ["60ml Gin", "30ml Lemon Juice", "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup", "15ml Crème de mûre"], ["Lemon", "Blackberries"], "Gin", ["Strong", "Fruity"])
-    Cocktail("Old Cuban (not made)", ["50ml Brown Rum -> 50ml Blended Rum -> 50ml White Rum", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], ["Mint"], "Rum", ["Minty", "Bubbly"])
+    Cocktail("Old Cuban (not made)", ["50ml Brown Rum -> 50ml Blended Rum -> 50ml White Rum", "30ml Lime Juice", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "60ml Secco", "Mint", "2 Dashes Angostura Bitters"], ["Mint"], "Rum", ["Fresh", "Bubbly"])
     Cocktail("Caipirinha (not made)", ["60ml Pitu", "1 Lime", "10g White Sugar -> 20ml Simple Sirup -> 10g Brown Sugar -> 20ml Agave Sirup"])
-    Cocktail("Southside (not made)", ["60ml Gin", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "30ml Lime Juice", "Mint"], ["Mint"], "Gin", ["Strong", "Minty"])
+    Cocktail("Southside (not made)", ["60ml Gin", "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup", "30ml Lime Juice", "Mint"], ["Mint"], "Gin", ["Strong", "Fresh"])
     Cocktail("French Kiss (not made)", ["60ml Gin", "Berries // muddled", "Secco", "Sparkling Water"], ["Raspberry", "Lemon Twist"], "Gin", ["Fruity", "Bubbly"])
     Cocktail("Passion fruit skinny bitch (not made)", ["60ml Vodka", "30ml Lime Juice", "Passion Fruit", "Sparkling Water"], ["Passion Fruit"], "Vodka", ["Fruity", "Bubbly"])
     Cocktail("Cranberry gin fizz (not made)", ["60ml Strawberry Gin -> 60ml Gin", "Strawberry", "Sparkling Water"], ["Rosemary"], "Gin", ["Fruity", "Bubbly", "Herbs"])
@@ -464,19 +578,25 @@ async function start() {
     Cocktail("Original", ["50ml Gin -> 50ml Vodka", "50ml Elderflower Sirup", "50ml Lime Juice -> 50ml Lemon Juice", "Sparkling Water"], ["Lime"], "Vodka", ["Fresh", "Bubbly"])
     Cocktail("43 Milk", ["50ml Licor 43", "50ml Milk"], ["(Chocolate Powder)"], ["Creamy"])
     add_odd_element(0)
-    add_all_categories(0)
+    if (get_base_spirits_filter().size == 0) {
+        add_all_categories(0)
+    }
 
     Mocktail("Brazilian Lemonade (not made)", ["1 Lime -> 30ml Lime Juice", "15g Brown Sugar -> 15g White Sugar", "100ml Condensed Milk"], ["Lime"], ["Citrus", "Creamy"])
-    Mocktail("Basil Lemonade (not made)", ["Lime", "Basil", "Mint"], ["Lime"], ["Herbs", "Citrus", "Minty"])
+    Mocktail("Basil Lemonade (not made)", ["Lime", "Basil", "Mint"], ["Lime"], ["Herbs", "Citrus", "Fresh"])
     Mocktail("Matcha Tonic", ["30ml Matcha", "Tonic Water", "(White Sugar)"], [], ["Herbs", "Bitter", "Fresh"])
     add_odd_element(1)
-    add_all_categories(1)
+    if (get_flavor_filter().size == 0) {
+        add_all_categories(1)
+    }
 
     Shot("Liquid Cocain (not made)", ["Licor 43", "Coldbrew"])
     Shot("Brain (not made)", ["10ml Vodka", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Baileys"])
     Shot("Green Tea Shot", ["10ml Whiskey", "10ml Peach Schnapps -> 10ml Peach Liquer", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"])
     add_odd_element(2)
-    add_all_categories(2)
+    if (get_flavor_filter().size == 0) {
+        add_all_categories(2)
+    }
 
     Coffee("Espresso", ["Double Espresso", "(Brown Sugar)"], ["Amaretti"], ["Coffee", "Strong"])
     Coffee("Espresso Macchiato", ["Double Espresso", "Steamed Milk", "(Brown Sugar)"], ["Amaretti"], ["Coffee", "Strong", "Creamy"])
@@ -490,14 +610,19 @@ async function start() {
     Coffee("Dalgona Coffee", ["Double Espresso", "Brown Sugar", "Milk"], ["Coffee", "Sweet", "Creamy"])
     Coffee("Creme Brule Coldbrew", ["Coldbrew", "Cream", "Milk", "Brown Sugar"], ["Coffee", "Sweet", "Creamy"])
     add_odd_element(3)
-    add_all_categories(3)
+    
+    if (get_flavor_filter().size == 0) {
+        add_all_categories(3)
+    }
 
-    add_all_base_spirits()
+    if (get_flavor_filter().size == 0) {
+        add_all_base_spirits()
+    }
 
     console.log(missing)
 }
 
-start()
+create_all()
 
 
 /*if (!available_ingredients[formatted_ingredient]){
@@ -687,3 +812,21 @@ async function create_lukas_mode_tab(){
 create_lukas_mode_tab()
 
 // #endregion
+
+
+
+function toggleDropdown(dropdown_name) {
+    var dropdown = document.getElementById(dropdown_name);
+    if (dropdown !== null) {
+         dropdown.classList.toggle('open');
+    }
+}
+
+function closeDropdown(dropdown_name) {
+    var dropdown = document.getElementById(dropdown_name);
+    if (dropdown !== null) {
+         if (!dropdown.contains(document.activeElement)) {
+         dropdown.classList.remove('open');
+         }
+    }
+}

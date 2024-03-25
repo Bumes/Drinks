@@ -11,3 +11,7 @@ leaving lukas mode - save
 einkaufsliste
 
 milk alternatives
+
+make not available marked
+
+order option
