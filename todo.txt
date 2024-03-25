@@ -1,11 +1,8 @@
 print every ingredient missing in list possible replacements
-comments in garnish and ingredients
 
 "sweetener" -> available_sweetener
 
 einkaufsliste
-
-milk alternatives
 
 make not available marked
 
