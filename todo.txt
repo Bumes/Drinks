@@ -1,10 +1,5 @@
-overwork replacement
 print every ingredient missing in list possible replacements
-categories
 comments in garnish and ingredients
-()
-"and"/"or" in garnish -> check
-leaving lukas mode - save
 
 "sweetener" -> available_sweetener
 

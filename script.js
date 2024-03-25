@@ -2,7 +2,6 @@
 
 // #region JSON 
 
-// Load JSON data from a file using fetch
 let available_ingredients;
 let current_frame = "drinks"
 
@@ -224,7 +223,7 @@ x tsp ->
         if (available_ingredients.hasOwnProperty(formatted_garnish)) {
             if (!available_ingredients[formatted_garnish]) {
                 //if (!available_ingredients[garnishes[g].toLowerCase().replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_')] && (garnishes[g].split(' ').length<2)){
-                console.log(garnishes[g] + " is missing for Garnish")
+                // console.log(garnishes[g] + " is missing for Garnish")
                 garnishes.splice(g, 1)
                 g--
             }
