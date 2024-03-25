@@ -88,7 +88,7 @@ coffee_added_flavor_profiles = []
 
 drinks_added_base_spirits = []
 
-function Drink(category, name, ingredients=[], garnishes=[], base_spirit="Other", flavor_profile=[]) {
+function Drink({category="Cocktails", name="No Name given", ingredients=[], garnishes=[], base_spirit="Other", flavor_profile=[]}) {
     if (name.search(document.getElementById(`${current_frame}-search-filter`).value) == -1) {
         return
     }
@@ -194,19 +194,19 @@ x tsp ->
 */
 
             for (let f = 0; f < flavor_profile.length; f++) {
-                if (category == 0) {
+                if (category == "Cocktails") {
                     if (!(drinks_added_flavor_profiles.includes(flavor_profile[f]))) {
                         drinks_added_flavor_profiles.push(flavor_profile[f]);
                     }
-                } else if (category == 1) {
+                } else if (category == "Mocktails") {
                     if (!(mocktails_added_flavor_profiles.includes(flavor_profile[f]))) {
                         mocktails_added_flavor_profiles.push(flavor_profile[f]);
                     }
-                } else if (category == 2) {
+                } else if (category == "Shots") {
                     if (!(shots_added_flavor_profiles.includes(flavor_profile[f]))) {
                         shots_added_flavor_profiles.push(flavor_profile[f]);
                     }
-                } else if (category == 3) {
+                } else if (category == "Coffee") {
                     if (!(coffee_added_flavor_profiles.includes(flavor_profile[f]))) {
                         coffee_added_flavor_profiles.push(flavor_profile[f]);
                     }
@@ -363,16 +363,16 @@ x tsp ->
             wrapperDiv.appendChild(saved_html);
             wrapperDiv.appendChild(drinkDiv);
 
-            if (category == 0){
+            if (category == "Cocktails"){
                 drinks_menu.appendChild(wrapperDiv);
             }
-            else if (category == 1){
+            else if (category == "Mocktails"){
                 mocktail_menu.appendChild(wrapperDiv);
             }
-            else if (category == 2){
+            else if (category == "Shots"){
                 shots_menu.appendChild(wrapperDiv);
             }
-            else if (category == 3){
+            else if (category == "Coffee"){
                 coffee_menu.appendChild(wrapperDiv);
             }
 
@@ -387,16 +387,16 @@ x tsp ->
 
         // Append both saved_html and drinkDiv to the wrapper
         wrapperDiv.appendChild(drinkDiv);
-        if (category == 0){
+        if (category == "Cocktails"){
             drinks_menu.appendChild(wrapperDiv);
         }
-        else if (category == 1){
+        else if (category == "Mocktails"){
             mocktail_menu.appendChild(wrapperDiv);
         }
-        else if (category == 2){
+        else if (category == "Shots"){
             shots_menu.appendChild(wrapperDiv);
         }
-        else if (category == 3){
+        else if (category == "Coffee"){
             coffee_menu.appendChild(wrapperDiv);
         }
     }
@@ -422,16 +422,16 @@ function add_odd_element(category){
         // Append both saved_html and drinkDiv to the wrapper
         wrapperDiv.appendChild(saved_html);
     
-        if (category == 0){
+        if (category == "Cocktails"){
             drinks_menu.appendChild(wrapperDiv);
         }
-        else if (category == 1){
+        else if (category == "Mocktails"){
             mocktail_menu.appendChild(wrapperDiv);
         }
-        else if (category == 2){
+        else if (category == "Shots"){
             shots_menu.appendChild(wrapperDiv);
         }
-        else if (category == 3){
+        else if (category == "Coffee"){
             coffee_menu.appendChild(wrapperDiv);
         }
         saved_html = ""
@@ -467,22 +467,22 @@ function get_base_spirits_filter() {
 
 function add_all_categories(category){
     let my_element_id = null
-    if (category == 0) {
+    if (category == "Cocktails") {
         drinks_added_flavor_profiles.sort()
         flavor_profile = drinks_added_flavor_profiles
         dropdownContent = document.getElementById("dropdown-content")
         my_element_id = 'drinks-category-dropdown-content'
-    } else if (category == 1) {
+    } else if (category == "Mocktails") {
         mocktails_added_flavor_profiles.sort()
         flavor_profile = mocktails_added_flavor_profiles
         area = document.getElementById("mocktails_category_area")
         my_element_id = 'mocktails-category-dropdown-content'
-    } else if (category == 2) {
+    } else if (category == "Shots") {
         shots_added_flavor_profiles.sort()
         flavor_profile = shots_added_flavor_profiles
         area = document.getElementById("shots_category_area")
         my_element_id = 'shots-category-dropdown-content'
-    } else if (category == 3) {
+    } else if (category == "Coffee") {
         coffee_added_flavor_profiles.sort()
         flavor_profile = coffee_added_flavor_profiles
         area = document.getElementById("coffee_category_area")
@@ -555,7 +555,7 @@ async function create_all() {
     delete_all()
 
     for (let d = 0; d < drinks.length; d++) {
-        Cocktail(drinks[d])
+        Drink(drinks[d])
     }
 
     /*Cocktail({name: "Edelstoff"})
