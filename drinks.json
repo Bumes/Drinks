@@ -152,7 +152,7 @@
             ]
         },
         {
-            "name": "Margarita (not made)",
+            "name": "Margarita",
             "ingredients": [
                 "50ml Silver Tequila",
                 "30ml Triple Sec",
@@ -217,7 +217,7 @@
             ]
         },
         {
-            "name": "Pisco Sour (not made)",
+            "name": "Pisco Sour",
             "ingredients": [
                 "60ml Pisco",
                 "30ml Lime Juice",
@@ -229,11 +229,11 @@
             ],
             "flavor_profile": [
                 "Citrus",
-                "Creamy (if wanted)"
+                "Creamy"
             ]
         },
         {
-            "name": "Paloma (not made)",
+            "name": "Paloma",
             "ingredients": [
                 "60ml Blanco Tequila",
                 "30ml Lime Juice",
@@ -267,7 +267,7 @@
             ]
         },
         {
-            "name": "Last Word (not made)",
+            "name": "Last Word",
             "ingredients": [
                 "30ml Gin",
                 "30ml Chartreuse",
@@ -293,7 +293,7 @@
             ]
         },
         {
-            "name": "Gimlet (not made)",
+            "name": "Gimlet",
             "ingredients": [
                 "60ml London Dry Gin -> 60ml Gin",
                 "30ml Lime Juice",
@@ -324,7 +324,7 @@
             ]
         },
         {
-            "name": "Amaretto Sour (not made)",
+            "name": "Amaretto Sour",
             "ingredients": [
                 "50ml Amaretto",
                 "30ml Lemon Juice -> 30ml Lime Juice",
@@ -335,7 +335,6 @@
                 "Cocktail Cherry",
                 "Angostura Bitters"
             ],
-            "base_spirit": "Not specified",
             "flavor_profile": [
                 "Nutty",
                 "Citrus",
@@ -393,7 +392,7 @@
             ]
         },
         {
-            "name": "Corpse Reviver (not made)",
+            "name": "Corpse Reviver",
             "ingredients": [
                 "30ml Gin",
                 "30ml Triple Sec",
@@ -411,7 +410,7 @@
             ]
         },
         {
-            "name": "Zombie (not made)",
+            "name": "Zombie",
             "ingredients": [
                 "30ml White Rum",
                 "30ml Brown Rum",
@@ -465,7 +464,7 @@
             ]
         },
         {
-            "name": "Vesper (not made)",
+            "name": "Vesper",
             "ingredients": [
                 "60ml Gin",
                 "30ml Vodka",
@@ -481,7 +480,7 @@
             ]
         },
         {
-            "name": "Cosmopolitan (not made)",
+            "name": "Cosmopolitan",
             "ingredients": [
                 "50ml Vodka Citron -> 50ml Vodka // (with citron)",
                 "30ml Cointreau",
@@ -499,7 +498,7 @@
             ]
         },
         {
-            "name": "Bramble (not made)",
+            "name": "Bramble",
             "ingredients": [
                 "60ml Gin",
                 "30ml Lemon Juice",
@@ -517,7 +516,7 @@
             ]
         },
         {
-            "name": "Old Cuban (not made)",
+            "name": "Old Cuban",
             "ingredients": [
                 "50ml Brown Rum -> 50ml Blended Rum -> 50ml White Rum",
                 "30ml Lime Juice",
@@ -536,18 +535,15 @@
             ]
         },
         {
-            "name": "Caipirinha (not made)",
+            "name": "Caipirinha",
             "ingredients": [
                 "60ml Pitu",
                 "1 Lime",
                 "10g White Sugar -> 20ml Simple Sirup -> 10g Brown Sugar -> 20ml Agave Sirup"
-            ],
-            "garnishes": [],
-            "base_spirit": "Not specified",
-            "flavor_profile": []
+            ]
         },
         {
-            "name": "Southside (not made)",
+            "name": "Southside",
             "ingredients": [
                 "60ml Gin",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
@@ -564,7 +560,7 @@
             ]
         },
         {
-            "name": "French Kiss (not made)",
+            "name": "French Kiss",
             "ingredients": [
                 "60ml Gin",
                 "Berries // muddled",
@@ -582,7 +578,7 @@
             ]
         },
         {
-            "name": "Passion fruit skinny bitch (not made)",
+            "name": "Passion fruit skinny bitch",
             "ingredients": [
                 "60ml Vodka",
                 "30ml Lime Juice",
@@ -599,7 +595,7 @@
             ]
         },
         {
-            "name": "Cranberry gin fizz (not made)",
+            "name": "Cranberry gin fizz",
             "ingredients": [
                 "60ml Strawberry Gin -> 60ml Gin",
                 "Strawberry",
@@ -616,7 +612,7 @@
             ]
         },
         {
-            "name": "Sex on the beach (not made)",
+            "name": "Sex on the beach",
             "ingredients": [
                 "40ml Vodka",
                 "20ml Peach Liqueur",
@@ -635,7 +631,7 @@
             ]
         },
         {
-            "name": "Fence Hopper (not made)",
+            "name": "Fence Hopper",
             "ingredients": [
                 "30ml Whiskey // (Bourbon)",
                 "30ml Apple Cider",
@@ -663,7 +659,6 @@
             "garnishes": [
                 "Lemon Twist"
             ],
-            "base_spirit": "",
             "flavor_profile": [
                 "Nutty",
                 "Citrus",
@@ -671,7 +666,7 @@
             ]
         },
         {
-            "name": "Italien Mule (Aperol Version) (not made)",
+            "name": "Italien Mule (Aperol Version)",
             "ingredients": [
                 "50ml Aperol",
                 "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice",
@@ -689,7 +684,7 @@
             ]
         },
         {
-            "name": "Kigoi Koi (not made)",
+            "name": "Kigoi Koi",
             "ingredients": [
                 "60ml Gin",
                 "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
@@ -705,7 +700,7 @@
             ]
         },
         {
-            "name": "Kojito (not made)",
+            "name": "Kojito",
             "ingredients": [
                 "60ml White Rum",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
@@ -723,7 +718,7 @@
             ]
         },
         {
-            "name": "Japan Mule (not made)",
+            "name": "Japan Mule",
             "ingredients": [
                 "60ml Shochu",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
@@ -767,7 +762,6 @@
             "garnishes": [
                 "(Chocolate Powder)"
             ],
-            "base_spirit": "",
             "flavor_profile": [
                 "Creamy"
             ]
@@ -775,7 +769,7 @@
     ],
     "Mocktails": [
         {
-            "name": "Brazilian Lemonade (not made)",
+            "name": "Brazilian Lemonade",
             "ingredients": [
                 "1 Lime -> 30ml Lime Juice",
                 "15g Brown Sugar -> 15g White Sugar",
@@ -790,7 +784,7 @@
             ]
         },
         {
-            "name": "Basil Lemonade (not made)",
+            "name": "Basil Lemonade",
             "ingredients": [
                 "Lime",
                 "Basil",
@@ -822,18 +816,27 @@
     ],
     "Shots": [
         {
-            "name": "Liquid Cocain (not made)",
+            "name": "Liquid Cocain",
             "ingredients": [
                 "Licor 43",
                 "Coldbrew"
+            ],
+            "flavor_profile": [
+                "Sweet",
+                "Coffee"
             ]
         },
         {
-            "name": "Brain (not made)",
+            "name": "Brain",
             "ingredients": [
                 "10ml Vodka",
                 "10ml Lime Juice -> 10ml Lemon Juice",
                 "10ml Baileys"
+            ],
+            "flavor_profile": [
+                "Weird",
+                "Citrus",
+                "Coffee"
             ]
         },
         {
@@ -843,6 +846,9 @@
                 "10ml Peach Schnapps -> 10ml Peach Liqueur",
                 "10ml Lime Juice -> 10ml Lemon Juice",
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
+            ],
+            "flavor_profile": [
+                "Fruity"
             ]
         }
     ],
@@ -857,6 +863,7 @@
                 "Amaretti"
             ],
             "flavor_profile": [
+                "Coffee",
                 "Strong"
             ]
         },
@@ -871,6 +878,7 @@
                 "Amaretti"
             ],
             "flavor_profile": [
+                "Coffee",
                 "Strong",
                 "Creamy"
             ]
@@ -883,6 +891,9 @@
             ],
             "garnishes": [
                 "Coffee"
+            ],
+            "flavor_profile": [
+                "Coffee"
             ]
         },
         {
@@ -891,7 +902,7 @@
                 "Espresso",
                 "Water"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Creamy"
             ]
@@ -904,7 +915,7 @@
                 "Steamed Milk",
                 "(Brown Sugar)"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Creamy"
             ]
@@ -916,7 +927,7 @@
                 "Steamed Milk",
                 "(Brown Sugar)"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Creamy",
                 "Milky"
@@ -929,7 +940,7 @@
                 "Chocolate Powder",
                 "Steamed Milk"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Chocolate",
                 "Creamy"
@@ -942,7 +953,7 @@
                 "Chocolate Powder",
                 "Steamed Milk"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Chocolate",
                 "Creamy"
@@ -957,9 +968,6 @@
             "garnishes": [
                 "Chocolate Powder"
             ],
-            "base_spirit": [
-                "Chocolate"
-            ],
             "flavor_profile": [
                 "Creamy"
             ]
@@ -971,7 +979,7 @@
                 "Brown Sugar",
                 "Milk"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Sweet",
                 "Creamy"
@@ -985,7 +993,7 @@
                 "Milk",
                 "Brown Sugar"
             ],
-            "garnishes": [
+            "flavor_profile": [
                 "Coffee",
                 "Sweet",
                 "Creamy"
