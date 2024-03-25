@@ -1,7 +1,4 @@
 // #region Drink Creation
-console.log("aoiwdnawiodnawo")
-console.log(window.location.href)
-console.log("äääääääääääää")
 
 // #region JSON 
 
@@ -16,9 +13,15 @@ async function fetchAndStoreIngredients() {
         console.error(error);
     }
 }
+
+json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v='
+
+if (window.location.href.search("stauti") != -1) {
+    json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/stauti-available-ingredients.json?v='
+}
   
 function fetchIngredients() {
-    return fetch('https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v=' + new Date().getTime())
+    return fetch(json_url + new Date().getTime())
         .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
