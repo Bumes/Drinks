@@ -1,5 +1,13 @@
 // #region Drink Creation
 
+$(document).ready(function(){
+    $.getJSON("https://ipinfo.io", function(data){
+        var ip = data.ip;
+        console.log("IP Address: " + ip);
+        // Do whatever you want with the IP address here
+    });
+});
+
 // #region JSON 
 
 let available_ingredients;
