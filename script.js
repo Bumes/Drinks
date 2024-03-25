@@ -36,7 +36,7 @@ function fetchIngredients() {
 
 async function fetchAndStoreDrinks() {
     try {
-        drinks = await fetchDrinks();
+        drinks = await fetchDrinks()
         console.log(available_ingredients)
     } catch (error) {
         console.error(error);
@@ -45,12 +45,7 @@ async function fetchAndStoreDrinks() {
   
 function fetchDrinks() {
     return fetch(drinks_url + new Date().getTime())
-        .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-        });
+        .then(response => response.json())
 }
 
 
@@ -559,9 +554,9 @@ async function create_all() {
 
     delete_all()
 
-    drinks.forEach(drink => {
-        Drink(drink)
-    });
+    for (let d = 0; d < drinks.length; d++) {
+        Cocktail(drinks[d])
+    }
 
     /*Cocktail({name: "Edelstoff"})
     Cocktail({name: "Secco", base_spirit: "Wine"})
