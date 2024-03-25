@@ -893,6 +893,11 @@
                 "Coffee",
                 "Strong",
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -930,6 +935,11 @@
             "flavor_profile": [
                 "Coffee",
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -943,6 +953,11 @@
                 "Coffee",
                 "Creamy",
                 "Milky"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -956,6 +971,11 @@
                 "Coffee",
                 "Chocolate",
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -969,6 +989,11 @@
                 "Coffee",
                 "Chocolate",
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -982,6 +1007,11 @@
             ],
             "flavor_profile": [
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         },
         {
@@ -1009,6 +1039,11 @@
                 "Coffee",
                 "Sweet",
                 "Creamy"
+            ],
+            "options": [
+                "milk",
+                "soy_milk",
+                "almond_milk"
             ]
         }
     ]
