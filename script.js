@@ -576,7 +576,7 @@ async function create_all() {
     Cocktail("French Kiss (not made)", ["60ml Gin", "Berries // muddled", "Secco", "Sparkling Water"], ["Raspberry", "Lemon Twist"], "Gin", ["Fruity", "Bubbly"])
     Cocktail("Passion fruit skinny bitch (not made)", ["60ml Vodka", "30ml Lime Juice", "Passion Fruit", "Sparkling Water"], ["Passion Fruit"], "Vodka", ["Fruity", "Bubbly"])
     Cocktail("Cranberry gin fizz (not made)", ["60ml Strawberry Gin -> 60ml Gin", "Strawberry", "Sparkling Water"], ["Rosemary"], "Gin", ["Fruity", "Bubbly", "Herbs"])
-    Cocktail("Sex on the beach (not made)", ["40ml Vodka", "20ml Peach Liqueur", "15ml Cranberry Sirup", "15ml Grenadine Sirup", "½ Lime -> 15ml Lime Juice", "80ml Orange Juice"], ["Cocktail Cherry"], "Vodka", ["Fruity", "Sweet"])
+    Cocktail("Sex on the beach (not made)", ["40ml Vodka", "20ml Peach Liqueur", "15ml Cranberry Sirup", "15ml Grenadine", "½ Lime -> 15ml Lime Juice", "80ml Orange Juice"], ["Cocktail Cherry"], "Vodka", ["Fruity", "Sweet"])
     Cocktail("Fence Hopper (not made)", ["30ml Whiskey // (Bourbon)", "30ml Apple Cider", "15ml Maple Sirup -> 15ml Honey Sirup -> 15ml Agave Sirup -> 10g Brown Sugar -> 10g White Sugar", "10ml Lemon Juice -> ½ Lemon -> ½ Lime -> 15ml Lime Juice",  "Angostura Bitters", "100ml IPA -> 100ml Beer"], ["Cinnamon Stick"], "Whiskey", ["Fruity", "Cinnamon"])
     Cocktail("Italien Mule", ["50ml Amaretto", "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice", "Ginger Beer"], ["Lemon Twist"], "", ["Nutty", "Citrus", "Ginger"])    
     Cocktail("Italien Mule (Aperol Version) (not made)", ["50ml Aperol", "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice", "Red Wine", "Ginger Beer"], ["Mint"], "Aperol", ["Citrus", "Ginger", "Mint"])
@@ -600,7 +600,7 @@ async function create_all() {
 
     Shot("Liquid Cocain (not made)", ["Licor 43", "Coldbrew"])
     Shot("Brain (not made)", ["10ml Vodka", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Baileys"])
-    Shot("Green Tea Shot", ["10ml Whiskey", "10ml Peach Schnapps -> 10ml Peach Liquer", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"])
+    Shot("Green Tea Shot", ["10ml Whiskey", "10ml Peach Schnapps -> 10ml Peach Liqueur", "10ml Lime Juice -> 10ml Lemon Juice", "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"])
     add_odd_element(2)
     if (get_flavor_filter().size == 0) {
         add_all_categories(2)
