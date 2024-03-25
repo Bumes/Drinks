@@ -11,7 +11,7 @@ drinks_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/drinks.json?v=
 picture_folder = 'pictures/'
 
 if (window.location.href.search("stauti") != -1) {
-    json_url = 'https://raw.githubusercontent.com/Bumes/Stauti-Drinks/main/available-ingredients.json?v='
+    json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/stauti-available-ingredients.json?v='
     picture_folder = 'https://raw.githubusercontent.com/Bumes/Drinks/main/pictures/'
 }
 
@@ -554,8 +554,11 @@ async function create_all() {
 
     delete_all()
 
-    for (let d = 0; d < drinks.length; d++) {
-        Drink(drinks[d])
+    for (const category in drinks) {
+        drinks[category].forEach(drink => {
+            drink["category"] = category
+            Drink(drink)
+        });
     }
 
     /*Cocktail({name: "Edelstoff"})

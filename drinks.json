@@ -1,6 +1,28 @@
-
-{ "Cocktails": 
-    [
+{
+    "Cocktails": [
+        {
+            "name": "Edelstoff"
+        },
+        {
+            "name": "Secco",
+            "base_spirit": "Wine"
+        },
+        {
+            "name": "Red Wine",
+            "base_spirit": "Wine"
+        },
+        {
+            "name": "White Wine",
+            "base_spirit": "Wine"
+        },
+        {
+            "name": "Mimosa",
+            "ingredients": [
+                "Secco",
+                "Orange Juice"
+            ],
+            "base_spirit": "Wine"
+        },
         {
             "name": "Mojito",
             "ingredients": [
