@@ -1,0 +1,53 @@
+{
+    "drinks": [
+        {
+            "name": "Mojito",
+            "ingredients": ["60ml White Rum", "15g Brown Sugar", "½ Lime -> 15ml Lime Juice", "Mint -> ", "Sparkling Water"],
+            "garnishes": ["Mint"],
+            "base_spirit": "Rum",
+            "flavor_profile": ["Fresh", "Citrus"]
+        },
+        {
+            "name": "Cuba Libre",
+            "ingredients": ["60ml Brown Rum -> 60ml White Rum", "½ Lime -> 15ml Lime Juice", "Coca Cola -> Soda Stream Cola"],
+            "garnishes": ["Lime"],
+            "base_spirit": "Rum",
+            "flavor_profile": ["Sweet", "Citrus"]
+        },
+        {
+            "name": "Aperol Spritz",
+            "ingredients": ["60ml Secco", "30ml Aperol", "Sparkling Water"],
+            "garnishes": ["Orange"],
+            "base_spirit": "Aperol",
+            "flavor_profile": ["Fresh", "Bitter", "Fruity"]
+        },
+        {
+            "name": "Hugo",
+            "ingredients": ["60ml Secco", "¼ Lime -> 10ml Lime Juice", "15ml Elderflower sirup", "Sparkling Water"],
+            "garnishes": ["Mint"],
+            "base_spirit": "Wine",
+            "flavor_profile": ["Sweet", "Fresh"]
+        },
+        {
+            "name": "Martini",
+            "ingredients":["60ml Gin", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"],
+            "garnishes": ["Lemon Twist or Olive"],
+            "base_spirit": "Gin",
+            "flavor_profile": ["Strong"]
+        },
+        {
+            "name": "Vodka Martini",
+            "ingredients": ["60ml Vodka", "15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet"],
+            "garnishes": ["Lemon Twist or Olive"],
+            "base_spirit": "Vodka",
+            "flavor_profile": ["Strong"]
+        },
+        {
+            "name": "Espresso Martini",
+            "ingredients": ["Double Espresso", "30ml Coffee Liqueur", "15ml Vodka"],
+            "garnishes": ["Coffee Beans"],
+            "base_spirit": "Vodka",
+            "flavor_profile": ["Strong", "Coffee"]
+        }
+    ]
+}
