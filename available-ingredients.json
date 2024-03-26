@@ -96,5 +96,6 @@
   "oat_milk": true,
   "soy_milk": false,
   "almond_milk": false,
-  "amaretti": true
+  "amaretti": true,
+  "existingKey": true
 }
