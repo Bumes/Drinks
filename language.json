@@ -1,7 +1,7 @@
 {
     "english": {
         "alcoholic_area_name": "Alcoholic",
-        "non_alcoholic_area_name": "Non-Alcoholic",
+        "non_alcoholic_area_name": "Alcoholfree",
         "shots_area_name": "Shots",
         "coffee_area_name": "Coffee",
         "search_text": "Search:",
@@ -16,5 +16,19 @@
         "garnishes_text": "Garnishes:"
     },
     "german": {
+        "alcoholic_area_name": "Alkoholisch",
+        "non_alcoholic_area_name": "Alkoholfrei",
+        "shots_area_name": "Kurze",
+        "coffee_area_name": "Kaffee",
+        "search_text": "Suchen:",
+        "base_spirit_text": "Schnapps",
+        "category_text": "Kategorie",
+        "avaliability_text": "Verfügbarkeit",
+        "available_text": "Verfügbar",
+        "not_available_text": "Nicht Verfügbar",
+        "flavors_text": "Geschmack:",
+        "ingredients_text": "Zutaten:",
+        "options_text": "Optionen:",
+        "garnishes_text": "Garnitur:"
     }
 }
