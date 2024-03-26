@@ -337,7 +337,7 @@ x tsp ->
             <div class="flavors_and_ingredients${horizontal}">
                 ${flavor_profile.length != 0 ? `
                 <div class="flavors${horizontal}">
-                    <p1>Flavors:</p1>
+                    <p1 id=flavors_text></p1>
                     <ul>
                     ${flavor_profile.map(flavor => `<li>${flavor.trim()}</li>`).join('')}
                     </ul>
@@ -346,7 +346,7 @@ x tsp ->
 
                 ${ingredients.length > 0 ? `
                 <div class="ingredients${horizontal}">
-                    <p1>Ingredients:</p1>
+                    <p1 id=ingredients_text></p1>
                     <ul>
                         ${ingredients.map(ingredient => `
                             <li class="${missing.hasOwnProperty(format(ingredient)) ? 'missing-ingredient' : ''}">
@@ -358,7 +358,7 @@ x tsp ->
 
                 ${options.length > 0 ? `
                 <div class="options${horizontal}">
-                    <p1>Options:</p1>
+                    <p1 id=options_text></p1>
                     <ul>
                     ${options.map(ingredient => `<li>${ingredient.trim()}</li>`).join('')}
                     </ul>
@@ -367,7 +367,7 @@ x tsp ->
 
                 ${garnishes.length > 0 ? `
                 <div class="garnishes${horizontal}">
-                    <p1>Garnish:</p1>
+                    <p1 id=garnishes_text></p1>
                     <ul>
                     ${garnishes.map(garnish => `<li>${garnish.trim()}</li>`).join('')}
                     </ul>
@@ -603,9 +603,7 @@ async function create_all() {
         idx++
     }
 
-    const missingIngredients = document.querySelectorAll('.missing-ingredient');
-    console.log("Number of missing ingredients:", missingIngredients.length);
-
+    update_language()
 
     console.log(missing)
 }
