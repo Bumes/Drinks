@@ -14,10 +14,10 @@
      <body>
           <header>
                <div class="tabs">
-                    <button class="tab_button" onclick="showTab('drinks_menu')">Drinks</button>
-                    <button class="tab_button" onclick="showTab('mocktails_menu')">Mocktail</button>
-                    <button class="tab_button" onclick="showTab('shots_menu')">Shots</button>
-                    <button class="tab_button" onclick="showTab('coffee_menu')">Coffee</button>
+                    <button class="tab_button" onclick="showTab('drinks_menu')"><label id="alcoholic_area_name"></label></button>
+                    <button class="tab_button" onclick="showTab('mocktails_menu')"><label id="non_alcoholic_area_name"></label></button>
+                    <button class="tab_button" onclick="showTab('shots_menu')"><label id="shots_area_name"></label></button>
+                    <button class="tab_button" onclick="showTab('coffee_menu')"><label id="coffee_area_name"></label></button>
                     <div></div>
                     <button class="toggle_lukas_mode" id="toggle_lukas_mode"></button>
                </div>
@@ -121,7 +121,8 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
           <script src="script.js"></script>
 
-          <script>
+          <script>          
+               update_language();
                showTab('drinks_menu');
           </script>
      </body>

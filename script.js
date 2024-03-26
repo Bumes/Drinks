@@ -772,3 +772,26 @@ function showTab(tabId) {
      create_all()
      current_frame = tabId.split("_")[0]
 }
+
+
+// Function to fetch language data from JSON file
+async function fetchLanguageData() {
+    try {
+        const response = await fetch("C:/Users/Luck/Desktop/Programme/Programmieren/Getränkekarte/Drinks/language.json"); // Assuming the JSON file is named languageData.json
+        if (!response.ok) {
+            throw new Error('Failed to fetch language data');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function update_language() {
+    const userLanguage = "english";
+    fetchLanguageData()
+    // const language = languages_json[userLanguage];
+    // Update HTML content with language data
+    // document.getElementById('alcoholArea').innerText = language.alcohol_area_name;
+        
+}

@@ -1,0 +1,14 @@
+{
+    "english": {
+        "alcoholic_area_name": "Alcoholic",
+        "non_alcoholic_area_name": "Non-Alcoholic",
+        "shots_area_name": "Shots",
+        "coffee_area_name": "Coffee",
+        "flavors_text": "Flavors",
+        "ingredients_text": "Ingredients",
+        "options_text": "Options",
+        "garnishes_text": "Garnishes"
+    },
+    "german": {
+    }
+}

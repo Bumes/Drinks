@@ -609,8 +609,8 @@
         {
             "name": "Cranberry gin fizz",
             "ingredients": [
-                "60ml Strawberry Gin -> 60ml Gin",
-                "Strawberry",
+                "60ml Cranberry Gin -> 60ml Gin",
+                "Cranberry",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -877,6 +877,11 @@
             "flavor_profile": [
                 "Coffee",
                 "Strong"
+            ],
+            "options": [
+                "Brown Sugar // (Recommended)",
+                "Honey",
+                "White Sugar"
             ]
         },
         {
@@ -896,8 +901,9 @@
             ],
             "options": [
                 "Milk",
+                "Oat Milk",
                 "Soy Milk",
-                "Almond Milkd"
+                "Almond Milk"
             ]
         },
         {
@@ -911,6 +917,11 @@
             ],
             "flavor_profile": [
                 "Coffee"
+            ],
+            "options": [
+                "Brown Sugar // (Recommended)",
+                "Honey",
+                "White Sugar"
             ]
         },
         {
@@ -922,6 +933,11 @@
             "flavor_profile": [
                 "Coffee",
                 "Creamy"
+            ],
+            "options": [
+                "Brown Sugar // (Recommended)",
+                "Honey",
+                "White Sugar"
             ]
         },
         {
@@ -937,7 +953,8 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
+                "Milk",
+                "Oat Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
@@ -955,7 +972,8 @@
                 "Milky"
             ],
             "options": [
-                "milk",
+                "Milk",
+                "Oat Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
@@ -973,7 +991,8 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
+                "Milk",
+                "Oat Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
@@ -991,7 +1010,8 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
+                "Milk",
+                "Oat Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
@@ -1009,7 +1029,8 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
+                "Milk",
+                "Oat Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
@@ -1041,7 +1062,7 @@
                 "Creamy"
             ],
             "options": [
-                "milk",
+                "Milk",
                 "Soy Milk",
                 "Almond Milk"
             ]
