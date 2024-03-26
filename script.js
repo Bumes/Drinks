@@ -774,14 +774,19 @@ function showTab(tabId) {
 }
 
 
-// Function to fetch language data from JSON file
-async function fetchLanguageData() {
-    try {
-        const response = await fetch("C:/Users/Luck/Desktop/Programme/Programmieren/Getränkekarte/Drinks/language.json"); // Assuming the JSON file is named languageData.json
+function fetchLanguages() {
+    return fetch("https://raw.githubusercontent.com/Bumes/Drinks/main/language.json?v=" + new Date().getTime())
+        .then(response => {
         if (!response.ok) {
-            throw new Error('Failed to fetch language data');
+            throw new Error('Network response was not ok');
         }
-        return await response.json();
+        return response.json();
+        });
+}
+
+async function fetchAndStoreLanguages() {
+    try {
+        return await fetchLanguages()
     } catch (error) {
         console.error(error);
     }
@@ -789,9 +794,19 @@ async function fetchLanguageData() {
 
 function update_language() {
     const userLanguage = "english";
-    fetchLanguageData()
-    // const language = languages_json[userLanguage];
-    // Update HTML content with language data
-    // document.getElementById('alcoholArea').innerText = language.alcohol_area_name;
-        
-}
+    fetchAndStoreLanguages()
+      .then(languages => {
+        // languages will now contain the actual data after successful fetch
+        const language = languages[userLanguage];
+        console.log(language);
+        for (const key in language) {
+            const element = document.getElementById(key);
+            if (element) {
+              element.textContent = language[key];
+            } else {
+              console.warn(`Element with ID "${key}" not found.`);
+            }
+          }
+      })
+      .catch(error => console.error(error));  // Handle errors from fetchLanguages
+  }
