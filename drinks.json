@@ -921,21 +921,6 @@
             ]
         },
         {
-            "name": "Aeracano",
-            "ingredients": [
-                "Espresso",
-                "Water"
-            ],
-            "flavor_profile": [
-                "coffee"
-            ],
-            "options": [
-                "Brown Sugar // (Recommended)",
-                "honey",
-                "White Sugar"
-            ]
-        },
-        {
             "name": "Cappuccino",
             "ingredients": [
                 "Double Espresso",
@@ -973,16 +958,18 @@
             ]
         },
         {
-            "name": "Adultccino",
+            "name": "Hot Chocolate",
             "ingredients": [
-                "Double Espresso",
                 "Chocolate Powder",
-                "Steamed Milk"
+                "(Steamed) Milk"
+            ],
+            "garnishes": [
+                "Chocolate Powder"
             ],
             "flavor_profile": [
-                "coffee",
                 "chocolate",
-                "creamy"
+                "sweet",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -1012,18 +999,73 @@
             ]
         },
         {
-            "name": "Hot Chocolate",
+            "name": "Matcha Latte",
             "ingredients": [
-                "Chocolate Powder",
-                "(Steamed) Milk"
-            ],
-            "garnishes": [
-                "Chocolate Powder"
+                "Matcha",
+                "Agave Sirup",
+                "Hot Water",
+                "Milk"
             ],
             "flavor_profile": [
-                "chocolate",
+                "Matcha test",
                 "sweet",
                 "milky"
+            ],
+            "options": [
+                "Milk",
+                "Oat Milk",
+                "Soy Milk",
+                "Almond Milk",
+                "Coconut Sirup"
+            ]
+        },
+        {
+            "name": "Iced Matcha Latte",
+            "ingredients": [
+                "Matcha",
+                "Agave Sirup",
+                "Water",
+                "Milk"
+            ],
+            "flavor_profile": [
+                "Matcha test 2",
+                "sweet",
+                "milky"
+            ],
+            "options": [
+                "Milk",
+                "Oat Milk",
+                "Soy Milk",
+                "Almond Milk",
+                "Coconut Sirup"
+            ]
+        },
+        {
+            "name": "Aeracano",
+            "ingredients": [
+                "Espresso",
+                "Water"
+            ],
+            "flavor_profile": [
+                "coffee"
+            ],
+            "options": [
+                "Brown Sugar // (Recommended)",
+                "honey",
+                "White Sugar"
+            ]
+        },
+        {
+            "name": "Adultccino",
+            "ingredients": [
+                "Double Espresso",
+                "Chocolate Powder",
+                "Steamed Milk"
+            ],
+            "flavor_profile": [
+                "coffee",
+                "chocolate",
+                "creamy"
             ],
             "options": [
                 "Milk",

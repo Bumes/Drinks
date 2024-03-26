@@ -141,6 +141,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
     }
 
     every_ingredient = true;
+    let language_name = ""
 
     if (ingredients.length > 0) {
         for (let g = 0; g < garnishes.length; g++) {
@@ -213,6 +214,13 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         */
     } else {
         every_ingredient = available_ingredients[format(name)]
+        formatted_option = format(name)
+        temp = name.replace(/[\d½|\d¼]+(ml|g)? /, '')
+        language_name = temp
+        if (language["ingredients"].hasOwnProperty(formatted_option)) {
+            language_name = language["ingredients"][formatted_option]
+        }
+        language_name = name.replace(temp, language_name)
     }
 
 
@@ -345,7 +353,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
             }
         </style>
 
-        <h1 class="image-header${!every_ingredient ? '-missing' : ''}">${name}</h2>
+        <h1 class="image-header${!every_ingredient ? '-missing' : ''}">${language_name == "" ? name : language_name}</h2>
 
         <div class="image-area${horizontal}">
 
@@ -357,9 +365,18 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
             <div class="flavors_and_ingredients${horizontal}">
                 ${flavor_profile.length != 0 ? `
                 <div class="flavors${horizontal}">
-                    <p1 id=flavors_text></p1>
+                    <p1 id="flavors_text"></p1>
                     <ul>
-                    ${flavor_profile.map(flavor => `<li>${flavor.trim()}</li>`).join('')}
+                        ${flavor_profile.map(flavor => {
+                            let formatted_flavor = format(flavor);
+                            let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
+                            let language_flavor = temp;
+                            if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
+                                language_flavor = language["flavor_profile"][formatted_flavor];
+                            }
+                            flavor = flavor.replace(temp, language_flavor);
+                            return `<li>${flavor.trim()}</li>`;
+                        }).join('')}
                     </ul>
 
                 </div>` : ''}
@@ -548,8 +565,8 @@ function add_all_categories(category) {
             formatted_flavor = format(name)
             temp = name.replace(/[\d½|\d¼]+(ml|g)? /, '')
             language_flavor = temp
-            if (language["ingredients"].hasOwnProperty(formatted_flavor)) {
-                language_flavor = language["ingredients"][formatted_flavor]
+            if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
+                language_flavor = language["flavor_profile"][formatted_flavor]
             }
             name = name.replace(temp, language_flavor)
             
@@ -827,8 +844,8 @@ let language;
 function update_language() {
     let userLanguage = navigator.language || navigator.userLanguage;
     userLanguage = userLanguage.split("-")[0]
-    console.error("Language:")
-    console.error(userLanguage)
+    console.log("Set Language to:")
+    console.log(userLanguage)
     fetchAndStoreLanguages()
         .then(languages => {
             // languages will now contain the actual data after successful fetch
