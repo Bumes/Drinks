@@ -251,7 +251,24 @@
             "amaretti": "Amaretti"
         },
         "flavor_profile": {
-
+            "strong": "Stark",
+            "sweet": "Süß",
+            "fresh": "Frisch",
+            "fruity": "Fruchtig",
+            "citrus": "Zitrisch",
+            "sour": "Sauer",
+            "tart": "Bitter",
+            "ginger": "Ingwer",
+            "bubbly": "Sprudelig",
+            "herbs": "Herbal",
+            "chocolate": "Schokolade",
+            "cinnamon": "Zimt",
+            "milky": "Milch",
+            "creamy": "Cremig",
+            "coffee": "Kaffee",
+            "nutty": "Nussig",
+            "honey": "Honig",
+            "weird": "Komisch"
         }
     }
 }
