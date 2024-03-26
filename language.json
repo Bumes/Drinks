@@ -1,5 +1,5 @@
 {
-    "en-US": {
+    "en": {
         "alcoholic_area_name": "Alcoholic",
         "non_alcoholic_area_name": "Alcoholfree",
         "shots_area_name": "Shots",
@@ -15,23 +15,7 @@
         "options_text": "Options:",
         "garnishes_text": "Garnishes:"
     },
-    "en-UK": {
-        "alcoholic_area_name": "Alcoholic",
-        "non_alcoholic_area_name": "Alcoholfree",
-        "shots_area_name": "Shots",
-        "coffee_area_name": "Coffee",
-        "search_text": "Search:",
-        "base_spirit_text": "Base Spirit",
-        "category_text": "Category",
-        "avaliability_text": "Avaliability",
-        "available_text": "Available",
-        "not_available_text": "Not Available",
-        "flavors_text": "Flavors:",
-        "ingredients_text": "Ingredients:",
-        "options_text": "Options:",
-        "garnishes_text": "Garnishes:"
-    },
-    "german": {
+    "de": {
         "alcoholic_area_name": "Alkoholisch",
         "non_alcoholic_area_name": "Alkoholfrei",
         "shots_area_name": "Kurze",
