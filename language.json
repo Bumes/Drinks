@@ -4,16 +4,16 @@
         "non_alcoholic_area_name": "Non-Alcoholic",
         "shots_area_name": "Shots",
         "coffee_area_name": "Coffee",
-        "search_text": "Search",
+        "search_text": "Search:",
         "base_spirit_text": "Base Spirit",
         "category_text": "Category",
         "avaliability_text": "Avaliability",
         "available_text": "Available",
         "not_available_text": "Not Available",
-        "flavors_text": "Flavors",
-        "ingredients_text": "Ingredients",
-        "options_text": "Options",
-        "garnishes_text": "Garnishes"
+        "flavors_text": "Flavors:",
+        "ingredients_text": "Ingredients:",
+        "options_text": "Options:",
+        "garnishes_text": "Garnishes:"
     },
     "german": {
     }
