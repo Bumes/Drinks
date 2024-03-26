@@ -149,10 +149,12 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         for (let i = 0; i < ingredients.length; i++) {
             doreturn = true;
             let ingredient = ingredients[i];
+            let chosen_ingredient = ingredient
             current_ingredients = ingredient.split(" -> ")
             let j
             for (j = 0; j < current_ingredients.length; j++) {
                 formatted_ingredient = format(current_ingredients[j])
+                chosen_ingredient = current_ingredients[j]
                 while (formatted_ingredient[0] == "_") {
                     formatted_ingredient = formatted_ingredient.substring(1, formatted_ingredient.length)
                 }
@@ -165,7 +167,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 } else if (formatted_ingredient == "") {
                     j = j - 1
                     doreturn = false
-                    ingredients[i] = "Missing: " + ingredient
+                    ingredients[i] = "Missing: " + ingredient.split(" -> ")[0]
+                    chosen_ingredient = "Missing: " + ingredient.split(" -> ")[0]
                     break
                 }
             }
@@ -180,7 +183,17 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 }
                 ingredient[i] = current_ingredients[0]
             } else {
-                ingredients[i] = ingredients[i].split("//")[0].replace("  ", " ").split(" -> ")[j]
+                if (chosen_ingredient.search("Missing: ") != -1) {
+                    temp = chosen_ingredient.replace("Missing: ", "").replace(/[\d½|\d¼]+(ml|g)? /, '')
+                } else {
+                    temp = chosen_ingredient.replace(/[\d½|\d¼]+(ml|g)? /, '')
+                }
+                language_ingredient = temp
+                formatted_temp = format(temp)
+                if (language["ingredients"].hasOwnProperty(formatted_temp)) {
+                    language_ingredient = language["ingredients"][formatted_temp]
+                }
+                ingredients[i] = chosen_ingredient.replace(temp, language_ingredient)
             }
         }
 
@@ -231,6 +244,13 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
             if (!available_ingredients[formatted_option]) {
                 options.splice(o, 1)
                 o--
+            } else {
+                temp = options[o].replace(/[\d½|\d¼]+(ml|g)? /, '')
+                language_option = temp
+                if (language["ingredients"].hasOwnProperty(formatted_option)) {
+                    language_option = language["ingredients"][formatted_option]
+                }
+                options[o] = options[o].replace(temp, language_option)
             }
         }
         if (every_ingredient === false && ingredients.length == 0) {
@@ -792,6 +812,8 @@ async function fetchAndStoreLanguages() {
     }
 }
 
+let language;
+
 function update_language() {
     let userLanguage = navigator.language || navigator.userLanguage;
     userLanguage = userLanguage.split("-")[0]
@@ -803,7 +825,7 @@ function update_language() {
             if (!languages.hasOwnProperty(userLanguage)) {
                 userLanguage = "en"
             }
-            const language = languages[userLanguage];
+            language = languages[userLanguage];
             console.log(language);
             for (const key in language) {
                 const elements = document.querySelectorAll(`#${key}`); // Use querySelectorAll to get all elements

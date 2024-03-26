@@ -113,6 +113,26 @@
             "soy_milk": "Soy Milk",
             "almond_milk": "Almond Milk",
             "amaretti": "Amaretti"
+        },
+        "flavor_profile": {
+            "strong": "Strong",
+            "sweet": "Sweet",
+            "fresh": "Fresh",
+            "fruity": "Fruity",
+            "citrus": "Citrus",
+            "sour": "Sour",
+            "tart": "Tart",
+            "ginger": "Ginger",
+            "bubbly": "Bubbly",
+            "herbs": "Herbs",
+            "chocolate": "Chocolate",
+            "cinnamon": "Cinnamon",
+            "milky": "Milky",
+            "creamy": "Creamy",
+            "coffee": "Coffee",
+            "nutty": "Nutty",
+            "honey": "Honey",
+            "weird": "Weird"
         }
     },
     "de": {
@@ -229,6 +249,9 @@
             "soy_milk": "Sojamilch",
             "almond_milk": "Mandelmilch",
             "amaretti": "Amaretti"
+        },
+        "flavor_profile": {
+
         }
     }
 }

@@ -49,8 +49,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Fresh",
-                "Citrus"
+                "fresh",
+                "citrus"
             ]
         },
         {
@@ -65,8 +65,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Sweet",
-                "Citrus"
+                "sweet",
+                "citrus"
             ]
         },
         {
@@ -81,9 +81,9 @@
             ],
             "base_spirit": "Aperol",
             "flavor_profile": [
-                "Fresh",
-                "Bitter",
-                "Fruity"
+                "fresh",
+                "tart",
+                "fruity"
             ]
         },
         {
@@ -99,8 +99,8 @@
             ],
             "base_spirit": "Wine",
             "flavor_profile": [
-                "Sweet",
-                "Fresh"
+                "sweet",
+                "fresh"
             ]
         },
         {
@@ -114,7 +114,7 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong"
+                "strong"
             ]
         },
         {
@@ -128,7 +128,7 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Strong"
+                "strong"
             ]
         },
         {
@@ -143,8 +143,8 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Strong",
-                "Coffee"
+                "strong",
+                "coffee"
             ]
         },
         {
@@ -159,8 +159,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Bitter"
+                "strong",
+                "tart"
             ]
         },
         {
@@ -175,8 +175,8 @@
             ],
             "base_spirit": "Tequila",
             "flavor_profile": [
-                "Strong",
-                "Sour"
+                "strong",
+                "sour"
             ]
         },
         {
@@ -191,8 +191,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Strong",
-                "Citrus"
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -201,15 +201,15 @@
                 "60ml Whiskey // (Scotch)",
                 "30ml Lemon Juice -> 30ml Lime Juice",
                 "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar",
-                "Ginger"
+                "ginger"
             ],
             "garnishes": [
                 "Candied Ginger"
             ],
             "base_spirit": "Whiskey",
             "flavor_profile": [
-                "Sweet",
-                "Ginger"
+                "sweet",
+                "ginger"
             ]
         },
         {
@@ -224,8 +224,8 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Ginger",
-                "Citrus"
+                "ginger",
+                "citrus"
             ]
         },
         {
@@ -240,8 +240,8 @@
                 "(Angostura Bitters)"
             ],
             "flavor_profile": [
-                "Citrus",
-                "Creamy"
+                "citrus",
+                "creamy"
             ]
         },
         {
@@ -257,8 +257,8 @@
             ],
             "base_spirit": "Tequila",
             "flavor_profile": [
-                "Strong",
-                "Sour"
+                "strong",
+                "sour"
             ]
         },
         {
@@ -274,8 +274,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Citrus",
-                "Bubbly"
+                "citrus",
+                "bubbly"
             ]
         },
         {
@@ -300,8 +300,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Strong",
-                "Fruity"
+                "strong",
+                "fruity"
             ]
         },
         {
@@ -316,8 +316,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Citrus"
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -331,8 +331,8 @@
             "garnishes": [],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Fruity",
-                "Creamy"
+                "fruity",
+                "creamy"
             ]
         },
         {
@@ -348,9 +348,9 @@
                 "Angostura Bitters"
             ],
             "flavor_profile": [
-                "Nutty",
-                "Citrus",
-                "Creamy"
+                "nutty",
+                "citrus",
+                "creamy"
             ]
         },
         {
@@ -365,8 +365,8 @@
             "garnishes": [],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Fruity",
-                "Sweet"
+                "fruity",
+                "sweet"
             ]
         },
         {
@@ -382,8 +382,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Bubbly"
+                "strong",
+                "bubbly"
             ]
         },
         {
@@ -398,9 +398,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Fruity",
-                "Creamy",
-                "Summer"
+                "fruity",
+                "creamy"
             ]
         },
         {
@@ -417,8 +416,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Citrus"
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -438,8 +437,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Strong",
-                "Fruity"
+                "strong",
+                "fruity"
             ]
         },
         {
@@ -454,8 +453,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Honey"
+                "strong",
+                "honey"
             ]
         },
         {
@@ -471,8 +470,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Herbs"
+                "strong",
+                "herbs"
             ]
         },
         {
@@ -488,7 +487,7 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong"
+                "strong"
             ]
         },
         {
@@ -504,9 +503,9 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Strong",
-                "Citrus",
-                "Fruity"
+                "strong",
+                "citrus",
+                "fruity"
             ]
         },
         {
@@ -523,8 +522,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Fruity"
+                "strong",
+                "fruity"
             ]
         },
         {
@@ -542,8 +541,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Fresh",
-                "Bubbly"
+                "fresh",
+                "bubbly"
             ]
         },
         {
@@ -567,8 +566,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Strong",
-                "Fresh"
+                "strong",
+                "fresh"
             ]
         },
         {
@@ -585,8 +584,8 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Fruity",
-                "Bubbly"
+                "fruity",
+                "bubbly"
             ]
         },
         {
@@ -602,8 +601,8 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Fruity",
-                "Bubbly"
+                "fruity",
+                "bubbly"
             ]
         },
         {
@@ -618,9 +617,9 @@
             ],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Fruity",
-                "Bubbly",
-                "Herbs"
+                "fruity",
+                "bubbly",
+                "herbs"
             ]
         },
         {
@@ -638,8 +637,8 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Fruity",
-                "Sweet"
+                "fruity",
+                "sweet"
             ]
         },
         {
@@ -657,8 +656,8 @@
             ],
             "base_spirit": "Whiskey",
             "flavor_profile": [
-                "Fruity",
-                "Cinnamon"
+                "fruity",
+                "cinnamon"
             ]
         },
         {
@@ -672,9 +671,9 @@
                 "Lemon Twist"
             ],
             "flavor_profile": [
-                "Nutty",
-                "Citrus",
-                "Ginger"
+                "nutty",
+                "citrus",
+                "ginger"
             ]
         },
         {
@@ -690,9 +689,8 @@
             ],
             "base_spirit": "Aperol",
             "flavor_profile": [
-                "Citrus",
-                "Ginger",
-                "Mint"
+                "citrus",
+                "ginger"
             ]
         },
         {
@@ -706,9 +704,9 @@
             "garnishes": [],
             "base_spirit": "Gin",
             "flavor_profile": [
-                "Citrus",
-                "Honey",
-                "Bubbly"
+                "citrus",
+                "honey",
+                "bubbly"
             ]
         },
         {
@@ -724,9 +722,8 @@
             ],
             "base_spirit": "Rum",
             "flavor_profile": [
-                "Fruity",
-                "Ginger",
-                "Mint"
+                "fruity",
+                "ginger"
             ]
         },
         {
@@ -742,10 +739,9 @@
             ],
             "base_spirit": "Other",
             "flavor_profile": [
-                "Strong",
-                "Ginger",
-                "Citrus",
-                "Woody"
+                "strong",
+                "ginger",
+                "citrus"
             ]
         },
         {
@@ -761,8 +757,8 @@
             ],
             "base_spirit": "Vodka",
             "flavor_profile": [
-                "Fresh",
-                "Bubbly"
+                "fresh",
+                "bubbly"
             ]
         },
         {
@@ -775,7 +771,7 @@
                 "(Chocolate Powder)"
             ],
             "flavor_profile": [
-                "Creamy"
+                "creamy"
             ]
         }
     ],
@@ -791,8 +787,8 @@
                 "Lime"
             ],
             "flavor_profile": [
-                "Citrus",
-                "Creamy"
+                "citrus",
+                "creamy"
             ]
         },
         {
@@ -806,9 +802,9 @@
                 "Lime"
             ],
             "flavor_profile": [
-                "Herbs",
-                "Citrus",
-                "Fresh"
+                "herbs",
+                "citrus",
+                "fresh"
             ]
         },
         {
@@ -820,9 +816,9 @@
             ],
             "garnishes": [],
             "flavor_profile": [
-                "Herbs",
-                "Bitter",
-                "Fresh"
+                "herbs",
+                "tart",
+                "fresh"
             ]
         }
     ],
@@ -834,8 +830,8 @@
                 "Coldbrew"
             ],
             "flavor_profile": [
-                "Sweet",
-                "Coffee"
+                "sweet",
+                "coffee"
             ]
         },
         {
@@ -846,9 +842,9 @@
                 "10ml Baileys"
             ],
             "flavor_profile": [
-                "Weird",
-                "Citrus",
-                "Coffee"
+                "weird",
+                "citrus",
+                "coffee"
             ]
         },
         {
@@ -860,11 +856,11 @@
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
             ],
             "flavor_profile": [
-                "Fruity"
+                "fruity"
             ]
         }
     ],
-    "Coffee": [
+    "coffee": [
         {
             "name": "Espresso",
             "ingredients": [
@@ -875,12 +871,12 @@
                 "Amaretti"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Strong"
+                "coffee",
+                "strong"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
-                "Honey",
+                "honey",
                 "White Sugar"
             ]
         },
@@ -895,9 +891,9 @@
                 "Amaretti"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Strong",
-                "Creamy"
+                "coffee",
+                "strong",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -913,14 +909,14 @@
                 "Water"
             ],
             "garnishes": [
-                "Coffee"
+                "coffee"
             ],
             "flavor_profile": [
-                "Coffee"
+                "coffee"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
-                "Honey",
+                "honey",
                 "White Sugar"
             ]
         },
@@ -931,12 +927,11 @@
                 "Water"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Creamy"
+                "coffee"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
-                "Honey",
+                "honey",
                 "White Sugar"
             ]
         },
@@ -949,8 +944,8 @@
                 "(Brown Sugar)"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Creamy"
+                "coffee",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -967,9 +962,8 @@
                 "(Brown Sugar)"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Creamy",
-                "Milky"
+                "coffee",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -986,9 +980,9 @@
                 "Steamed Milk"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Chocolate",
-                "Creamy"
+                "coffee",
+                "chocolate",
+                "creamy"
             ],
             "options": [
                 "Milk",
@@ -1005,9 +999,10 @@
                 "Steamed Milk"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Chocolate",
-                "Creamy"
+                "coffee",
+                "chocolate",
+                "sweet",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -1026,7 +1021,9 @@
                 "Chocolate Powder"
             ],
             "flavor_profile": [
-                "Creamy"
+                "chocolate",
+                "sweet",
+                "milky"
             ],
             "options": [
                 "Milk",
@@ -1043,9 +1040,9 @@
                 "Milk"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Sweet",
-                "Creamy"
+                "coffee",
+                "sweet",
+                "creamy"
             ]
         },
         {
@@ -1057,9 +1054,9 @@
                 "Brown Sugar"
             ],
             "flavor_profile": [
-                "Coffee",
-                "Sweet",
-                "Creamy"
+                "coffee",
+                "sweet",
+                "creamy"
             ],
             "options": [
                 "Milk",
