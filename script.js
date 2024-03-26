@@ -543,7 +543,17 @@ function add_all_categories(category) {
     if (my_element_id !== null) {
         for (let f = 0; f < flavor_profile.length; f++) {
             var newOption = document.createElement('label');
-            newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${flavor_profile[f]}`;
+
+            let name = flavor_profile[f]
+            formatted_flavor = format(name)
+            temp = name.replace(/[\d½|\d¼]+(ml|g)? /, '')
+            language_flavor = temp
+            if (language["ingredients"].hasOwnProperty(formatted_flavor)) {
+                language_flavor = language["ingredients"][formatted_flavor]
+            }
+            name = name.replace(temp, language_flavor)
+            
+            newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${name}`;
             document.getElementById(my_element_id).appendChild(newOption);
             document.getElementById(my_element_id).appendChild(document.createElement('br'));
         }
