@@ -860,7 +860,7 @@
             ]
         }
     ],
-    "coffee": [
+    "Coffee": [
         {
             "name": "Espresso",
             "ingredients": [
@@ -1007,7 +1007,7 @@
                 "Milk"
             ],
             "flavor_profile": [
-                "Matcha test",
+                "matcha",
                 "sweet",
                 "milky"
             ],
@@ -1028,7 +1028,7 @@
                 "Milk"
             ],
             "flavor_profile": [
-                "Matcha test 2",
+                "matcha",
                 "sweet",
                 "milky"
             ],

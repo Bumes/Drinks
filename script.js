@@ -855,14 +855,16 @@ function update_language() {
             language = languages[userLanguage];
             console.log(language);
             for (const key in language) {
-                const elements = document.querySelectorAll(`#${key}`); // Use querySelectorAll to get all elements
+                if (typeof(language[key]) != "object") {
+                    const elements = document.querySelectorAll(`#${key}`); // Use querySelectorAll to get all elements
 
-                if (elements.length > 0) {
-                    for (const element of elements) {
-                        element.textContent = language[key];
+                    if (elements.length > 0) {
+                        for (const element of elements) {
+                            element.textContent = language[key];
+                        }
+                    } else {
+                        console.info(`Element with ID "${key}" not found.`);
                     }
-                } else {
-                    console.info(`Element with ID "${key}" not found.`);
                 }
             }
         })
