@@ -872,7 +872,8 @@
             ],
             "flavor_profile": [
                 "coffee",
-                "strong"
+                "strong",
+                "this is a test"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
