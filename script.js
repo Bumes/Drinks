@@ -794,6 +794,7 @@ async function fetchAndStoreLanguages() {
 
 function update_language() {
     let userLanguage = navigator.language || navigator.userLanguage;
+    console.error("Language:")
     console.error(userLanguage)
     fetchAndStoreLanguages()
         .then(languages => {
