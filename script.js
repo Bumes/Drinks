@@ -801,7 +801,7 @@ function update_language() {
         .then(languages => {
             // languages will now contain the actual data after successful fetch
             if (!languages.hasOwnProperty(userLanguage)) {
-                userLanguage = "en-US"
+                userLanguage = "en"
             }
             const language = languages[userLanguage];
             console.log(language);
