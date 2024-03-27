@@ -410,8 +410,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     </ul>
 
                 </div>` : ''}
-            ${every_ingredient ?  `<button onclick='sendData("${format(name)}")'>Bestellen</button>` : `<button>Vormerken</button>`}
             </div>` : ''}
+            ${every_ingredient ?  `<button id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
     `;
 
     // Add the drink to the correct menu 
@@ -593,6 +593,10 @@ function get_flavor_filter() {
 
 function delete_all() {
     var header_elements = document.querySelectorAll('.image-header');
+    header_elements.forEach(function (element) {
+        element.remove();
+    });
+    var header_elements = document.querySelectorAll('#order_button');
     header_elements.forEach(function (element) {
         element.remove();
     });
