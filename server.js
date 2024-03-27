@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/', function(request, response){
-    response.sendFile('./master.html');
+    response.sendFile('https://raw.githubusercontent.com/Bumes/Drinks/main/master.html');
 });
 
 // Middleware to parse JSON body
