@@ -3,17 +3,14 @@
 // #region JSON 
 let available_ingredients;
 let drinks;
+let queue_drinks;
 let current_frame = "drinks"
+
 
 
 json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v='
 drinks_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/drinks.json?v='
 picture_folder = 'pictures/'
-
-if (window.location.href.search("stauti") != -1) {
-    json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/stauti-available-ingredients.json?v='
-    picture_folder = 'https://raw.githubusercontent.com/Bumes/Drinks/main/pictures/'
-}
 
 async function fetchAndStoreIngredients() {
     try {
@@ -368,15 +365,15 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     <p1 id="flavors_text"></p1>
                     <ul>
                         ${flavor_profile.map(flavor => {
-                            let formatted_flavor = format(flavor);
-                            let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
-                            let language_flavor = temp;
-                            if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
-                                language_flavor = language["flavor_profile"][formatted_flavor];
-                            }
-                            flavor = flavor.replace(temp, language_flavor);
-                            return `<li>${flavor.trim()}</li>`;
-                        }).join('')}
+        let formatted_flavor = format(flavor);
+        let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
+        let language_flavor = temp;
+        if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
+            language_flavor = language["flavor_profile"][formatted_flavor];
+        }
+        flavor = flavor.replace(temp, language_flavor);
+        return `<li>${flavor.trim()}</li>`;
+    }).join('')}
                     </ul>
 
                 </div>` : ''}
@@ -569,7 +566,7 @@ function add_all_categories(category) {
                 language_flavor = language["flavor_profile"][formatted_flavor]
             }
             name = name.replace(temp, language_flavor)
-            
+
             newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${name}`;
             document.getElementById(my_element_id).appendChild(newOption);
             document.getElementById(my_element_id).appendChild(document.createElement('br'));
@@ -628,19 +625,47 @@ function Coffee({ name, ingredients, garnishes, flavor_profile }) {
 }
 
 function add_drink(formatted_name) {
-    console.log(formatted_name)
+    if (drinks.hasOwnProperty(formatted_name)) {
+        queue_drinks.append(all_drinks[formatted_name])
+        create_all()
+    }
 }
 
-async function create_all() {
-    await fetchAndStoreIngredients();
+
+function fetchLanguages() {
+    return fetch("https://raw.githubusercontent.com/Bumes/main/language.json")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        });
+}
+
+async function fetchAndStoreLanguages() {
+    try {
+        return await fetchLanguages()
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function load() {
+    await fetchAndStoreIngredients(); 
     await fetchAndStoreDrinks();
+    await fetchAndStoreLanguages();
+}
+
+load()
+
+async function create_all() {
 
     delete_all()
 
     let idx = 0
 
-    for (const category in drinks) {
-        drinks[category].forEach(drink => {
+    for (const category in queue_drinks) {
+        queue_drinks[category].forEach(drink => {
             drink["category"] = category
             Drink(drink)
         });
@@ -665,50 +690,6 @@ async function create_all() {
 
 // #endregion
 
-function fetchLanguages() {
-    return fetch("https://raw.githubusercontent.com/Bumes/Drinks/main/language.json?v=" + new Date().getTime())
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        });
-}
-
-async function fetchAndStoreLanguages() {
-    try {
-        return await fetchLanguages()
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 let language;
 
-function sendData() {
-    var inputData = document.getElementById("inputData").value;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://drinks-oxb9.onrender.com/master', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            console.log('Data sent successfully');
-        }
-    };
-    xhr.onerror = function () {
-        console.error('Error while sending data.');
-        return;
-    };
-    var data = JSON.stringify({ input: inputData });
-    console.log("Sending data: " + data);
-    xhr.send(data);
-}
-
-
-const lastOrderElement = document.getElementById('lastOrder');
-const eventSource = new EventSource('/lastOrder');
-
-eventSource.onmessage = function (event) {
-     const data = JSON.parse(event.data);
-     add_drink(data)
-};
+module.exports = add_drink;

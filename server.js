@@ -5,6 +5,7 @@ const PORT = 3000;
 const cors = require('cors');
 const EventEmitter = require('events');
 const eventEmitter = new EventEmitter();
+const add_drink = require("./master-script")
 
 app.use(cors());
 
@@ -15,11 +16,11 @@ let lastOrder = '';
 
 // Endpoint to receive data from client
 app.post('/master', (req, res) => {
-    lastOrder = req.body.input;
-    console.log("master: " + lastOrder)
+    lastOrder = req.body;
     console.log('Received data:', lastOrder);
     // Emit an event when new data is received
     eventEmitter.emit('newData', lastOrder);
+    add_drink(lastOrder)
     res.sendStatus(200);
 });
 
@@ -28,6 +29,8 @@ app.get('/', (req, res) => {
     // Assuming you have a master.html file in the same directory
     res.sendFile(__dirname + '/master.html');
 });
+
+app.use(express.static(__dirname))
 
 // Endpoint to subscribe to last order updates using SSE
 app.get('/lastOrder', (req, res) => {

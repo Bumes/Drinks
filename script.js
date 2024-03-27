@@ -848,7 +848,7 @@ let language;
 
 function sendData(inputData) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://drinks-oxb9.onrender.com/master', true);
+    xhr.open('POST', 'http://localhost:3000/master', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {
