@@ -6,8 +6,6 @@ let drinks;
 let queue_drinks;
 let current_frame = "drinks"
 
-
-
 json_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/available-ingredients.json?v='
 drinks_url = 'https://raw.githubusercontent.com/Bumes/Drinks/main/drinks.json?v='
 picture_folder = 'pictures/'
@@ -692,4 +690,6 @@ async function create_all() {
 
 let language;
 
-module.exports = add_drink;
+eventEmitter.on("newData", (data) => {
+    add_drink(data)
+})

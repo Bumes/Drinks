@@ -5,7 +5,6 @@ const PORT = 3000;
 const cors = require('cors');
 const EventEmitter = require('events');
 const eventEmitter = new EventEmitter();
-const add_drink = require("./master-script")
 
 app.use(cors());
 
@@ -20,7 +19,6 @@ app.post('/master', (req, res) => {
     console.log('Received data:', lastOrder);
     // Emit an event when new data is received
     eventEmitter.emit('newData', lastOrder);
-    add_drink(lastOrder)
     res.sendStatus(200);
 });
 
