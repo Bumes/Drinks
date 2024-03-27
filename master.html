@@ -1,3 +1,50 @@
 <!DOCTYPE html>
 
-<label>MASTER</label>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>MASTER</title>
+</head>
+
+<body>
+     <div id="all_drinks_menu" class="menu">
+          <div class="filter">
+               <div class="search">
+                    <label class="search_label"><label id="search_text"></label></label>
+                    <input class="search_filter" id="all_drinks-search-filter" oninput="create_all()"></input>
+
+                    
+
+                    <!--<div class="dropdown" id="all_drinks-base-spirit-dropdown" tabindex="1"
+                   onblur='closeDropdown("all_drinks-base-spirit-dropdown")'>
+                   <button onclick='toggleDropdown("all_drinks-base-spirit-dropdown")'><label
+                             id="base_spirit_text"></label></button>
+                   <div class="dropdown-content" id="all_drinks-base-spirit-dropdown-content">
+                   </div>
+              </div>
+
+              <div class="dropdown" id="all_drinks-category-dropdown" tabindex="0"
+                   onblur='closeDropdown("all_drinks-category-dropdown")'>
+                   <button onclick='toggleDropdown("all_drinks-category-dropdown")'><label
+                             id="flavor_text"></label></button>
+                   <div class="dropdown-content" id="all_drinks-category-dropdown-content">
+                   </div>
+              </div>
+
+              <div class="dropdown" id="all_drinks-availability-options-dropdown" tabindex="2"
+                   onblur='closeDropdown("all_drinks-availability-options-dropdown")'>
+                   <button onclick='toggleDropdown("all_drinks-availability-options-dropdown")'><label
+                             id="avaliability_text"></label></button>
+                   <div class="dropdown-content" id="all_drinks-availability-options-dropdown-content">
+                        <input type="checkbox" name="Available" id="all_drinks-availability-dropdown" checked="true"
+                             onclick="create_all()"><label id="available_text"></label></input>
+                        <label><input type="checkbox" name="Not Available" id="all_drinks-not-availability-dropdown"
+                                  onclick="create_all()"><label id="not_available_text"></label></input></label>
+                   </div>
+              </div>-->
+               </div>
+               <input type="text" id="inputData">
+               <button onclick="sendData()">Send Data</button>
+          </div>
+     </div>
+</body>
