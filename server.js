@@ -13,6 +13,7 @@ let lastOrder = '';
 // Endpoint to receive data from client
 app.post('/master', (req, res) => {
     lastOrder = req.body.input;
+    console.log("master: " + lastOrder)
     console.log('Received data:', lastOrder);
     res.sendStatus(200);
 });
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 // Endpoint to serve last order data
 app.get('/lastOrder', (req, res) => {
+    console.log("lastOrder: " + req)
     res.send(lastOrder);
 });
 

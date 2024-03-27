@@ -844,7 +844,7 @@ let language;
 function sendData() {
     var inputData = document.getElementById("inputData").value;
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://drinks.lukas-bumes.de:3000/master', true);
+    xhr.open('POST', 'https://drinks-oxb9.onrender.com/master', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {
