@@ -7,18 +7,20 @@
 </head>
 <body>
     <h1>Last Order:</h1>
-    <p id="lastOrder"></p>
+    <div id="lastOrder"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $.get('/lastOrder', function(data) {
-                $('#lastOrder').text(data);
-            });
-        });
+        const lastOrderElement = document.getElementById('lastOrder');
+        const eventSource = new EventSource('/lastOrder');
+
+        eventSource.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            lastOrderElement.textContent = data;
+        };
     </script>
 </body>
 </html>
+
 
 
 
