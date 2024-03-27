@@ -1,7 +1,3 @@
-print every ingredient missing in list possible replacements
-
-"sweetener" -> available_sweetener
-
 einkaufsliste
 
 order option

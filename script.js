@@ -870,3 +870,21 @@ function update_language() {
         })
         .catch(error => console.error(error));  // Handle errors from fetchLanguages
 }
+
+function sendData() {
+    var inputData = document.getElementById("inputData").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://localhost:3000/receive-data', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log('Data sent successfully');
+            window.location.reload(); // Refresh page to update last order
+        }
+    };
+    xhr.onerror = function () {
+        console.error('Error while sending data.');
+    };
+    var data = JSON.stringify({ input: inputData });
+    xhr.send(data);
+}
