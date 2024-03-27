@@ -36,7 +36,7 @@
   "baileys": true,
   "licor_43": false,
   "chartreuse": false,
-  "amaretto": false,
+  "amaretto": true,
   "apricot_brandy": false,
   "falernum_liqueur": false,
   "peach_liqueur": true,

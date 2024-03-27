@@ -666,8 +666,6 @@ create_all()
 
 // #endregion
 
-
-
 // #region lukas mode
 
 function upload_new_data(event) {
@@ -848,7 +846,8 @@ let language;
 
 function sendData(inputData) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://drinks-master.lukas-bumes.de:3000/master', true);
+    // 'https://drinks-master.lukas-bumes.de:3000/master'
+    xhr.open('POST', "http://localhost:3000/master", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function () {
         if (xhr.status === 200) {

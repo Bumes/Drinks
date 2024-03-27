@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 const cors = require('cors');
-const EventEmitter = require('events');
-const eventEmitter = new EventEmitter();
 
 app.use(cors());
 
@@ -17,8 +15,7 @@ let lastOrder = '';
 app.post('/master', (req, res) => {
     lastOrder = req.body;
     console.log('Received data:', lastOrder);
-    // Emit an event when new data is received
-    eventEmitter.emit('newData', lastOrder);
+    // Emit an event to indicate that a new order has been received
     res.sendStatus(200);
 });
 
@@ -29,27 +26,6 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.static(__dirname))
-
-// Endpoint to subscribe to last order updates using SSE
-app.get('/lastOrder', (req, res) => {
-    res.setHeader('Content-Type', 'text/event-stream');
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', 'keep-alive');
-
-    // Send current last order immediately
-    res.write(`data: ${JSON.stringify(lastOrder)}\n\n`);
-
-    // Subscribe to new data events
-    const onData = (data) => {
-        res.write(`data: ${JSON.stringify(data)}\n\n`);
-    };
-    eventEmitter.on('newData', onData);
-
-    // Clean up event listener when connection closes
-    req.on('close', () => {
-        eventEmitter.off('newData', onData);
-    });
-});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

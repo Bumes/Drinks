@@ -104,6 +104,26 @@
             ]
         },
         {
+            "name": "Kentucky Buck",
+            "flavor_profile": [
+                "ginger",
+                "fruity"
+            ],
+            "base_spirit": "Whiskey",
+            "ingredients": [
+                "Strawberry",
+                "60ml Simple Sirup",
+                "1 Lemon -> 1 Lime -> 40ml Lemon Juice -> 40ml Lime Juice",
+                "2 Dashes Angostura Bitters",
+                "60ml Whiskey // (Bourbon)",
+                "Ginger Beer -> Ginger Ale"
+            ],
+            "garnishes": [
+                "Lemon",
+                "Strawberry"
+            ]
+        },
+        {
             "name": "Martini",
             "ingredients": [
                 "60ml Gin",

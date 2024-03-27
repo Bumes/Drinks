@@ -623,15 +623,17 @@ function Coffee({ name, ingredients, garnishes, flavor_profile }) {
 }
 
 function add_drink(formatted_name) {
+    console.log("1")
     if (drinks.hasOwnProperty(formatted_name)) {
+        console.log("2")
         queue_drinks.append(all_drinks[formatted_name])
+        console.log("3")
         create_all()
     }
 }
 
-
 function fetchLanguages() {
-    return fetch("https://raw.githubusercontent.com/Bumes/main/language.json?v=" + new Date().getTime())
+    return fetch("https://raw.githubusercontent.com/Bumes/Drinks/main/language.json?v=" + new Date().getTime())
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -690,6 +692,4 @@ async function create_all() {
 
 let language;
 
-eventEmitter.on("newData", (data) => {
-    add_drink(data)
-})
+add_drink("beer")
