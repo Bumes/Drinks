@@ -7,13 +7,18 @@
 </head>
 
 <body>
+     <script src="language.js"></script>
      <div id="all_drinks_menu" class="menu">
           <div class="filter">
                <div class="search">
                     <label class="search_label"><label id="search_text"></label></label>
                     <input class="search_filter" id="all_drinks-search-filter" oninput="create_all()"></input>
 
-                    
+               </div>
+          </div>
+     </div>
+</body>
+
 
                     <!--<div class="dropdown" id="all_drinks-base-spirit-dropdown" tabindex="1"
                    onblur='closeDropdown("all_drinks-base-spirit-dropdown")'>
@@ -42,9 +47,3 @@
                                   onclick="create_all()"><label id="not_available_text"></label></input></label>
                    </div>
               </div>-->
-               </div>
-               <input type="text" id="inputData">
-               <button onclick="sendData()">Send Data</button>
-          </div>
-     </div>
-</body>
