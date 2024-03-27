@@ -730,7 +730,7 @@ function upload_new_data(event) {
 lukas_mode_allowed = false
 currently_lukas_mode = false
 
-document.getElementById("toggle_lukas_mode").addEventListener("click", function () {
+/*document.getElementById("toggle_lukas_mode").addEventListener("click", function () {
     if (!lukas_mode_allowed) {
         var password = prompt("Please enter the password:");
         if (password === "ilm") {
@@ -751,9 +751,9 @@ document.getElementById("toggle_lukas_mode").addEventListener("click", function 
     
     bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
         console.log(hash)
-    });*/
+    });
 
-});
+});*/
 
 lukas_mode_tab = document.getElementById("lukas_mode")
 
