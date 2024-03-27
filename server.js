@@ -19,22 +19,10 @@ app.post('/master', (req, res) => {
 
 // Endpoint to serve HTML page with last order
 app.get('/', (req, res) => {
-    res.send(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Last Order</title>
-        </head>
-        <body>
-            <h1>Last Order:</h1>
-            <label id="lastOrderLabel">${lastOrder}</label>
-        </body>
-        </html>
-    `);
+    my_label = document.getElementById("my_result_label")
+    my_label.textContent = lastOrder
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://drinks.lukas-bumes:${PORT}`);
+    console.log(`Server is running on https://drinks.lukas-bumes:${PORT}`);
 });

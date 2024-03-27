@@ -854,6 +854,7 @@ function sendData() {
     };
     xhr.onerror = function () {
         console.error('Error while sending data.');
+        return
     };
     var data = JSON.stringify({ input: inputData });
     console.log("Sending data: " + data)
