@@ -633,7 +633,7 @@ function add_drink(formatted_name) {
 
 
 function fetchLanguages() {
-    return fetch("https://raw.githubusercontent.com/Bumes/main/language.json")
+    return fetch("https://raw.githubusercontent.com/Bumes/main/language.json?v=" + new Date().getTime())
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
