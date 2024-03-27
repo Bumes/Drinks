@@ -909,16 +909,13 @@
                 "Espresso",
                 "Water"
             ],
-            "garnishes": [
-                "coffee"
-            ],
             "flavor_profile": [
                 "coffee"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
-                "honey",
-                "White Sugar"
+                "White Sugar",
+                "honey"
             ]
         },
         {

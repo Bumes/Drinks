@@ -1,75 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Page</title>
-</head>
-<body>
-    <h1>Last Order:</h1>
-    <div id="lastOrder"></div>
-
-    <script>
-        const lastOrderElement = document.getElementById('lastOrder');
-        const eventSource = new EventSource('/lastOrder');
-
-        eventSource.onmessage = function(event) {
-            const data = JSON.parse(event.data);
-            lastOrderElement.textContent = data;
-        };
-    </script>
-</body>
-</html>
-
-
-
-
-<!--<!DOCTYPE html>
 
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>MASTER</title>
+     <title>Master Drink</title>
 </head>
 
 <body>
-     <script src="language.js"></script>
+     <h1>Last Order:</h1>
+     <div id="lastOrder"></div>
+
      <div id="all_drinks_menu" class="menu">
           <div class="filter">
                <div class="search">
                     <label class="search_label"><label id="search_text"></label></label>
-                    <input class="search_filter" id="all_drinks-search-filter" oninput="create_all()"></input>
-                    <label id="my_result_label"></label>
+                    <input class="search_filter" id="all-drinks-search-filter" oninput="create_all()"></input>
                </div>
           </div>
      </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="language.js"></script>
+     <script src="master-script.js"></script>
+
+     <script>
+          update_language();
+          showTab('drinks_menu');
+     </script>
+
 </body>
+</html>
 
+<!--
+                    <div class="dropdown" id="drinks-base-spirit-dropdown" tabindex="1"
+                         onblur='closeDropdown("drinks-base-spirit-dropdown")'>
+                         <button onclick='toggleDropdown("drinks-base-spirit-dropdown")'><label
+                                   id="base_spirit_text"></label></button>
+                         <div class="dropdown-content" id="drinks-base-spirit-dropdown-content">
+                         </div>
+                    </div>
 
-                    <div class="dropdown" id="all_drinks-base-spirit-dropdown" tabindex="1"
-                   onblur='closeDropdown("all_drinks-base-spirit-dropdown")'>
-                   <button onclick='toggleDropdown("all_drinks-base-spirit-dropdown")'><label
-                             id="base_spirit_text"></label></button>
-                   <div class="dropdown-content" id="all_drinks-base-spirit-dropdown-content">
-                   </div>
-              </div>
+                    <div class="dropdown" id="drinks-category-dropdown" tabindex="0"
+                         onblur='closeDropdown("drinks-category-dropdown")'>
+                         <button onclick='toggleDropdown("drinks-category-dropdown")'><label
+                                   id="flavor_text"></label></button>
+                         <div class="dropdown-content" id="drinks-category-dropdown-content">
+                         </div>
+                    </div>
 
-              <div class="dropdown" id="all_drinks-category-dropdown" tabindex="0"
-                   onblur='closeDropdown("all_drinks-category-dropdown")'>
-                   <button onclick='toggleDropdown("all_drinks-category-dropdown")'><label
-                             id="flavor_text"></label></button>
-                   <div class="dropdown-content" id="all_drinks-category-dropdown-content">
-                   </div>
-              </div>
-
-              <div class="dropdown" id="all_drinks-availability-options-dropdown" tabindex="2"
-                   onblur='closeDropdown("all_drinks-availability-options-dropdown")'>
-                   <button onclick='toggleDropdown("all_drinks-availability-options-dropdown")'><label
-                             id="avaliability_text"></label></button>
-                   <div class="dropdown-content" id="all_drinks-availability-options-dropdown-content">
-                        <input type="checkbox" name="Available" id="all_drinks-availability-dropdown" checked="true"
-                             onclick="create_all()"><label id="available_text"></label></input>
-                        <label><input type="checkbox" name="Not Available" id="all_drinks-not-availability-dropdown"
-                                  onclick="create_all()"><label id="not_available_text"></label></input></label>
-                   </div>
-              </div>-->
+                    <div class="dropdown" id="drinks-availability-options-dropdown" tabindex="2"
+                         onblur='closeDropdown("drinks-availability-options-dropdown")'>
+                         <button onclick='toggleDropdown("drinks-availability-options-dropdown")'><label
+                                   id="avaliability_text"></label></button>
+                         <div class="dropdown-content" id="drinks-availability-options-dropdown-content">
+                              <input type="checkbox" name="Available" id="drinks-availability-dropdown" checked="true"
+                                   onclick="create_all()"><label id="available_text"></label></input>
+                              <label><input type="checkbox" name="Not Available" id="drinks-not-availability-dropdown"
+                                        onclick="create_all()"><label id="not_available_text"></label></input></label>
+                         </div>
+                    </div>
+               -->

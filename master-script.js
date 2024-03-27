@@ -410,7 +410,6 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     </ul>
 
                 </div>` : ''}
-            ${every_ingredient ?  `<button onclick='sendData("${format(name)}")'>Bestellen</button>` : `<button>Vormerken</button>`}
             </div>` : ''}
     `;
 
@@ -628,6 +627,10 @@ function Coffee({ name, ingredients, garnishes, flavor_profile }) {
     Drink(3, name, ingredients, garnishes, null, flavor_profile)
 }
 
+function add_drink(formatted_name) {
+    console.log(formatted_name)
+}
+
 async function create_all() {
     await fetchAndStoreIngredients();
     await fetchAndStoreDrinks();
@@ -658,169 +661,9 @@ async function create_all() {
     console.log(missing)
 }
 
-create_all()
+// create_all()
 
 // #endregion
-
-
-
-// #region lukas mode
-
-function upload_new_data(event) {
-
-    let githubToken = 'ghp_5ewV5uVGFNCmqmoME'
-    githubToken = githubToken + '9Mt2rygyABqN430Tajr'
-    const repoOwner = 'Bumes';
-    const repoName = 'Drinks';
-    const filePath = 'available-ingredients.json';
-
-    const existingKey = event.currentTarget.my_ingredient; // Replace with your existing key
-    const newValue = event.target.checked; // Replace with the new value
-
-    // Load the existing content from GitHub
-    fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-        method: 'GET',
-        headers: {
-            Authorization: `token ${githubToken}`,
-            'Content-Type': 'application/json',
-        },
-    })
-        .then(response => response.json())
-        .then(data => {
-            // Decode the base64 content from GitHub
-            const currentContent = atob(data.content);
-
-            // Parse the content into an object
-            const currentData = JSON.parse(currentContent);
-
-            // Modify the value of an existing key in the object
-            currentData.existingKey = newValue; // Change 'existingKey' to the key you want to modify
-
-            // Encode the updated content as JSON with indentation
-            const updatedContent = JSON.stringify(currentData, null, 2);
-
-            // Encode the updated content as base64
-            const updatedContentBase64 = btoa(updatedContent);
-
-            // Update the file on GitHub with the modified and formatted content
-            fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`, {
-                method: 'PUT',
-                headers: {
-                    Authorization: `token ${githubToken}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    message: 'Update file via API',
-                    content: updatedContentBase64,
-                    sha: data.sha,
-                }),
-            })
-                .then(response => response.json())
-                .then(result => {
-                    console.log('File updated on GitHub:', result);
-                })
-                .catch(error => {
-                    console.error('Error updating the file:', error);
-                });
-        })
-        .catch(error => {
-            console.error('Error fetching file content:', error);
-        });
-}
-
-lukas_mode_allowed = false
-currently_lukas_mode = false
-
-/*document.getElementById("toggle_lukas_mode").addEventListener("click", function () {
-    if (!lukas_mode_allowed) {
-        var password = prompt("Please enter the password:");
-        if (password === "ilm") {
-            lukas_mode_allowed = true
-        }
-    }
-
-    currently_lukas_mode = !currently_lukas_mode
-
-    var tabs = document.getElementsByClassName("menu");
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-    document.getElementById(currently_lukas_mode ? "lukas_mode" : "drinks_menu").style.display = "block";
-
-    /*const bcrypt = require('bcrypt');
-    const saltRounds = 10;
-    
-    bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
-        console.log(hash)
-    });
-
-});*/
-
-lukas_mode_tab = document.getElementById("lukas_mode")
-
-async function create_lukas_mode_tab() {
-    await fetchAndStoreIngredients();
-    for (ingredient in available_ingredients) {
-        try {
-            const ingDiv = document.createElement("div");
-            ingDiv.innerHTML = `
-            <p1>${ingredient}</p1>
-            `
-            const checkbox = document.createElement("input")
-            checkbox.type = "checkbox";
-            checkbox.checked = available_ingredients[ingredient]
-            checkbox.addEventListener('change', upload_new_data, false)
-            checkbox.my_ingredient = ingredient
-
-            const wrapperDiv = document.createElement('div');
-            wrapperDiv.style.display = 'flex';
-
-            ingDiv.style.flex = '2';
-            checkbox.style.flex = '2';
-
-            // Append both saved_html and drinkDiv to the wrapper
-            wrapperDiv.appendChild(ingDiv);
-            wrapperDiv.appendChild(checkbox);
-
-            lukas_mode_tab.appendChild(wrapperDiv);
-        } catch {
-            return
-        }
-    }
-}
-
-create_lukas_mode_tab()
-
-// #endregion
-
-
-
-function toggleDropdown(dropdown_name) {
-    var dropdown = document.getElementById(dropdown_name);
-    if (dropdown !== null) {
-        dropdown.classList.toggle('open');
-    }
-}
-
-function closeDropdown(dropdown_name) {
-    var dropdown = document.getElementById(dropdown_name);
-    if (dropdown !== null) {
-        if (!dropdown.contains(document.activeElement)) {
-            dropdown.classList.remove('open');
-        }
-    }
-}
-
-function showTab(tabId) {
-    var tabs = document.getElementsByClassName("menu");
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-    document.getElementById(tabId).style.display = "block";
-    create_all()
-    current_frame = tabId.split("_")[0]
-}
-
 
 function fetchLanguages() {
     return fetch("https://raw.githubusercontent.com/Bumes/Drinks/main/language.json?v=" + new Date().getTime())
@@ -842,7 +685,8 @@ async function fetchAndStoreLanguages() {
 
 let language;
 
-function sendData(inputData) {
+function sendData() {
+    var inputData = document.getElementById("inputData").value;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://drinks-oxb9.onrender.com/master', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -855,8 +699,16 @@ function sendData(inputData) {
         console.error('Error while sending data.');
         return;
     };
-    var data = JSON.stringify({ formatted_name: inputData });
+    var data = JSON.stringify({ input: inputData });
     console.log("Sending data: " + data);
     xhr.send(data);
 }
 
+
+const lastOrderElement = document.getElementById('lastOrder');
+const eventSource = new EventSource('/lastOrder');
+
+eventSource.onmessage = function (event) {
+     const data = JSON.parse(event.data);
+     add_drink(data)
+};
