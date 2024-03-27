@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Page</title>
+</head>
+<body>
+    <h1>Last Order:</h1>
+    <p id="lastOrder"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get('/lastOrder', function(data) {
+                $('#lastOrder').text(data);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
 
 <head>
      <meta charset="UTF-8">
@@ -20,7 +44,7 @@
 </body>
 
 
-                    <!--<div class="dropdown" id="all_drinks-base-spirit-dropdown" tabindex="1"
+                    <div class="dropdown" id="all_drinks-base-spirit-dropdown" tabindex="1"
                    onblur='closeDropdown("all_drinks-base-spirit-dropdown")'>
                    <button onclick='toggleDropdown("all_drinks-base-spirit-dropdown")'><label
                              id="base_spirit_text"></label></button>

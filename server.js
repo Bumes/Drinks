@@ -19,10 +19,15 @@ app.post('/master', (req, res) => {
 
 // Endpoint to serve HTML page with last order
 app.get('/', (req, res) => {
-    my_label = document.getElementById("my_result_label")
-    my_label.textContent = lastOrder
+    // Assuming you have a master.html file in the same directory
+    res.sendFile(__dirname + '/master.html');
+});
+
+// Endpoint to serve last order data
+app.get('/lastOrder', (req, res) => {
+    res.send(lastOrder);
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on https://drinks.lukas-bumes:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
