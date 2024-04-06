@@ -185,9 +185,6 @@ coffee_added_flavor_profiles = []
 drinks_added_base_spirits = []
 
 function Drink({ category = "Cocktails", name = "No Name given", ingredients = [], options = [], garnishes = [], base_spirit = "Other", flavor_profile = [] }) {
-    if (name.toLowerCase().search(document.getElementById(`${current_frame}-search-filter`).value.toLowerCase()) == -1) {
-        return
-    }
     if (current_frame == "drinks") {
         base_spirit_filter = get_base_spirits_filter()
 
@@ -355,16 +352,6 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         }
         if (every_ingredient === false && ingredients.length == 0) {
             every_ingredient = options.length > 0
-        }
-    }
-
-    if (every_ingredient) {
-        if (!document.getElementById(`${current_frame}-availability-dropdown`).checked) {
-            return
-        }
-    } else {
-        if (!document.getElementById(`${current_frame}-not-availability-dropdown`).checked) {
-            return
         }
     }
 
