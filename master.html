@@ -1,60 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--
+<script>
+     const path = window.location.pathname
 
-<head>
+     // Check if the path is '/master'
+     if (path === '/master') {
+          // Load the master homepage content
+          fetch('master.html')
+               .then(response => response.text())
+               .then(html => {
+                    // Replace the current page content with the master homepage content
+                    document.body.innerHTML = html
+               })
+               .catch(error => {
+                    console.error('Error loading master homepage:', error)
+               })
+     }
+</script>--><!-- Metadata for the page --><html><head>
+     <!-- Title of webpage in the browser -->
+     <title>Drinks</title>
      <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Master Drink</title>
+
+     <link rel="stylesheet" type="text/css" href="drinks.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-     <h1>Last Order:</h1>
-     <div id="lastOrder"></div>
-
-     <div id="all_drinks_menu" class="menu">
-          <div class="filter">
-               <div class="search">
-                    <!--<label class="search_label"><label id="search_text"></label></label>
-                    <input class="search_filter" id="all-drinks-search-filter" oninput="create_all()"></input>-->
-               </div>
-          </div>
+     <div id="drinks_menu" class="menu">
      </div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script src="language.js"></script>
-     <script src="master-script.js"></script>
+     <script rc="server.js"></script>
 
-     <script>
-          update_language();
-     </script>
-
-</body>
-</html>
-
-<!--
-                    <div class="dropdown" id="drinks-base-spirit-dropdown" tabindex="1"
-                         onblur='closeDropdown("drinks-base-spirit-dropdown")'>
-                         <button onclick='toggleDropdown("drinks-base-spirit-dropdown")'><label
-                                   id="base_spirit_text"></label></button>
-                         <div class="dropdown-content" id="drinks-base-spirit-dropdown-content">
-                         </div>
-                    </div>
-
-                    <div class="dropdown" id="drinks-category-dropdown" tabindex="0"
-                         onblur='closeDropdown("drinks-category-dropdown")'>
-                         <button onclick='toggleDropdown("drinks-category-dropdown")'><label
-                                   id="flavor_text"></label></button>
-                         <div class="dropdown-content" id="drinks-category-dropdown-content">
-                         </div>
-                    </div>
-
-                    <div class="dropdown" id="drinks-availability-options-dropdown" tabindex="2"
-                         onblur='closeDropdown("drinks-availability-options-dropdown")'>
-                         <button onclick='toggleDropdown("drinks-availability-options-dropdown")'><label
-                                   id="avaliability_text"></label></button>
-                         <div class="dropdown-content" id="drinks-availability-options-dropdown-content">
-                              <input type="checkbox" name="Available" id="drinks-availability-dropdown" checked="true"
-                                   onclick="create_all()"><label id="available_text"></label></input>
-                              <label><input type="checkbox" name="Not Available" id="drinks-not-availability-dropdown"
-                                        onclick="create_all()"><label id="not_available_text"></label></input></label>
-                         </div>
-                    </div>
-               -->
+</body></html>

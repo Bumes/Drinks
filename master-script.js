@@ -32,6 +32,7 @@ async function fetchAndStoreDrinks() {
     try {
         drinks = await fetchDrinks()
         console.log(available_ingredients)
+        console.log("added drinks")
     } catch (error) {
         console.error(error);
     }
@@ -691,5 +692,3 @@ async function create_all() {
 // #endregion
 
 let language;
-
-add_drink("beer")

@@ -657,8 +657,6 @@ async function create_all() {
         idx++
     }
 
-    update_language()
-
     console.log(missing)
 }
 
