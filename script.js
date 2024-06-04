@@ -411,7 +411,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
                 </div>` : ''}
             </div>` : ''}
-            ${every_ingredient ?  `<button id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
+            ${every_ingredient ?  `<button class="order-button" id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
     `;
 
     // Add the drink to the correct menu 
@@ -855,7 +855,7 @@ function sendData(inputData) {
         }
     };
     xhr.onerror = function () {
-        console.error('Error while sending data.');
+        console.error('Error while sending data. Status:', xhr.status, 'Status Text:', xhr.statusText);
         return;
     };
     var data = JSON.stringify({ formatted_name: inputData });

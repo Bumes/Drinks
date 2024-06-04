@@ -4,11 +4,18 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
+            "name": "Drinks",
             "file": "c:\\Users\\Luck\\Desktop\\Programme\\Programmieren\\Getränkekarte\\Drinks\\index.html" //"C:\\Users\\luk62\\Desktop\\Projekte\\Drinks\\index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Drinks Master",
+            "file": "C:\\Users\\Luck\\Desktop\\Programme\\Programmieren\\Getränkekarte\\Drinks\\master.html" //"C:\\Users\\luk62\\Desktop\\Projekte\\Drinks\\index.html"
         }
     ]
 }

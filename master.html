@@ -1,33 +1,32 @@
-<!DOCTYPE html><!--
-<script>
-     const path = window.location.pathname
-
-     // Check if the path is '/master'
-     if (path === '/master') {
-          // Load the master homepage content
-          fetch('master.html')
-               .then(response => response.text())
-               .then(html => {
-                    // Replace the current page content with the master homepage content
-                    document.body.innerHTML = html
-               })
-               .catch(error => {
-                    console.error('Error loading master homepage:', error)
-               })
-     }
-</script>--><!-- Metadata for the page --><html><head>
-     <!-- Title of webpage in the browser -->
-     <title>Drinks</title>
-     <meta charset="UTF-8">
-
-     <link rel="stylesheet" type="text/css" href="drinks.css">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<!DOCTYPE html><html><head>
+    <!-- Title of webpage in the browser -->
+    <title>Drinks</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="drinks.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-     <div id="drinks_menu" class="menu">
-     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <script rc="server.js"></script>
+    <div id="drinks_menu" class="menu"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="server.js"></script> <!-- Fix typo in src attribute -->
+    
+    <script>
+        const path = window.location.pathname;
+
+        // Check if the path is '/master'
+        if (path === '/master') {
+            // Load the master homepage content
+            fetch('master.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Replace the current page content with the master homepage content
+                    document.body.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading master homepage:', error);
+                });
+        }
+    </script>
+
 
 </body></html>
