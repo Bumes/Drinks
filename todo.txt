@@ -2,4 +2,4 @@ einkaufsliste
 
 order option
 
-add aquafaba, white beer
+add aquafaba, white beer, rosmary... option for gin tonic
