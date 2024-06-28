@@ -302,7 +302,7 @@
                 "Citrus peel"
             ],
             "flavor_profile": [
-                "bitter"
+                "tart"
             ],
             "base_spirit": "Gin"
         },
@@ -316,7 +316,7 @@
             "base_spirit": "Gin",
             "flavor_profile": [
                 "coffee",
-                "bitter",
+                "tart",
                 "weirs"
             ]
         },
@@ -904,6 +904,17 @@
             ]
         },
         {
+            "name": "Espresso Tonic",
+            "ingredients": [
+                "Espresso",
+                "Tonic Water"
+            ],
+            "flavor_profile": [
+                "coffee",
+                "tart",
+                "fresh"
+        },
+        {
             "name": "Matcha Tonic",
             "ingredients": [
                 "30ml Matcha",
@@ -960,20 +971,18 @@
         {
             "name": "Espresso",
             "ingredients": [
-                "Double Espresso",
-                "(Brown Sugar)"
+                "Double Espresso"
             ],
             "garnishes": [
                 "Amaretti"
             ],
             "flavor_profile": [
                 "coffee",
-                "strong",
-                "this is a test"
+                "strong"
             ],
             "options": [
                 "Brown Sugar // (Recommended)",
-                "honey",
+                "Honey",
                 "White Sugar"
             ]
         },
@@ -981,8 +990,7 @@
             "name": "Espresso Macchiato",
             "ingredients": [
                 "Double Espresso",
-                "Steamed Milk",
-                "(Brown Sugar)"
+                "Steamed Milk"
             ],
             "garnishes": [
                 "Amaretti"
@@ -996,7 +1004,10 @@
                 "Milk",
                 "Oat Milk",
                 "Soy Milk",
-                "Almond Milk"
+                "Almond Milk",
+                "Brown Sugar",
+                "Honey",
+                "White Sugar"
             ]
         },
         {
@@ -1011,7 +1022,7 @@
             "options": [
                 "Brown Sugar // (Recommended)",
                 "White Sugar",
-                "honey"
+                "Honey"
             ]
         },
         {
