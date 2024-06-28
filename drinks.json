@@ -6,7 +6,8 @@
                 "Edelstoff",
                 "Augustiner",
                 "Urtyp",
-                "Kloster Gold"
+                "Kloster Gold",
+                 "Schneider Helles"
             ]
         },
         {
@@ -14,6 +15,7 @@
             "base_spirit": "Wine",
             "options": [
                 "Freixenet Cava Blanca",
+                "Freixenet Carta Nevada",
                 "Freixenet"
             ]
         },
@@ -101,6 +103,14 @@
             "flavor_profile": [
                 "sweet",
                 "fresh"
+            ]
+        },
+        {
+            "name": "Flavored beer",
+            "options": [
+                "raspberry sirup",
+                "grenadine sirup",
+                "elderflower sirup"
             ]
         },
         {
@@ -249,6 +259,23 @@
             ]
         },
         {
+            "name": "Aviation",
+            "ingredients": [
+                "60ml Gin // (St. George Botanivore)",
+                "10ml Creme de Violette // (Rothman and Winter) -> 10ml Creme de Mure",
+                "10ml Luxardo Maraschino",
+                "15ml Lemon Juice"
+            ],
+            "garnishes": [
+                "lemon oil",
+                "cocktail cherry"
+            ],
+            "base_spirit": "Gin",
+            "flavor_profile": [
+                "sweet"
+            ]
+        },
+        {
             "name": "Pisco Sour",
             "ingredients": [
                 "60ml Pisco",
@@ -262,6 +289,35 @@
             "flavor_profile": [
                 "citrus",
                 "creamy"
+            ]
+        },
+        {
+            "name": "Gin Tonic",
+            "ingredients": [
+                "50ml Gin",
+                "Tonic Water"
+            ],
+            "garnishes": [
+                "Rosmary",
+                "Citrus peel"
+            ],
+            "flavor_profile": [
+                "bitter"
+            ],
+            "base_spirit": "Gin"
+        },
+        {
+            "name": "Gin Espresso Tonic",
+            "ingredients": [
+                "50ml Gin",
+                "Espresso",
+                "Tonic Water"
+            ],
+            "base_spirit": "Gin",
+            "flavor_profile": [
+                "coffee",
+                "bitter",
+                "weirs"
             ]
         },
         {
@@ -297,6 +353,26 @@
                 "citrus",
                 "bubbly"
             ]
+        },
+        {
+            "name": "Blue Finch",
+            "ingredients": [
+                "50ml Gin",
+                "15 Creme de Violette -> 15ml Creme de Mur",
+                "20ml Lavender Sirup",
+                "25ml lemon juice",
+                "20ml Aqua faba -> egg white",
+                "60ml Secco // (Champagne)"
+            ],
+            "flavor_profile": [
+                "sweet",
+                "flowery",
+                "creamy"
+            ],
+            "garnishes": [
+                "lavender"
+            ],
+            "base_spirit": "Gin"
         },
         {
             "name": "Last Word",
