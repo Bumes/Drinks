@@ -57,6 +57,25 @@
             ]
         },
         {
+            "name": "Beer Mojito",
+            "ingredients": [
+                "60ml White Rum",
+                "15g Brown Sugar",
+                "½ Lime -> 15ml Lime Juice",
+                "Mint -> ",
+                "White Beer"
+            ],
+            "garnishes": [
+                "Mint"
+            ],
+            "base_spirit": "Rum",
+            "flavor_profile": [
+                "fresh",
+                "citrus",
+                "herbs"
+            ]
+        },
+        {
             "name": "Cuba Libre",
             "ingredients": [
                 "60ml Brown Rum -> 60ml White Rum",
