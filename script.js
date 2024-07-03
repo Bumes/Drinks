@@ -124,8 +124,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
     for (const item of flavor_filter) {
         for (let f = 0; f < flavor_profile.length; f++) {
-            if (item.name == flavor_profile[f]) {
-                if (item.value === false) {
+            if (flavor_profile[f].includes(item.name)) {
+                if (item.value === true) {
                     return
                 }
             }
