@@ -120,24 +120,19 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
     flavor_filter = get_flavor_filter()
 
-    let is_one_selected_flavor = false
     let is_any_selected_flavor = false
 
     for (const item of flavor_filter) {
         for (let f = 0; f < flavor_profile.length; f++) {
             if (item.name == flavor_profile[f]) {
-                if (item.value === true) {
-                    is_one_selected_flavor = true;
+                if (item.value === false) {
+                    return
                 }
             }
         }
         if (item.value === true) {
             is_any_selected_flavor = true
         }
-    }
-
-    if ((!is_one_selected_flavor) && is_any_selected_flavor) {
-        return
     }
 
     every_ingredient = true;
