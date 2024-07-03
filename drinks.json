@@ -7,7 +7,8 @@
                 "Augustiner",
                 "Urtyp",
                 "Kloster Gold",
-                 "Schneider Helles"
+                "Schneider Helles",
+                "Oettinger"
             ]
         },
         {
@@ -262,7 +263,7 @@
             "name": "Aviation",
             "ingredients": [
                 "60ml Gin // (St. George Botanivore)",
-                "10ml Creme de Violette // (Rothman and Winter) -> 10ml Creme de Mure",
+                "10ml Creme de Violette // (Rothman and Winter) -> 10ml Crème de Mûre",
                 "10ml Luxardo Maraschino",
                 "15ml Lemon Juice"
             ],
@@ -358,7 +359,7 @@
             "name": "Blue Finch",
             "ingredients": [
                 "50ml Gin",
-                "15 Creme de Violette -> 15ml Creme de Mur",
+                "15 Creme de Violette -> 15ml Crème de Mûre",
                 "20ml Lavender Sirup",
                 "25ml lemon juice",
                 "20ml Aqua faba -> egg white",
