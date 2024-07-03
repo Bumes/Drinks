@@ -133,7 +133,8 @@
             "nutty": "Nutty",
             "honey": "Honey",
             "matcha": "Matcha",
-            "weird": "Weird"
+            "weird": "Weird",
+            "flowery": "Flowery"
         }
     },
     "de": {
@@ -270,7 +271,8 @@
             "nutty": "Nussig",
             "honey": "Honig",
             "matcha": "Matcha",
-            "weird": "Komisch"
+            "weird": "Komisch",
+            "flowery": "Blumig"
         }
     }
 }
