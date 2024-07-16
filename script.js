@@ -177,7 +177,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 } else {
                     missing[formatted_ingredient][1] = missing[formatted_ingredient][1].replace(/\d+/, match => (parseInt(match) + 1).toString())
                 }
-                ingredient[i] = current_ingredients[0]
+                ingredients[i] = current_ingredients[0]
             } else {
                 if (chosen_ingredient.search("Missing: ") != -1) {
                     temp = chosen_ingredient.replace("Missing: ", "").replace(/[\d½|\d¼]+(ml|g)? /, '')

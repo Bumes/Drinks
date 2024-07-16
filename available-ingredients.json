@@ -42,11 +42,11 @@
   "falernum_liqueur": false,
   "peach_liqueur": true,
   "orange_liqueur": false,
-  "crème_de_mûre": false,
+  "crème_de_mûre": true,
   "luxardo_maraschino": false,
   "cointreau": false,
   "triple_sec": false,
-  "water": true,
+  "water": true,"v"
   "hot_water": true,
   "sparkling_water": true,
   "wild_berry": true,
