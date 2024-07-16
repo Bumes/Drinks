@@ -627,10 +627,10 @@
         {
             "name": "Bramble",
             "ingredients": [
-                "60ml Gin",
-                "30ml Lemon Juice",
+                "50ml Gin",
+                "15ml Lemon Juice -> 15ml Lime Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
-                "15ml Crème de mûre"
+                "20ml Crème de mûre"
             ],
             "garnishes": [
                 "Lemon",
