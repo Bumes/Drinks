@@ -741,6 +741,16 @@
             ]
         },
         {
+            "name": "The Godfather",
+            "ingredient": [
+                "60ml Whiskey (Irish)",
+                "30ml Amaretto"
+            ],
+            "flavor_profile": [
+                "nutty"
+            ]
+        },
+        {
             "name": "Passion fruit skinny bitch",
             "ingredients": [
                 "60ml Vodka",
@@ -1050,6 +1060,18 @@
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
             ],
             "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Chocolate covered Cheery",
+            "ingredients": [
+                "10ml Coffee Liqueur",
+                "10ml Baileys",
+                "10ml Grenadine"
+            ],
+            "flavor_profile": [
+                "chocolate",
                 "fruity"
             ]
         },
