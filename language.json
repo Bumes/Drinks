@@ -14,6 +14,7 @@
         "ingredients_text": "Ingredients:",
         "options_text": "Options:",
         "garnishes_text": "Garnishes:",
+        "recommended_text": "Recommended Drinks",
         "ingredients": {
             "beer": "Beer",
             "augustiner": "Augustiner",
@@ -152,6 +153,7 @@
         "ingredients_text": "Zutaten:",
         "options_text": "Optionen:",
         "garnishes_text": "Garnitur:",
+        "recommended_text": "Empfohlene Getränke",
         "ingredients": {
             "beer": "Bier",
             "augustiner": "Augustiner",
