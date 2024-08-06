@@ -956,6 +956,81 @@
             "flavor_profile": [
                 "creamy"
             ]
+        },
+        {
+            "name": "Club Stauti V1",
+            "ingredients": [
+                "Brown Rum",
+                "Lemon Juice",
+                "Simple Sirup",
+                "Club Mate"
+            ], 
+            "flavor_profile": [
+                "weird"
+            ], 
+            "base_spirit": "rum",
+            "garnishes": [
+                "lime"
+            ]
+        },
+        {
+            "name": "Club Stauti V2",
+            "ingredients": [
+                "Vodka",
+                "Grenadine",
+                "Cranberry",
+                "Club Mate"
+            ], 
+            "flavor_profile": [
+                "weird"
+            ], 
+            "base_spirit": "vodka",
+            "garnishes": [
+                "Berries"
+            ]
+        },
+        {
+            "name": "Club Stauti V3",
+            "ingredients": [
+                "Jägermeister",
+                "Club Mate"
+            ], 
+            "flavor_profile": [
+                "herbs",
+                "weird"
+            ], 
+            "garnishes": [
+                "Rucula"
+            ]
+        },
+        {
+            "name": "Club Stauti V3-1",
+            "ingredients": [
+                "Ramazotti",
+                "Club Mate"
+            ], 
+            "flavor_profile": [
+                "herbs",
+                "weird"
+            ], 
+            "garnishes": [
+                "Rucula"
+            ]
+        },
+        {
+            "name": "Zwetchgen Smash",
+            "ingredients": [
+                "Gin",
+                "Plumb",
+                "Basil",
+                "Lime Juice"
+            ], 
+            "flavor_profile": [
+                "sweet"
+            ], 
+            "garnishes": [
+                "Basil"
+            ]
         }
     ],
     "Mocktails": [
