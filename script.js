@@ -679,16 +679,12 @@ async function create_all() {
         if (drinks[category][0].recommended && drinks[category][0].recommended.luck) {
             recommended_drinks = drinks[category][0].recommended.luck
             if (recommended_drinks) {
-
+                
                 recommendedDiv = document.createElement("div");
                 recommendedDiv.classList.add("drink");
 
                 // Populate the drink container
-                recommendedDiv.innerHTML = `
-                    <style>
-                    </style>
-            
-                    <h1 class="recommended-header">${"Recommended"}</h2>`
+                recommendedDiv.innerHTML = `<h1 class="recommended-header">${"Recommended"}`
 
                 recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
                 recommendedDiv.style.width = '98%'; // Use flex layout to display them side by side
@@ -730,11 +726,7 @@ async function create_all() {
                 spaceDiv = document.createElement("div");
 
                 // Populate the drink container
-                spaceDiv.innerHTML = `
-                    <style>
-                    </style>
-            
-                    <h1 class="seperator">${""}</h2>`
+                spaceDiv.innerHTML = `<h1 class="seperator">${""}`
 
                 spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
                 spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
