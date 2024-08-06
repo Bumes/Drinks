@@ -120,7 +120,24 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Aperol",
+            "base_spirit": "Wine",
+            "flavor_profile": [
+                "fresh",
+                "tart",
+                "fruity"
+            ]
+        },
+        {
+            "name": "Campari Spritz",
+            "ingredients": [
+                "60ml Secco",
+                "30ml Campari",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Orange"
+            ],
+            "base_spirit": "Wine",
             "flavor_profile": [
                 "fresh",
                 "tart",
@@ -220,7 +237,7 @@
             "name": "Negroni",
             "ingredients": [
                 "30ml Gin",
-                "30ml Sweet Vermouth",
+                "30ml Sweet Vermouth -> 30ml Dry Vermouth -> 30ml Lillet",
                 "30ml Campari -> 30ml Aperol"
             ],
             "garnishes": [
@@ -236,8 +253,8 @@
             "name": "Margarita",
             "ingredients": [
                 "50ml Silver Tequila",
-                "30ml Triple Sec",
-                "30ml Lime Juice"
+                "30ml Triple Sec -> 30ml Cointreau -> 30ml Orange Liqueur",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice"
             ],
             "garnishes": [
                 "Orange"
@@ -252,8 +269,8 @@
             "name": "Daiquiri",
             "ingredients": [
                 "60ml White Rum -> 60ml Brown Rum",
-                "30ml Lime Juice",
-                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"
             ],
             "garnishes": [
                 "Lime"
@@ -286,7 +303,7 @@
             "ingredients": [
                 "60ml Vodka",
                 "90ml Ginger Beer -> 90ml Ginger Ale",
-                "½ Lime -> 15ml Lime Juice"
+                "½ Lime -> 30ml Lime Juice -> ½ Lemon -> 30ml Lemon Juice"
             ],
             "garnishes": [
                 "Lime"
@@ -303,7 +320,7 @@
                 "60ml Gin // (St. George Botanivore)",
                 "10ml Creme de Violette // (Rothman and Winter) -> 10ml Crème de Mûre",
                 "10ml Luxardo Maraschino",
-                "15ml Lemon Juice"
+                "15ml Lemon Juice -> 15ml Lime Juice"
             ],
             "garnishes": [
                 "lemon oil",
@@ -318,7 +335,7 @@
             "name": "Pisco Sour",
             "ingredients": [
                 "60ml Pisco",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
                 "(1 Egg White)"
             ],
@@ -362,8 +379,8 @@
         {
             "name": "Paloma",
             "ingredients": [
-                "60ml Blanco Tequila",
-                "30ml Lime Juice",
+                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Grapefruit Soda",
                 "Salt"
             ],
@@ -418,14 +435,14 @@
             "ingredients": [
                 "30ml Gin",
                 "30ml Chartreuse",
-                "30ml Lime Juice"
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice"
             ]
         },
         {
             "name": "Mai Tai",
             "ingredients": [
                 "60ml Blended Rum -> 60ml Brown Rum -> 60ml White Rum",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Orgeat Sirup",
                 "15ml Orange Liqueur",
                 "Mint -> "
@@ -443,7 +460,7 @@
             "name": "Gimlet",
             "ingredients": [
                 "60ml London Dry Gin -> 60ml Gin",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"
             ],
             "garnishes": [
@@ -459,7 +476,7 @@
             "name": "Clover Club",
             "ingredients": [
                 "50ml Gin",
-                "30ml Lemon Juice -> 30ml Lime Juice",
+                "30ml Lime Juice -> 30ml Lemon Juice -> ½ Lime -> ½ Lemon",
                 "30ml Raspberry Sirup",
                 "1 Egg White"
             ],
@@ -474,7 +491,7 @@
             "name": "Amaretto Sour",
             "ingredients": [
                 "50ml Amaretto",
-                "30ml Lemon Juice -> 30ml Lime Juice",
+                "30ml Lemon Juice -> 30ml Lime Juice -> ½ Lime -> ½ Lemon",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
                 "1 Egg White"
             ],
@@ -493,8 +510,8 @@
             "ingredients": [
                 "50ml Brown Rum -> 50ml White Rum",
                 "20ml Campari -> 20ml Aperol",
-                "15ml Lime Juice",
-                "15ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
+                "15ml Lime Juice -> 15ml Lemon",
+                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
                 "50ml Pineapple Juice"
             ],
             "garnishes": [],
@@ -508,8 +525,8 @@
             "name": "Gin Fizz",
             "ingredients": [
                 "50ml Gin",
-                "60ml Lemon Juice",
-                "30ml Simple Sirup -> 20g White Sugar -> 30g Brown Sugar -> 30ml Agave Sirup",
+                "1 Lime -> 1 Lemon -> 60ml Lime Juice -> 60ml Lemon Juice",
+                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -541,8 +558,8 @@
             "name": "Corpse Reviver",
             "ingredients": [
                 "30ml Gin",
-                "30ml Triple Sec",
-                "30ml Lemon Juice -> 30ml Lime Juice",
+                "30ml Triple Sec -> 30ml Cointreau -> 30ml Orange Liqueur",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Lillet -> 30ml Sweet Vermouth",
                 "Absinthe"
             ],
@@ -562,7 +579,7 @@
                 "30ml Brown Rum",
                 "30ml Apricot Brandy",
                 "15ml Falernum Liqueur",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Pineapple Juice",
                 "10ml Grenadine"
             ],
@@ -580,8 +597,8 @@
             "name": "Bee's Knees",
             "ingredients": [
                 "60ml Gin",
-                "30ml Lemon Juice -> 30ml Lime Juice",
-                "30ml Honey Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "30ml Honey Sirup -> 15ml Honey -> 30ml Agave Sirup -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"
             ],
             "garnishes": [
                 "Lemon"
@@ -596,7 +613,7 @@
             "name": "Gin Basil Smash",
             "ingredients": [
                 "60ml Gin",
-                "30ml Lemon Juice -> 30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
                 "Basil"
             ],
@@ -629,8 +646,8 @@
             "name": "Cosmopolitan",
             "ingredients": [
                 "50ml Vodka Citron -> 50ml Vodka // (with citron)",
-                "30ml Cointreau",
-                "30ml Lime Juice",
+                "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "60ml Cranberry Juice"
             ],
             "garnishes": [
@@ -665,7 +682,7 @@
             "name": "Old Cuban",
             "ingredients": [
                 "50ml Brown Rum -> 50ml Blended Rum -> 50ml White Rum",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
                 "60ml Secco",
                 "Mint",
@@ -683,8 +700,8 @@
         {
             "name": "Caipirinha",
             "ingredients": [
-                "60ml Pitu",
-                "1 Lime",
+                "60ml Pitu -> 60ml White Rum",
+                "! Lime -> ! Lemon -> 60ml Lime Juice -> 60ml Lemon Juice",
                 "10g White Sugar -> 20ml Simple Sirup -> 10g Brown Sugar -> 20ml Agave Sirup"
             ]
         },
@@ -693,7 +710,7 @@
             "ingredients": [
                 "60ml Gin",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Mint"
             ],
             "garnishes": [
@@ -727,7 +744,7 @@
             "name": "Passion fruit skinny bitch",
             "ingredients": [
                 "60ml Vodka",
-                "30ml Lime Juice",
+                "½ Lime -> ½ Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Passion Fruit",
                 "Sparkling Water"
             ],
@@ -764,7 +781,7 @@
                 "20ml Peach Liqueur",
                 "15ml Cranberry Sirup",
                 "15ml Grenadine",
-                "½ Lime -> 15ml Lime Juice",
+                "15ml Lime Juice",
                 "80ml Orange Juice"
             ],
             "garnishes": [
@@ -782,7 +799,7 @@
                 "30ml Whiskey // (Bourbon)",
                 "30ml Apple Cider",
                 "15ml Maple Sirup -> 15ml Honey Sirup -> 15ml Agave Sirup -> 10g Brown Sugar -> 10g White Sugar",
-                "10ml Lemon Juice -> ½ Lemon -> ½ Lime -> 15ml Lime Juice",
+                "10ml Lemon Juice -> 10ml Lime Juice",
                 "Angostura Bitters",
                 "100ml IPA -> 100ml Beer"
             ],
@@ -814,8 +831,8 @@
         {
             "name": "Italien Mule (Aperol Version)",
             "ingredients": [
-                "50ml Aperol",
-                "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 15ml Lemon Juice",
+                "50ml Aperol -> 50ml Campari",
+                "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 20ml Lemon Juice",
                 "Red Wine",
                 "Ginger Beer"
             ],
@@ -865,7 +882,7 @@
             "name": "Japan Mule",
             "ingredients": [
                 "60ml Shochu",
-                "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
+                "½ Lime -> 30ml Lime Juice Lime -> ½ Lemon -> 30ml Lemon Juice",
                 "Ginger Beer",
                 "Yuzu"
             ],
