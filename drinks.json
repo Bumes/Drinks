@@ -988,6 +988,36 @@
     ],
     "Shots": [
         {
+            "name": "Frangelico",
+            "flavor_profile": [
+                "sweet",
+                "nutty"
+            ]
+        },
+        {
+            "name": "Jägermeister",
+            "flavor_profile": [
+                "strong",
+                "herbs"
+            ]
+        },
+        {
+            "name": "Pfeffi",
+            "flavor_profile": [
+                "fresh"
+            ]
+        },
+        {
+            "name": "Tequila",
+            "garnishes": [
+                "Lemon or Orange",
+                "Salt or Cinnamon"
+            ],
+            "flavor_profile": [
+                "strong"
+            ]
+        },
+        {
             "name": "Liquid Cocaine",
             "ingredients": [
                 "Licor 43",
@@ -1021,6 +1051,29 @@
             ],
             "flavor_profile": [
                 "fruity"
+            ]
+        },
+        {
+            "name": "Irish Car Bomb",
+            "ingredients": [
+                "20ml Whiskey (Irish)",
+                "20ml Baileys",
+                "Guinness"
+            ],
+            "flavor_profile": [
+                "tart"
+            ]
+        },
+        {
+            "name": "Kamikaze",
+            "ingredients": [
+                "30ml Vodka",
+                "10ml Orange Liqueur",
+                "10ml Lime Juice -> 10ml Lemon Juice"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "sour"
             ]
         }
     ],
