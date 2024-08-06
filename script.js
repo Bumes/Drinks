@@ -626,7 +626,7 @@ function Shot({ name, ingredients, garnishes, flavor_profile }) {
 function Coffee({ name, ingredients, garnishes, flavor_profile }) {
     Drink(3, name, ingredients, garnishes, null, flavor_profile)
 }
-
+/*
 async function create_all() {
     await fetchAndStoreIngredients();
     await fetchAndStoreDrinks();
@@ -655,7 +655,128 @@ async function create_all() {
     update_language()
 
     console.log(missing)
+}*/
+
+async function create_all() {
+    await fetchAndStoreIngredients();
+    await fetchAndStoreDrinks();
+
+    delete_all()
+
+    let idx = 0;
+    let processedDrinks = new Set();
+
+    // First process recommended drinks under "luck"
+    for (const category in drinks) {
+        drinks[category].forEach(drink => {
+            if (drink.recommended && drink.recommended.luck) {
+                
+                drinkDiv = document.createElement("div");
+                drinkDiv.classList.add("drink");
+            
+                // Populate the drink container
+                drinkDiv.innerHTML = `
+                    <style>
+                    </style>
+            
+                    <h1 class="recommended-header">${"Recommended"}</h2>`
+
+                drinkDiv.style.display = 'flex'; // Use flex layout to display them side by side
+                drinkDiv.style.width = '98%'; // Use flex layout to display them side by side
+
+                // Set flex property on saved_html to take up more space (adjust as needed)
+                drinkDiv.style.flex = '1';
+        
+                if (category == "Cocktails") {
+                    drinks_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Mocktails") {
+                    mocktail_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Shots") {
+                    shots_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Coffee") {
+                    coffee_menu.appendChild(drinkDiv);
+                }
+
+                drink.recommended.luck.forEach(drink_name => {
+                    drinks[category].forEach(search_drink => {
+                        if (search_drink.name == drink_name) {
+                            recommended_drink = search_drink;
+                        }
+                    })
+                    if (recommended_drink) {
+                        if (!processedDrinks.has(recommended_drink)) {
+                            processedDrinks.add(recommended_drink);
+                            recommended_drink["category"] = category;
+                            Drink(recommended_drink);
+                        }
+                    }
+                });
+
+                
+                add_odd_element(category);
+
+                drinkDiv = document.createElement("div");
+                drinkDiv.classList.add("drink");
+            
+                // Populate the drink container
+                drinkDiv.innerHTML = `
+                    <style>
+                    </style>
+            
+                    <h1 class="recommended-header">${"All Drinks"}</h2>`
+
+                drinkDiv.style.display = 'flex'; // Use flex layout to display them side by side
+                drinkDiv.style.width = '98%'; // Use flex layout to display them side by side
+
+                // Set flex property on saved_html to take up more space (adjust as needed)
+                drinkDiv.style.flex = '1';
+        
+                if (category == "Cocktails") {
+                    drinks_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Mocktails") {
+                    mocktail_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Shots") {
+                    shots_menu.appendChild(drinkDiv);
+                }
+                else if (category == "Coffee") {
+                    coffee_menu.appendChild(drinkDiv);
+                }
+
+            }
+        });
+    }
+
+    // Now process the rest, skipping already processed drinks
+    for (const category in drinks) {
+        drinks[category].forEach(drink => {
+            if (!processedDrinks.has(drink)) {
+                drink["category"] = category;
+                Drink(drink);
+                processedDrinks.add(drink);  // Mark as processed
+            }
+        });
+
+        add_odd_element(category);
+        if (get_flavor_filter().size == 0) {
+            if (idx == 0) {
+                add_all_base_spirits();
+            }
+            add_all_categories(category);
+        }
+
+        idx++;
+    }
+
+    update_language();
+
+    console.log(missing);
 }
+
 
 create_all()
 
