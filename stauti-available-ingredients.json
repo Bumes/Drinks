@@ -1,6 +1,6 @@
 {
-  "beer": false,
-  "augustiner": false,
+  "beer": true,
+  "augustiner": true,
   "edelstoff": false,
   "urtyp": false,
   "kloster_gold": false,
