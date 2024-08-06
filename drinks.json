@@ -1,6 +1,16 @@
 {
     "Cocktails": [
         {
+            "recommended": {
+                "luck": [
+                    "Mojito"
+                ],
+                "stauti": [
+                    "Beer"
+                ]
+            }
+        },
+        {
             "name": "Beer",
             "options": [
                 "Edelstoff",
