@@ -31,6 +31,8 @@
             ]
         },
         {
+            "name": "Guinness"
+        {
             "name": "Secco",
             "base_spirit": "Wine",
             "options": [
@@ -743,7 +745,7 @@
         {
             "name": "The Godfather",
             "ingredient": [
-                "60ml Whiskey (Irish)",
+                "60ml Whiskey // (Irish)",
                 "30ml Amaretto"
             ],
             "flavor_profile": [
