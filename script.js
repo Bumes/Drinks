@@ -363,15 +363,15 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     <p1 id="flavors_text"></p1>
                     <ul>
                         ${flavor_profile.map(flavor => {
-                            let formatted_flavor = format(flavor);
-                            let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
-                            let language_flavor = temp;
-                            if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
-                                language_flavor = language["flavor_profile"][formatted_flavor];
-                            }
-                            flavor = flavor.replace(temp, language_flavor);
-                            return `<li>${flavor.trim()}</li>`;
-                        }).join('')}
+        let formatted_flavor = format(flavor);
+        let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
+        let language_flavor = temp;
+        if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
+            language_flavor = language["flavor_profile"][formatted_flavor];
+        }
+        flavor = flavor.replace(temp, language_flavor);
+        return `<li>${flavor.trim()}</li>`;
+    }).join('')}
                     </ul>
 
                 </div>` : ''}
@@ -406,7 +406,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
                 </div>` : ''}
             </div>` : ''}
-            ${every_ingredient ?  `<button class="order-button" id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
+            ${every_ingredient ? `<button class="order-button" id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
     `;
 
     // Add the drink to the correct menu 
@@ -565,7 +565,7 @@ function add_all_categories(category) {
                 language_flavor = language["flavor_profile"][formatted_flavor]
             }
             name = name.replace(temp, language_flavor)
-            
+
             newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${name}`;
             document.getElementById(my_element_id).appendChild(newOption);
             document.getElementById(my_element_id).appendChild(document.createElement('br'));
@@ -605,6 +605,14 @@ function delete_all() {
     });
     var horizontal_elements = document.querySelectorAll('.image-area-horizontal');
     horizontal_elements.forEach(function (element) {
+        element.remove();
+    });
+    var seperator_elements = document.querySelectorAll('.seperator');
+    seperator_elements.forEach(function (element) {
+        element.remove();
+    });
+    var recommended_elements = document.querySelectorAll('.recommended-header');
+    recommended_elements.forEach(function (element) {
         element.remove();
     });
 }
@@ -668,39 +676,40 @@ async function create_all() {
 
     // First process recommended drinks under "luck"
     for (const category in drinks) {
-        drinks[category].forEach(drink => {
-            if (drink.recommended && drink.recommended.luck) {
-                
-                drinkDiv = document.createElement("div");
-                drinkDiv.classList.add("drink");
-            
+        if (drinks[category][0].recommended && drinks[category][0].recommended.luck) {
+            recommended_drinks = drinks[category][0].recommended.luck
+            if (recommended_drinks) {
+
+                recommendedDiv = document.createElement("div");
+                recommendedDiv.classList.add("drink");
+
                 // Populate the drink container
-                drinkDiv.innerHTML = `
+                recommendedDiv.innerHTML = `
                     <style>
                     </style>
             
                     <h1 class="recommended-header">${"Recommended"}</h2>`
 
-                drinkDiv.style.display = 'flex'; // Use flex layout to display them side by side
-                drinkDiv.style.width = '98%'; // Use flex layout to display them side by side
+                recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
+                recommendedDiv.style.width = '98%'; // Use flex layout to display them side by side
 
                 // Set flex property on saved_html to take up more space (adjust as needed)
-                drinkDiv.style.flex = '1';
-        
+                recommendedDiv.style.flex = '1';
+
                 if (category == "Cocktails") {
-                    drinks_menu.appendChild(drinkDiv);
+                    drinks_menu.appendChild(recommendedDiv);
                 }
                 else if (category == "Mocktails") {
-                    mocktail_menu.appendChild(drinkDiv);
+                    mocktail_menu.appendChild(recommendedDiv);
                 }
                 else if (category == "Shots") {
-                    shots_menu.appendChild(drinkDiv);
+                    shots_menu.appendChild(recommendedDiv);
                 }
                 else if (category == "Coffee") {
-                    coffee_menu.appendChild(drinkDiv);
+                    coffee_menu.appendChild(recommendedDiv);
                 }
 
-                drink.recommended.luck.forEach(drink_name => {
+                recommended_drinks.forEach(drink_name => {
                     drinks[category].forEach(search_drink => {
                         if (search_drink.name == drink_name) {
                             recommended_drink = search_drink;
@@ -715,40 +724,40 @@ async function create_all() {
                     }
                 });
 
-                
+
                 add_odd_element(category);
 
-                drinkDiv = document.createElement("div");
-                drinkDiv.classList.add("drink");
-            
+                spaceDiv = document.createElement("div");
+
                 // Populate the drink container
-                drinkDiv.innerHTML = `
+                spaceDiv.innerHTML = `
                     <style>
                     </style>
             
-                    <h1 class="recommended-header">${"All Drinks"}</h2>`
+                    <h1 class="seperator">${""}</h2>`
 
-                drinkDiv.style.display = 'flex'; // Use flex layout to display them side by side
-                drinkDiv.style.width = '98%'; // Use flex layout to display them side by side
+                spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
+                spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
+                spaceDiv.style.height = '100px'; // Use flex layout to display them side by side
 
                 // Set flex property on saved_html to take up more space (adjust as needed)
-                drinkDiv.style.flex = '1';
-        
+                spaceDiv.style.flex = '1';
+
                 if (category == "Cocktails") {
-                    drinks_menu.appendChild(drinkDiv);
+                    drinks_menu.appendChild(spaceDiv);
                 }
                 else if (category == "Mocktails") {
-                    mocktail_menu.appendChild(drinkDiv);
+                    mocktail_menu.appendChild(spaceDiv);
                 }
                 else if (category == "Shots") {
-                    shots_menu.appendChild(drinkDiv);
+                    shots_menu.appendChild(spaceDiv);
                 }
                 else if (category == "Coffee") {
-                    coffee_menu.appendChild(drinkDiv);
+                    coffee_menu.appendChild(spaceDiv);
                 }
-
+                break;
             }
-        });
+        }
     }
 
     // Now process the rest, skipping already processed drinks
