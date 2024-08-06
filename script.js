@@ -676,8 +676,13 @@ async function create_all() {
 
     // First process recommended drinks under "luck"
     for (const category in drinks) {
-        if (drinks[category][0].recommended && drinks[category][0].recommended.luck) {
-            recommended_drinks = drinks[category][0].recommended.luck
+        
+        if (drinks[category][0].recommended) {
+            if (window.location.href.search("stauti") != -1) {
+                recommended_drinks = drinks[category][0].recommended.stauti
+            } else {
+                recommended_drinks = drinks[category][0].recommended.luck
+            }
             if (recommended_drinks) {
                 
                 recommendedDiv = document.createElement("div");
