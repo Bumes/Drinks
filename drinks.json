@@ -16,6 +16,12 @@
                     "Tokyo Mule"
                 ],
                 "stauti": [
+                    "Zwetschgen Smash",
+                    "Club Stauti V1",
+                    "Club Stauti V2",
+                    "Club Stauti V3",
+                    "Club Stauti V3-1",
+                    "Gin Espresso Tonic"
                 ]
             }
         },
@@ -142,6 +148,23 @@
                 "fresh",
                 "tart",
                 "fruity"
+            ]
+        },,
+        {
+            "name": "Limoncello Spritz",
+            "ingredients": [
+                "60ml Secco",
+                "30ml Limoncello",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "citrus"
+            ],
+            "base_spirit": "Wine",
+            "flavor_profile": [
+                "fresh",
+                "tart",
+                "citrus"
             ]
         },
         {
