@@ -697,7 +697,7 @@ async function create_all() {
 
                 // Populate the drink container
                 if (window.location.href.search("stauti") != -1) {
-                    recommendedDiv.innerHTML = `<h1 id="stauti-recommended_text" class="recommended-header">${"Recommended"}`
+                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="recommended-header">${"Recommended"}`
                 } else {
                     recommendedDiv.innerHTML = `<h1 id="recommended_text" class="recommended-header">${"Recommended"}`
                 }
