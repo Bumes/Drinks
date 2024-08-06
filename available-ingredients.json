@@ -59,6 +59,7 @@
   "sprite": false,
   "soda_stream_sprite": true,
   "tonic_water": true,
+  "club_mate": false,
   "grapefruit_soda": false,
   "orange_juice": true,
   "pineapple_juice": false,
