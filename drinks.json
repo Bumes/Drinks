@@ -804,6 +804,27 @@
             ]
         },
         {
+            "name": "Touchdown",
+            "ingredients": [
+                "40ml Vodka",
+                "20ml Apricot Brandy",
+                "30ml Grenadine",
+                "15ml Lime Juice",
+                "30ml Orange Juice",
+                "90ml Maracuja Juice"
+            ],
+            "garnishes": [
+                "Cocktail Cherry",
+                "Orange Slice"
+            ],
+            "base_spirit": "Vodka",
+            "flavor_profile": [
+                "fruity",
+                "sweet",
+                "sour"
+            ]
+        },
+        {
             "name": "Fence Hopper",
             "ingredients": [
                 "30ml Whiskey // (Bourbon)",
