@@ -3,11 +3,19 @@
         {
             "recommended": {
                 "luck": [
-                    "Mojito",
-                    "Whitebeer Mojito"
+                    "Whitebeer Mojito",
+                    "Kentucky Buck",
+                    "Espresso Martini",
+                    "Penicillin",
+                    "Gin Espresso Tonic",
+                    "Amaretto Sour",
+                    "Jungle Bird",
+                    "Gin Basil Smash",
+                    "Bramble",
+                    "Italian Mule",
+                    "Tokyo Mule"
                 ],
                 "stauti": [
-                    "Beer"
                 ]
             }
         },
