@@ -353,7 +353,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         <div class="image-area${horizontal}">
 
             <div class="image-container">
-                <img src="${picture_folder}${name.toLowerCase().replace(/ *\([^)]*\)/g, "").trim().replace(/\s+$/g, "").split(' ').join('-').split("'").join('') + ".png"}" alt="${name + " Picture"}">
+                <img src="${picture_folder}${name.toLowerCase().replace(/ *\([^)]*\)/g, "").trim().replace(/\s+$/g, "").replace("ñ", "n").split(' ').join('-').split("'").join('') + ".png"}" alt="${name + " Picture"}">
             </div>
 
             ${flavor_profile.length > 0 || ingredients.length > 0 || options.length > 0 ? `
