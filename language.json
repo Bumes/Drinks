@@ -15,6 +15,7 @@
         "options_text": "Options:",
         "garnishes_text": "Garnishes:",
         "recommended_text": "Recommended Drinks",
+        "stauti_recommended_text": "Stauti's Favourites",
         "ingredients": {
             "beer": "Beer",
             "augustiner": "Augustiner",
@@ -154,6 +155,7 @@
         "options_text": "Optionen:",
         "garnishes_text": "Garnitur:",
         "recommended_text": "Empfohlene Getränke",
+        "stauti-recommended_text": "Stautis Empfehlungen",
         "ingredients": {
             "beer": "Bier",
             "augustiner": "Augustiner",
