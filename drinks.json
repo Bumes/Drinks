@@ -986,7 +986,8 @@
                 "Brown Rum",
                 "Lemon Juice",
                 "Simple Sirup",
-                "Club Mate"
+                "Club Mate",
+                "(Angostura Bitters)"
             ], 
             "flavor_profile": [
                 "weird"
@@ -999,13 +1000,13 @@
         {
             "name": "Club Stauti V2",
             "ingredients": [
-                "Vodka",
+                "Gin",
                 "Grenadine",
                 "Cranberry Sirup",
                 "Club Mate"
             ], 
             "flavor_profile": [
-                "weird"
+                "sweet"
             ], 
             "base_spirit": "vodka",
             "garnishes": [
@@ -1015,29 +1016,16 @@
         {
             "name": "Club Stauti V3",
             "ingredients": [
-                "Jägermeister",
-                "Club Mate"
+                "Ramazotti -> Jägermeister",
+                "Club Mate",
+                "Angostura Bitters"
             ], 
             "flavor_profile": [
                 "herbs",
                 "weird"
             ], 
             "garnishes": [
-                "Rucula"
-            ]
-        },
-        {
-            "name": "Club Stauti V3-1",
-            "ingredients": [
-                "Ramazotti",
-                "Club Mate"
-            ], 
-            "flavor_profile": [
-                "herbs",
-                "weird"
-            ], 
-            "garnishes": [
-                "Rucula"
+                "Rucola"
             ]
         },
         {
