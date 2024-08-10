@@ -611,8 +611,8 @@ function delete_all() {
     horizontal_elements.forEach(function (element) {
         element.remove();
     });
-    var seperator_elements = document.querySelectorAll('.seperator');
-    seperator_elements.forEach(function (element) {
+    var other_drinks_elements = document.querySelectorAll('.other_drinks');
+    other_drinks_elements.forEach(function (element) {
         element.remove();
     });
     var recommended_elements = document.querySelectorAll('.recommended-header');
@@ -697,9 +697,9 @@ async function create_all() {
 
                 // Populate the drink container
                 if (window.location.href.search("stauti") != -1) {
-                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="recommended-header">$Recommended`
+                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="recommended-header">Recommended`
                 } else {
-                    recommendedDiv.innerHTML = `<h1 id="recommended_text" class="recommended-header">$Recommended`
+                    recommendedDiv.innerHTML = `<h1 id="recommended_text" class="recommended-header">Recommended`
                 }
 
                 recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
@@ -748,7 +748,7 @@ async function create_all() {
                     spaceDiv = document.createElement("div");
 
                     // Populate the drink container
-                    spaceDiv.innerHTML = `<style>.seperator { height: 100px}</style><h1 class="seperator">Other Drinks`
+                    spaceDiv.innerHTML = `<style>.other_drinks { height: 100px}</style><h1 id="other_drinks_text" class="other_drinks">Other Drinks`
 
                     spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
                     spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
