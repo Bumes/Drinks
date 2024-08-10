@@ -81,7 +81,7 @@ function sortIngredients(arr) {
 }
 
 function format(text) {
-    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
 }
 
 
@@ -188,6 +188,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 formatted_temp = format(temp)
                 if (language["ingredients"].hasOwnProperty(formatted_temp)) {
                     language_ingredient = language["ingredients"][formatted_temp]
+                } else {
+                    console.log("Language is missing " + formatted_temp + " as an ingredient.")
                 }
                 ingredients[i] = chosen_ingredient.replace(temp, language_ingredient)
             }
@@ -215,7 +217,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         if (language["ingredients"].hasOwnProperty(formatted_option)) {
             language_name = language["ingredients"][formatted_option]
         } else {
-            console.log("Language is missing " + formatted_option)
+            console.log("Language is missing " + formatted_option + " as a name.")
         }
         language_name = name.replace(temp, language_name)
     }
@@ -254,6 +256,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 language_option = temp
                 if (language["ingredients"].hasOwnProperty(formatted_option)) {
                     language_option = language["ingredients"][formatted_option]
+                } else {
+                    console.log("Language is missing " + formatted_option + " as an option")
                 }
                 options[o] = options[o].replace(temp, language_option)
             }
@@ -370,6 +374,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         let language_flavor = temp;
         if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
             language_flavor = language["flavor_profile"][formatted_flavor];
+        } else {
+            console.log("Language is missing " + formatted_flavor + " as a flavor profile.")
         }
         flavor = flavor.replace(temp, language_flavor);
         return `<li>${flavor.trim()}</li>`;
@@ -569,6 +575,8 @@ function add_all_categories(category) {
             language_flavor = temp
             if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
                 language_flavor = language["flavor_profile"][formatted_flavor]
+            } else {
+                console.log("Language is missing " + formatted_option + " as an flavor option.")
             }
             name = name.replace(temp, language_flavor)
 

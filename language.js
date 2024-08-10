@@ -3,8 +3,8 @@
 function update_language() {
     let userLanguage = navigator.language || navigator.userLanguage;
     userLanguage = userLanguage.split("-")[0]
-    console.log("Set Language to:")
-    console.log(userLanguage)
+    //console.log("Set Language to:")
+    //console.log(userLanguage)
     fetchAndStoreLanguages()
         .then(languages => {
             // languages will now contain the actual data after successful fetch
