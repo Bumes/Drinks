@@ -693,7 +693,7 @@ async function create_all() {
                 recommendedDiv.classList.add("drink");
 
                 // Populate the drink container
-                recommendedDiv.innerHTML = `<h1 class="recommended-header">${"Recommended"}`
+                recommendedDiv.innerHTML = `<h1 class="recommended-header">Recommended`
 
                 recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
                 recommendedDiv.style.width = '98%'; // Use flex layout to display them side by side
@@ -729,33 +729,40 @@ async function create_all() {
                     }
                 });
 
-
                 add_odd_element(category);
 
-                spaceDiv = document.createElement("div");
+                if (length(processedDrinks) == 0) {
+                    var recommended_elements = document.querySelectorAll('.recommended-header');
+                    recommended_elements.forEach(function (element) {
+                        element.remove();
+                    });
+                } else {
 
-                // Populate the drink container
-                spaceDiv.innerHTML = `<style>.seperator { height: 100px}</style><h1 class="seperator">`
+                    spaceDiv = document.createElement("div");
 
-                spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
-                spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
+                    // Populate the drink container
+                    spaceDiv.innerHTML = `<style>.seperator { height: 100px}</style><h1 class="seperator">Other Drinks`
 
-                // Set flex property on saved_html to take up more space (adjust as needed)
-                spaceDiv.style.flex = '1';
+                    spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
+                    spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
 
-                if (category == "Cocktails") {
-                    drinks_menu.appendChild(spaceDiv);
+                    // Set flex property on saved_html to take up more space (adjust as needed)
+                    spaceDiv.style.flex = '1';
+
+                    if (category == "Cocktails") {
+                        drinks_menu.appendChild(spaceDiv);
+                    }
+                    else if (category == "Mocktails") {
+                        mocktail_menu.appendChild(spaceDiv);
+                    }
+                    else if (category == "Shots") {
+                        shots_menu.appendChild(spaceDiv);
+                    }
+                    else if (category == "Coffee") {
+                        coffee_menu.appendChild(spaceDiv);
+                    }
+                    break;
                 }
-                else if (category == "Mocktails") {
-                    mocktail_menu.appendChild(spaceDiv);
-                }
-                else if (category == "Shots") {
-                    shots_menu.appendChild(spaceDiv);
-                }
-                else if (category == "Coffee") {
-                    coffee_menu.appendChild(spaceDiv);
-                }
-                break;
             }
         }
     }
