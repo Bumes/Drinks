@@ -214,6 +214,8 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         language_name = temp
         if (language["ingredients"].hasOwnProperty(formatted_option)) {
             language_name = language["ingredients"][formatted_option]
+        } else {
+            console.log("Language is missing " + formatted_option)
         }
         language_name = name.replace(temp, language_name)
     }
@@ -738,35 +740,36 @@ async function create_all() {
 
                 add_odd_element(category);
 
-                if (length(processedDrinks) == 0) {
+                if (processedDrinks.length == 0) {
                     var recommended_elements = document.querySelectorAll('.recommended-header');
                     recommended_elements.forEach(function (element) {
                         element.remove();
                     });
                 } else {
 
-                    spaceDiv = document.createElement("div");
+                    other_drinks_div = document.createElement("div");
+                    other_drinks_div.classList.add("drink");
 
                     // Populate the drink container
-                    spaceDiv.innerHTML = `<style>.other_drinks { height: 100px}</style><h1 id="other_drinks_text" class="other_drinks">Other Drinks`
+                    other_drinks_div.innerHTML = `<h1 id="other_drinks_text" class="other_drinks">Other Drinks`
 
-                    spaceDiv.style.display = 'flex'; // Use flex layout to display them side by side
-                    spaceDiv.style.width = '98%'; // Use flex layout to display them side by side
+                    other_drinks_div.style.display = 'flex'; // Use flex layout to display them side by side
+                    other_drinks_div.style.width = '98%'; // Use flex layout to display them side by side
 
                     // Set flex property on saved_html to take up more space (adjust as needed)
-                    spaceDiv.style.flex = '1';
+                    other_drinks_div.style.flex = '1';
 
                     if (category == "Cocktails") {
-                        drinks_menu.appendChild(spaceDiv);
+                        drinks_menu.appendChild(other_drinks_div);
                     }
                     else if (category == "Mocktails") {
-                        mocktail_menu.appendChild(spaceDiv);
+                        mocktail_menu.appendChild(other_drinks_div);
                     }
                     else if (category == "Shots") {
-                        shots_menu.appendChild(spaceDiv);
+                        shots_menu.appendChild(other_drinks_div);
                     }
                     else if (category == "Coffee") {
-                        coffee_menu.appendChild(spaceDiv);
+                        coffee_menu.appendChild(other_drinks_div);
                     }
                     break;
                 }
