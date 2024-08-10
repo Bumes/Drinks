@@ -16,6 +16,12 @@
                     "Tokyo Mule"
                 ],
                 "stauti": [
+                    "Zwetschgen Smash",
+                    "Club Stauti V1",
+                    "Club Stauti V2",
+                    "Club Stauti V3",
+                    "Club Stauti V3-1",
+                    "Gin Espresso Tonic"
                 ]
             }
         },
@@ -142,6 +148,23 @@
                 "fresh",
                 "tart",
                 "fruity"
+            ]
+        },
+        {
+            "name": "Limoncello Spritz",
+            "ingredients": [
+                "60ml Secco",
+                "30ml Limoncello",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "citrus"
+            ],
+            "base_spirit": "Wine",
+            "flavor_profile": [
+                "fresh",
+                "tart",
+                "citrus"
             ]
         },
         {
@@ -741,6 +764,16 @@
             ]
         },
         {
+            "name": "The Godfather",
+            "ingredient": [
+                "60ml Whiskey // (Irish)",
+                "30ml Amaretto"
+            ],
+            "flavor_profile": [
+                "nutty"
+            ]
+        },
+        {
             "name": "Passion fruit skinny bitch",
             "ingredients": [
                 "60ml Vodka",
@@ -791,6 +824,27 @@
             "flavor_profile": [
                 "fruity",
                 "sweet"
+            ]
+        },
+        {
+            "name": "Touchdown",
+            "ingredients": [
+                "40ml Vodka",
+                "20ml Apricot Brandy",
+                "30ml Grenadine",
+                "15ml Lime Juice",
+                "30ml Orange Juice",
+                "90ml Maracuja Juice"
+            ],
+            "garnishes": [
+                "Cocktail Cherry",
+                "Orange Slice"
+            ],
+            "base_spirit": "Vodka",
+            "flavor_profile": [
+                "fruity",
+                "sweet",
+                "sour"
             ]
         },
         {
@@ -925,6 +979,69 @@
             "flavor_profile": [
                 "creamy"
             ]
+        },
+        {
+            "name": "Club Stauti V1",
+            "ingredients": [
+                "Brown Rum",
+                "Lemon Juice",
+                "Simple Sirup",
+                "Club Mate",
+                "(Angostura Bitters)"
+            ], 
+            "flavor_profile": [
+                "weird"
+            ], 
+            "base_spirit": "rum",
+            "garnishes": [
+                "lime"
+            ]
+        },
+        {
+            "name": "Club Stauti V2",
+            "ingredients": [
+                "Gin",
+                "Grenadine",
+                "Cranberry Sirup",
+                "Club Mate"
+            ], 
+            "flavor_profile": [
+                "sweet"
+            ], 
+            "base_spirit": "vodka",
+            "garnishes": [
+                "Berries"
+            ]
+        },
+        {
+            "name": "Club Stauti V3",
+            "ingredients": [
+                "Ramazzotti -> Jägermeister",
+                "Club Mate",
+                "Angostura Bitters"
+            ], 
+            "flavor_profile": [
+                "herbs",
+                "weird"
+            ], 
+            "garnishes": [
+                "Rucola"
+            ]
+        },
+        {
+            "name": "Zwetschgen Smash",
+            "ingredients": [
+                "Gin",
+                "Plumb",
+                "Basil",
+                "Lime Juice"
+            ], 
+            "flavor_profile": [
+                "sweet"
+            ], 
+            "garnishes": [
+                "Basil"
+            ]
         }
     ],
     "Mocktails": [
@@ -988,6 +1105,36 @@
     ],
     "Shots": [
         {
+            "name": "Frangelico",
+            "flavor_profile": [
+                "sweet",
+                "nutty"
+            ]
+        },
+        {
+            "name": "Jägermeister",
+            "flavor_profile": [
+                "strong",
+                "herbs"
+            ]
+        },
+        {
+            "name": "Pfeffi",
+            "flavor_profile": [
+                "fresh"
+            ]
+        },
+        {
+            "name": "Tequila",
+            "garnishes": [
+                "Lemon or Orange",
+                "Salt or Cinnamon"
+            ],
+            "flavor_profile": [
+                "strong"
+            ]
+        },
+        {
             "name": "Liquid Cocaine",
             "ingredients": [
                 "Licor 43",
@@ -1021,6 +1168,41 @@
             ],
             "flavor_profile": [
                 "fruity"
+            ]
+        },
+        {
+            "name": "Chocolate covered Cheery",
+            "ingredients": [
+                "10ml Coffee Liqueur",
+                "10ml Baileys",
+                "10ml Grenadine"
+            ],
+            "flavor_profile": [
+                "chocolate",
+                "fruity"
+            ]
+        },
+        {
+            "name": "Irish Car Bomb",
+            "ingredients": [
+                "20ml Whiskey (Irish)",
+                "20ml Baileys",
+                "Guinness"
+            ],
+            "flavor_profile": [
+                "tart"
+            ]
+        },
+        {
+            "name": "Kamikaze",
+            "ingredients": [
+                "30ml Vodka",
+                "10ml Orange Liqueur",
+                "10ml Lime Juice -> 10ml Lemon Juice"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "sour"
             ]
         }
     ],

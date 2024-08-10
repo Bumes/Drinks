@@ -687,13 +687,20 @@ async function create_all() {
             } else {
                 recommended_drinks = drinks[category][0].recommended.luck
             }
+            if (recommended_drinks == [] || recommended_drinks == "" || !recommended_drinks) {
+                    break;
+            }
             if (recommended_drinks) {
                 
                 recommendedDiv = document.createElement("div");
                 recommendedDiv.classList.add("drink");
 
                 // Populate the drink container
-                recommendedDiv.innerHTML = `<h1 class="recommended-header">Recommended`
+                if (window.location.href.search("stauti") != -1) {
+                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="recommended-header">$Recommended`
+                } else {
+                    recommendedDiv.innerHTML = `<h1 id="recommended_text" class="recommended-header">$Recommended`
+                }
 
                 recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
                 recommendedDiv.style.width = '98%'; // Use flex layout to display them side by side
