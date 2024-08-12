@@ -446,7 +446,8 @@
                 "Sparkling Water"
             ],
             "garnishes": [
-                "Lime Wheel"
+                "Lime Wheel",
+                "Salt Rim"
             ]
         },
         {
@@ -1064,7 +1065,7 @@
             ]
         },
         {
-            "name": "Absinthe Frappée",
+            "name": "Absinthe Frappé",
             "ingredients": [
                 "50ml Absinthe",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
@@ -1521,7 +1522,8 @@
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
             ],
             "garnishes": [
-                "Orange Twist"
+                "Orange Twist",
+                "Sugar Rim"
             ]
         },
         {
