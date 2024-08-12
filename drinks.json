@@ -465,6 +465,19 @@
             ]
         },
         {
+            "name": "Paloma 2",
+            "ingredients": [
+                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "30ml Grapefruit Juice",
+                "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
+                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Lime Wheel"
+            ]
+        },
+        {
             "name": "French 75",
             "ingredients": [
                 "30ml Gin",
@@ -1508,19 +1521,6 @@
             ],
             "garnishes": [
                 "Lemon Twist"
-            ]
-        },
-        {
-            "name": "Paloma",
-            "ingredients": [
-                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
-                "30ml Grapefruit Juice",
-                "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
-                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
-                "Sparkling Water"
-            ],
-            "garnishes": [
-                "Lime Wheel"
             ]
         },
         {
