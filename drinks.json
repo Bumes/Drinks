@@ -1108,21 +1108,6 @@
             ]
         },
         {
-            "name": "Club Stauti V3-1",
-            "ingredients": [
-                "Ramazzotti",
-                "Club Mate",
-                "Angostura Bitters"
-            ], 
-            "flavor_profile": [
-                "herbs",
-                "weird"
-            ], 
-            "garnishes": [
-                "Rucola"
-            ]
-        },
-        {
             "name": "Zwetschgen Smash",
             "ingredients": [
                 "Gin",
