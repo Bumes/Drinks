@@ -81,7 +81,7 @@ function sortIngredients(arr) {
 }
 
 function format(text) {
-    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes", "").replace("dash", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
 }
 
 
@@ -90,32 +90,11 @@ mocktails_added_flavor_profiles = []
 shots_added_flavor_profiles = []
 coffee_added_flavor_profiles = []
 
-drinks_added_base_spirits = []
+drinks_added_ingredients = []
 
-function Drink({ category = "Cocktails", name = "No Name given", ingredients = [], options = [], garnishes = [], base_spirit = "Other", flavor_profile = [] }) {
+function Drink({ category = "Cocktails", name = "No Name given", ingredients = [], options = [], garnishes = [], flavor_profile = [] }) {
     if (name.toLowerCase().search(document.getElementById(`${current_frame}-search-filter`).value.toLowerCase()) == -1 || name == "No Name given") {
         return
-    }
-    if (current_frame == "drinks") {
-        base_spirit_filter = get_base_spirits_filter()
-
-        let is_selected_base_spirit = false
-        let is_any_selected_base_spirit = false
-
-        for (const item of base_spirit_filter) {
-            if (item.name === base_spirit) {
-                if (item.value === true) {
-                    is_selected_base_spirit = true;
-                }
-            }
-            if (item.value === true) {
-                is_any_selected_base_spirit = true
-            }
-        }
-
-        if (is_selected_base_spirit !== is_any_selected_base_spirit) {
-            return
-        }
     }
 
     flavor_filter = get_flavor_filter()
@@ -143,11 +122,13 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
             garnishes[g] = garnishes[g].split("//")[0]
         }
         for (let i = 0; i < ingredients.length; i++) {
+            
             doreturn = true;
             let ingredient = ingredients[i];
             let chosen_ingredient = ingredient
             current_ingredients = ingredient.split(" -> ")
             let j
+
             for (j = 0; j < current_ingredients.length; j++) {
                 formatted_ingredient = format(current_ingredients[j])
                 chosen_ingredient = current_ingredients[j]
@@ -168,6 +149,12 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     break
                 }
             }
+
+            let filter_ingredient = chosen_ingredient.split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("Double ", "").replace("Steamed ", "").replace("Dashes", "").replace("Dash", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/[()]/g, '') 
+
+            if (!(drinks_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
+                drinks_added_ingredients.push(filter_ingredient);
+            }       
 
 
             if (doreturn) {
@@ -241,9 +228,6 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 coffee_added_flavor_profiles.push(flavor_profile[f]);
             }
         }
-    }
-    if (!(drinks_added_base_spirits.includes(base_spirit)) & base_spirit !== null) {
-        drinks_added_base_spirits.push(base_spirit);
     }
     if (options.length > 0) {
         for (let o = 0; o < options.length; o++) {
@@ -509,26 +493,26 @@ function add_odd_element(category) {
     }
 }
 
-function add_all_base_spirits() {
+function add_all_ingredients() {
 
-    drinks_added_base_spirits.sort()
-    const index = drinks_added_base_spirits.indexOf("Other");
+    drinks_added_ingredients.sort()
+    const index = drinks_added_ingredients.indexOf("Other");
     if (index !== -1) {
-        drinks_added_base_spirits.push(drinks_added_base_spirits.splice(index, 1)[0]);
+        drinks_added_ingredients.push(drinks_added_ingredients.splice(index, 1)[0]);
     }
 
-    for (let b = 0; b < drinks_added_base_spirits.length; b++) {
+    for (let b = 0; b < drinks_added_ingredients.length; b++) {
         var newOption = document.createElement('label');
-        newOption.innerHTML = `<input type="checkbox" name="${drinks_added_base_spirits[b]}" onchange="create_all()"> ${drinks_added_base_spirits[b]}`;
+        newOption.innerHTML = `<input type="checkbox" name="${drinks_added_ingredients[b]}" onchange="create_all()"> ${drinks_added_ingredients[b]}`;
         // newOption.addEventListener('change', (event) => {create_all()})
-        document.getElementById('drinks-base-spirit-dropdown-content').appendChild(newOption);
-        document.getElementById('drinks-base-spirit-dropdown-content').appendChild(document.createElement('br'));
+        document.getElementById('drinks-ingredients-dropdown-content').appendChild(newOption);
+        document.getElementById('drinks-ingredients-dropdown-content').appendChild(document.createElement('br'));
     }
 }
 
-function get_base_spirits_filter() {
+function get_ingredients_filter() {
     const checkboxSet = new Set();
-    const checkboxes = document.querySelectorAll(`#${current_frame}-base-spirit-dropdown-content input[type="checkbox"]`);
+    const checkboxes = document.querySelectorAll(`#${current_frame}-ingredients-dropdown-content input[type="checkbox"]`);
 
     checkboxes.forEach(checkbox => {
         checkboxSet.add({ name: checkbox.name, value: checkbox.checked });
@@ -633,8 +617,8 @@ function delete_all() {
 
 
 
-function Cocktail({ name, ingredients, garnishes, base_spirit, flavor_profile }) {
-    Drink(0, name, ingredients, garnishes, base_spirit, flavor_profile)
+function Cocktail({ name, ingredients, garnishes, flavor_profile }) {
+    Drink(0, name, ingredients, garnishes, flavor_profile)
 }
 
 function Mocktail({ name, ingredients, garnishes, flavor_profile }) {
@@ -666,7 +650,7 @@ async function create_all() {
         add_odd_element(category)
         if (get_flavor_filter().size == 0) {
             if (idx == 0) {
-                add_all_base_spirits()
+                add_all_ingredients()
             }
             add_all_categories(category)
         }
@@ -798,7 +782,7 @@ async function create_all() {
         add_odd_element(category);
         if (get_flavor_filter().size == 0) {
             if (idx == 0) {
-                add_all_base_spirits();
+                add_all_ingredients();
             }
             add_all_categories(category);
         }

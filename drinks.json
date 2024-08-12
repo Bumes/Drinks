@@ -37,7 +37,6 @@
         },
         {
             "name": "Secco",
-            "base_spirit": "Wine",
             "options": [
                 "Freixenet Cava Blanca",
                 "Freixenet Carta Nevada",
@@ -46,12 +45,10 @@
         },
         {
             "name": "Red Wine",
-            "base_spirit": "Wine",
             "options": []
         },
         {
             "name": "White Wine",
-            "base_spirit": "Wine",
             "options": []
         },
         {
@@ -59,8 +56,7 @@
             "ingredients": [
                 "Secco",
                 "Orange Juice"
-            ],
-            "base_spirit": "Wine"
+            ]
         },
         {
             "name": "Mojito",
@@ -74,7 +70,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fresh",
                 "citrus"
@@ -92,7 +87,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fresh",
                 "citrus",
@@ -109,7 +103,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "sweet",
                 "citrus"
@@ -125,7 +118,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Wine",
             "flavor_profile": [
                 "fresh",
                 "tart",
@@ -142,7 +134,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Wine",
             "flavor_profile": [
                 "fresh",
                 "tart",
@@ -159,7 +150,6 @@
             "garnishes": [
                 "citrus"
             ],
-            "base_spirit": "Wine",
             "flavor_profile": [
                 "fresh",
                 "tart",
@@ -177,7 +167,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Wine",
             "flavor_profile": [
                 "sweet",
                 "fresh"
@@ -197,7 +186,6 @@
                 "ginger",
                 "fruity"
             ],
-            "base_spirit": "Whiskey",
             "ingredients": [
                 "Strawberry",
                 "60ml Simple Sirup -> 30g White Sugar -> 30g Brown Sugar -> 60ml Agave Sirup",
@@ -220,7 +208,6 @@
             "garnishes": [
                 "Lemon Twist or Olive"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong"
             ]
@@ -234,7 +221,6 @@
             "garnishes": [
                 "Lemon Twist or Olive"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "strong"
             ]
@@ -249,7 +235,6 @@
             "garnishes": [
                 "Coffee Beans"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "strong",
                 "coffee"
@@ -265,7 +250,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "tart"
@@ -281,7 +265,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "tart"
@@ -297,7 +280,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "tart"
@@ -313,7 +295,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "tart"
@@ -329,7 +310,6 @@
             "garnishes": [
                 "Orange"
             ],
-            "base_spirit": "Tequila",
             "flavor_profile": [
                 "strong",
                 "sour"
@@ -345,7 +325,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "strong",
                 "citrus"
@@ -357,12 +336,11 @@
                 "60ml Whiskey // (Scotch)",
                 "30ml Lemon Juice -> 30ml Lime Juice",
                 "30ml Honey Sirup -> 30ml Agave Sirup -> 15ml Honey -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar",
-                "ginger"
+                "Ginger"
             ],
             "garnishes": [
                 "Candied Ginger"
             ],
-            "base_spirit": "Whiskey",
             "flavor_profile": [
                 "sweet",
                 "ginger"
@@ -378,7 +356,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "ginger",
                 "citrus"
@@ -396,7 +373,6 @@
                 "lemon oil",
                 "cocktail cherry"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "sweet"
             ]
@@ -429,8 +405,7 @@
             ],
             "flavor_profile": [
                 "tart"
-            ],
-            "base_spirit": "Gin"
+            ]
         },
         {
             "name": "Gin Espresso Tonic",
@@ -439,7 +414,6 @@
                 "Espresso",
                 "Tonic Water"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "coffee",
                 "tart",
@@ -457,7 +431,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Tequila",
             "flavor_profile": [
                 "strong",
                 "sour"
@@ -487,7 +460,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "citrus",
                 "bubbly"
@@ -499,7 +471,7 @@
                 "50ml Gin",
                 "15 Creme de Violette -> 15ml Crème de Mûre",
                 "20ml Lavender Sirup",
-                "25ml lemon juice",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
                 "20ml Aquafaba -> egg white",
                 "60ml Secco // (Champagne)"
             ],
@@ -510,8 +482,7 @@
             ],
             "garnishes": [
                 "lavender"
-            ],
-            "base_spirit": "Gin"
+            ]
         },
         {
             "name": "Last Word",
@@ -533,7 +504,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "strong",
                 "fruity"
@@ -549,7 +519,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "citrus"
@@ -564,7 +533,6 @@
                 "1 Egg White -> Aquafaba"
             ],
             "garnishes": [],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "fruity",
                 "creamy"
@@ -598,7 +566,6 @@
                 "50ml Pineapple Juice"
             ],
             "garnishes": [],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fruity",
                 "sweet"
@@ -616,7 +583,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "bubbly"
@@ -633,7 +599,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "bubbly"
@@ -649,7 +614,6 @@
             "garnishes": [
                 "Pineapple Leave"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fruity",
                 "creamy"
@@ -667,7 +631,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "citrus"
@@ -688,7 +651,6 @@
                 "Pineapple",
                 "Cocktail Cherry"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "strong",
                 "fruity"
@@ -704,7 +666,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "honey"
@@ -721,7 +682,6 @@
             "garnishes": [
                 "Basil"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "herbs"
@@ -738,7 +698,6 @@
                 "Lemon",
                 "Orange"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong"
             ]
@@ -754,7 +713,6 @@
             "garnishes": [
                 "Lemon"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "strong",
                 "citrus",
@@ -773,7 +731,6 @@
                 "Lemon",
                 "Blackberries"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "fruity"
@@ -792,7 +749,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fresh",
                 "bubbly"
@@ -817,7 +773,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "strong",
                 "fresh"
@@ -835,7 +790,6 @@
                 "Raspberry",
                 "Lemon Twist"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "fruity",
                 "bubbly"
@@ -862,7 +816,6 @@
             "garnishes": [
                 "Passion Fruit"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "fruity",
                 "bubbly"
@@ -878,7 +831,6 @@
             "garnishes": [
                 "Rosemary"
             ],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "fruity",
                 "bubbly",
@@ -898,7 +850,6 @@
             "garnishes": [
                 "Cocktail Cherry"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "fruity",
                 "sweet"
@@ -918,7 +869,6 @@
                 "Cocktail Cherry",
                 "Orange Slice"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "fruity",
                 "sweet",
@@ -938,7 +888,6 @@
             "garnishes": [
                 "Cinnamon Stick"
             ],
-            "base_spirit": "Whiskey",
             "flavor_profile": [
                 "fruity",
                 "cinnamon"
@@ -971,7 +920,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Aperol",
             "flavor_profile": [
                 "citrus",
                 "ginger"
@@ -986,7 +934,6 @@
                 "Secco"
             ],
             "garnishes": [],
-            "base_spirit": "Gin",
             "flavor_profile": [
                 "citrus",
                 "honey",
@@ -1004,7 +951,6 @@
             "garnishes": [
                 "Mint"
             ],
-            "base_spirit": "Rum",
             "flavor_profile": [
                 "fruity",
                 "ginger"
@@ -1021,7 +967,6 @@
             "garnishes": [
                 "Dried Citrus"
             ],
-            "base_spirit": "Other",
             "flavor_profile": [
                 "strong",
                 "ginger",
@@ -1039,7 +984,6 @@
             "garnishes": [
                 "Lime"
             ],
-            "base_spirit": "Vodka",
             "flavor_profile": [
                 "fresh",
                 "bubbly"
@@ -1066,11 +1010,10 @@
                 "Simple Sirup -> White Sugar -> Brown Sugar -> Agave Sirup",
                 "Club Mate",
                 "(Angostura Bitters)"
-            ], 
+            ],
             "flavor_profile": [
                 "weird"
-            ], 
-            "base_spirit": "Rum",
+            ],
             "garnishes": [
                 "lime"
             ]
@@ -1082,11 +1025,10 @@
                 "Grenadine",
                 "Cranberry Sirup",
                 "Club Mate"
-            ], 
+            ],
             "flavor_profile": [
                 "sweet"
-            ], 
-            "base_spirit": "Vodka",
+            ],
             "garnishes": [
                 "Berries"
             ]
@@ -1097,11 +1039,11 @@
                 "Jägermeister",
                 "Club Mate",
                 "Angostura Bitters"
-            ], 
+            ],
             "flavor_profile": [
                 "herbs",
                 "weird"
-            ], 
+            ],
             "garnishes": [
                 "Rucola"
             ]
@@ -1113,10 +1055,10 @@
                 "Plumb",
                 "Basil",
                 "Lime Juice"
-            ], 
+            ],
             "flavor_profile": [
                 "sweet"
-            ], 
+            ],
             "garnishes": [
                 "Basil"
             ]
@@ -1132,7 +1074,7 @@
             "flavor_profile": [
                 "strong",
                 "fresh"
-            ], 
+            ],
             "garnishes": [
                 "Mint"
             ]
@@ -1171,7 +1113,7 @@
             ],
             "flavor_profile": [
                 "herbs"
-            ], 
+            ],
             "garnishes": [
                 "Cherry"
             ]
@@ -1204,7 +1146,7 @@
                 "60ml Cognac",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Dry Curacao -> 15ml Orange Curacao -> 15ml Orange Liqueur",
-                "10ml Luxardo Maraschino",
+                "10ml Maraschino Liqueur // (Luxardo)",
                 "2 Dashes Angostura Bitters"
             ],
             "garnishes": [
@@ -1223,7 +1165,7 @@
             "flavor_profile": [
                 "fresh",
                 "honey"
-            ], 
+            ],
             "garnishes": [
                 "Grapefruit Twist"
             ]
@@ -1238,7 +1180,7 @@
             ],
             "flavor_profile": [
                 "fruity"
-            ], 
+            ],
             "garnishes": [
                 "Cinnamon Sugar Rim",
                 "Orange Twist"
@@ -1266,7 +1208,7 @@
             ],
             "flavor_profile": [
                 "ginger"
-            ], 
+            ],
             "garnishes": [
                 "Lime Wedge"
             ]
@@ -1280,7 +1222,7 @@
             ],
             "flavor_profile": [
                 "coffee"
-            ], 
+            ],
             "garnishes": [
                 "nutmeg"
             ]
@@ -1296,7 +1238,7 @@
             ],
             "flavor_profile": [
                 "fruity"
-            ], 
+            ],
             "garnishes": [
                 "Grape"
             ]
@@ -1321,7 +1263,7 @@
             ],
             "flavor_profile": [
                 "fruity"
-            ], 
+            ],
             "garnishes": [
                 "Orange Slice"
             ]
@@ -1335,7 +1277,7 @@
             ],
             "flavor_profile": [
                 "honey"
-            ], 
+            ],
             "garnishes": [
                 "Lemon Twist"
             ]
@@ -1350,7 +1292,7 @@
             ],
             "flavor_profile": [
                 "strong"
-            ], 
+            ],
             "garnishes": [
                 "Orange Slice",
                 "Cherry"
@@ -1365,7 +1307,7 @@
             ],
             "flavor_profile": [
                 "honey"
-            ], 
+            ],
             "garnishes": [
                 "Lime Wedge"
             ]
@@ -1418,7 +1360,7 @@
             ],
             "flavor_profile": [
                 "fruity"
-            ], 
+            ],
             "garnishes": [
                 "Orange Twist"
             ]
@@ -1433,7 +1375,7 @@
             ],
             "flavor_profile": [
                 "citrus"
-            ], 
+            ],
             "garnishes": [
                 "Lime Wheel",
                 "Cherry"
@@ -1448,7 +1390,7 @@
             ],
             "flavor_profile": [
                 "strong"
-            ], 
+            ],
             "garnishes": [
                 "Mint"
             ]
@@ -1474,7 +1416,7 @@
             ],
             "flavor_profile": [
                 "strong"
-            ], 
+            ],
             "garnishes": [
                 "Orange Twist"
             ]
@@ -1537,7 +1479,7 @@
             ],
             "flavor_profile": [
                 "creamy"
-            ], 
+            ],
             "garnishes": [
                 "Cherry"
             ]
@@ -1551,7 +1493,7 @@
             ],
             "flavor_profile": [
                 "coffee"
-            ], 
+            ],
             "garnishes": [
                 "Flamed Orange Twist"
             ]
@@ -1578,7 +1520,7 @@
                 "15ml Cointreau -> 15ml Orange Liqueur",
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup"
             ],
-            "garnishes":[
+            "garnishes": [
                 "Orange Twist"
             ]
         },
@@ -1605,7 +1547,7 @@
             ],
             "flavor_profile": [
                 "fruity"
-            ], 
+            ],
             "garnishes": [
                 "Orange Twist"
             ]
@@ -1620,7 +1562,7 @@
             ],
             "flavor_profile": [
                 "strong"
-            ], 
+            ],
             "garnishes": [
                 "Lemon Wheel",
                 "Cherry"
@@ -1636,7 +1578,7 @@
             "flavor_profile": [
                 "strong",
                 "fresh"
-            ], 
+            ],
             "garnishes": [
                 "Mint"
             ]
@@ -1705,7 +1647,7 @@
                 "30ml Matcha",
                 "Tonic Water"
             ],
-            "options":[
+            "options": [
                 "White Sugar"
             ],
             "garnishes": [],
