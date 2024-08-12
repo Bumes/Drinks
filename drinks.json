@@ -1095,7 +1095,7 @@
         {
             "name": "Club Stauti V3",
             "ingredients": [
-                "Ramazzotti",
+                "Jägermeister",
                 "Club Mate",
                 "Angostura Bitters"
             ], 
@@ -1110,7 +1110,7 @@
         {
             "name": "Club Stauti V3-1",
             "ingredients": [
-                "Jägermeister",
+                "Ramazzotti",
                 "Club Mate",
                 "Angostura Bitters"
             ], 
@@ -1479,23 +1479,6 @@
             ],
             "garnishes": [
                 "Lemon Wheel"
-            ]
-        },
-        {
-            "name": "Old Cuban",
-            "ingredients": [
-                "40ml Brown Rum",
-                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
-                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
-                "2 Dashes Angostura Bitters",
-                "Mint",
-                "60ml Secco // (Champagne)"
-            ],
-            "flavor_profile": [
-                "mint"
-            ], 
-            "garnishes": [
-                "Mint"
             ]
         },
         {
