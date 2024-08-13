@@ -292,19 +292,19 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
     for (i in chosen_ingredients) {
         let filter_ingredient = chosen_ingredients[i].split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("Double ", "").replace("Steamed ", "").replace("Dashes", "").replace("Dash", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/[()]/g, '').replace(/^\s+|\s+$/g, '')
 
-        if (category == "cocktails") {
+        if (category == "Cocktails") {
             if (!(cocktails_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
                 cocktails_added_ingredients.push(filter_ingredient);
             }
-        } else if (category == "mocktails") {
+        } else if (category == "Mocktails") {
             if (!(mocktails_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
                 mocktails_added_ingredients.push(filter_ingredient);
             }
-        } else if (category == "shots") {
+        } else if (category == "Shots") {
             if (!(shots_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
                 shots_added_ingredients.push(filter_ingredient);
             }
-        } else if (category == "coffee") {
+        } else if (category == "Coffee") {
             if (!(coffee_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
                 coffee_added_ingredients.push(filter_ingredient);
             }
@@ -558,9 +558,9 @@ function add_all_ingredients(category) {
 
     delete_all_ingredients(category)
 
-    for (let b = 0; b < cocktails_added_ingredients.length; b++) {
+    for (let b = 0; b < ingredients.length; b++) {
         var newOption = document.createElement('label');
-        newOption.innerHTML = `<input type="checkbox" name="${cocktails_added_ingredients[b]}" onchange="create_all()"> ${cocktails_added_ingredients[b]}`;
+        newOption.innerHTML = `<input type="checkbox" name="${ingredients[b]}" onchange="create_all()"> ${ingredients[b]}`;
         // newOption.addEventListener('change', (event) => {create_all()})
         document.getElementById(`${category}-ingredients-dropdown-content`).appendChild(newOption);
         document.getElementById(`${category}-ingredients-dropdown-content`).appendChild(document.createElement('br'));
