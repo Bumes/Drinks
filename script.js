@@ -398,7 +398,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
                 </div>` : ''}
             </div>` : ''}
-            ${every_ingredient ? `<button class="order-button" id="order_button" onclick='sendData("${format(name)}")'>Bestellen</button id="order_button">` : `<button>Vormerken</button>`}
+            ${every_ingredient ? `<button class="order-button" id="order_button" onclick='sendData("${format(name)}")'>Order</button>` : `<button class="order-button" id="pre_order_button" onclick='sendData("${format(name)}>Pre-Order</button>`}
     `;
 
     // Add the drink to the correct menu 

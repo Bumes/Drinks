@@ -17,6 +17,8 @@
         "recommended_text": "Recommended Drinks",
         "stauti_recommended_text": "Stauti's Favourites",
         "other_drinks_text": "Other Drinks",
+        "order_button": "Order",
+        "pre_order_button": "Pre-Order",
         "ingredients": {
             "beer": "Beer",
             "white_beer": "White Beer",
@@ -167,6 +169,8 @@
         "recommended_text": "Empfohlene Getränke",
         "stauti_recommended_text": "Stautis Empfehlungen",
         "other_drinks_text": "Andere Getränke",
+        "order_button": "Bestellen",
+        "pre_order_button": "Vorbestellen",
         "ingredients": {
             "beer": "Bier",
             "white_beer": "Weißbier",
