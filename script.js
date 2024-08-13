@@ -103,6 +103,9 @@ shots_added_flavor_profiles = []
 coffee_added_flavor_profiles = []
 
 cocktails_added_ingredients = []
+mocktails_added_ingredients = []
+shots_added_ingredients = []
+coffee_added_ingredients = []
 
 function Drink({ category = "Cocktails", name = "No Name given", ingredients = [], options = [], garnishes = [], flavor_profile = [] }) {
     if (name.toLowerCase().search(document.getElementById(`${current_frame}-search-filter`).value.toLowerCase()) == -1 || name == "No Name given") {
@@ -289,8 +292,22 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
     for (i in chosen_ingredients) {
         let filter_ingredient = chosen_ingredients[i].split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("Double ", "").replace("Steamed ", "").replace("Dashes", "").replace("Dash", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/[()]/g, '').replace(/^\s+|\s+$/g, '')
 
-        if (!(cocktails_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
-            cocktails_added_ingredients.push(filter_ingredient);
+        if (category == "cocktails") {
+            if (!(cocktails_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
+                cocktails_added_ingredients.push(filter_ingredient);
+            }
+        } else if (category == "mocktails") {
+            if (!(mocktails_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
+                mocktails_added_ingredients.push(filter_ingredient);
+            }
+        } else if (category == "shots") {
+            if (!(shots_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
+                shots_added_ingredients.push(filter_ingredient);
+            }
+        } else if (category == "coffee") {
+            if (!(coffee_added_ingredients.includes(filter_ingredient)) & filter_ingredient !== null & filter_ingredient.search("Missing") == -1) {
+                coffee_added_ingredients.push(filter_ingredient);
+            }
         }
     }
 
@@ -528,7 +545,16 @@ function add_odd_element(category) {
 
 function add_all_ingredients(category) {
 
-    cocktails_added_ingredients.sort()
+    if (category == "cocktails") {
+        ingredients = cocktails_added_ingredients.sort()
+    } else if (category == "mocktails") {
+        ingredients = mocktails_added_ingredients.sort()
+    } else if (category == "shots") {
+        ingredients = shots_added_ingredients.sort()
+    } else if (category == "coffee") {
+        ingredients = coffee_added_ingredients.sort()
+    }
+    
 
     delete_all_ingredients(category)
 
