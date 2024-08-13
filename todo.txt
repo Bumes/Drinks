@@ -2,4 +2,4 @@ einkaufsliste
 
 order option
 
-add aquafaba, white beer, rosmary... option for gin tonic
+no recommended available but other - weird box (something to do with recommended-header)

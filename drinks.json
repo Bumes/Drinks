@@ -408,6 +408,10 @@
             ],
             "flavor_profile": [
                 "tart"
+            ],
+            "options": [
+                "Citrus",
+                "Rosemary"
             ]
         },
         {
@@ -516,7 +520,7 @@
         {
             "name": "Gimlet",
             "ingredients": [
-                "60ml London Dry Gin -> 60ml Gin",
+                "60ml Gin // (London Dry)",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"
             ],

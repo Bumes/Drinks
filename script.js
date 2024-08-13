@@ -109,24 +109,17 @@ coffee_added_ingredients = []
 
 function Drink({ category = "Cocktails", name = "No Name given", ingredients = [], options = [], garnishes = [], flavor_profile = [] }) {
     if (name.toLowerCase().search(document.getElementById(`${current_frame}-search-filter`).value.toLowerCase()) == -1 || name == "No Name given") {
-        return
+        return false
     }
 
     flavor_filter = get_flavor_filter()
 
-    let is_any_selected_flavor = false
+    const flavor_filter_names = [...flavor_filter]
+        .filter(item => item.value === true)
+        .map(item => format(item.name.split(" ").join(" ")));
 
-    for (const item of flavor_filter) {
-        for (let f = 0; f < flavor_profile.length; f++) {
-            if (flavor_profile[f].includes(item.name)) {
-                if (item.value === true) {
-                    return
-                }
-            }
-        }
-        if (item.value === true) {
-            is_any_selected_flavor = true
-        }
+    if (!flavor_filter_names.every(element => flavor_profile.includes(element))) {
+        return false
     }
 
     every_ingredient = true;
@@ -186,10 +179,13 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 }
                 language_ingredient = temp
                 formatted_temp = format(temp)
-                if (language["ingredients"].hasOwnProperty(formatted_temp)) {
-                    language_ingredient = language["ingredients"][formatted_temp]
-                } else if (formatted_temp != "") {
-                    console.log("Language is missing " + formatted_temp + " as an ingredient.")
+                try {
+                    if (language["ingredients"].hasOwnProperty(formatted_temp)) {
+                        language_ingredient = language["ingredients"][formatted_temp]
+                    } else if (formatted_temp != "") {
+                        console.log("Language is missing " + formatted_temp + " as an ingredient.")
+                    }
+                } catch {
                 }
                 ingredients[i] = chosen_ingredient.replace(temp, language_ingredient)
             }
@@ -235,7 +231,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         .map(item => format(item.name.split(" ").join(" ")));
 
     if (!filteredNames.every(element => formatted_chosen_ingredients.includes(element))) {
-        return
+        return false
     }
 
     for (let f = 0; f < flavor_profile.length; f++) {
@@ -281,11 +277,11 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
     if (every_ingredient) {
         if (!document.getElementById(`${current_frame}-availability-dropdown`).checked) {
-            return
+            return false
         }
     } else {
         if (!document.getElementById(`${current_frame}-not-availability-dropdown`).checked) {
-            return
+            return false
         }
     }
 
@@ -411,11 +407,10 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         } else {
             console.log("Language is missing " + formatted_flavor + " as a flavor profile.")
         }
-        flavor = flavor.replace(temp, language_flavor);
-        return `<li>${flavor.trim()}</li>`;
+        reflavor = flavor.replace(temp, language_flavor);
+        return `<li>${reflavor.trim()}</li>`;
     }).join('')}
                     </ul>
-
                 </div>` : ''}
 
                 ${ingredients.length > 0 ? `
@@ -505,6 +500,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
             coffee_menu.appendChild(wrapperDiv);
         }
     }
+    return true
 }
 
 function add_odd_element(category) {
@@ -554,7 +550,7 @@ function add_all_ingredients(category) {
     } else if (category == "coffee") {
         ingredients = coffee_added_ingredients.sort()
     }
-    
+
 
     delete_all_ingredients(category)
 
@@ -671,13 +667,16 @@ function delete_all() {
     horizontal_elements.forEach(function (element) {
         element.remove();
     });
-    var other_drinks_elements = document.querySelectorAll('.other_drinks');
-    other_drinks_elements.forEach(function (element) {
-        element.remove();
-    });
-    var recommended_elements = document.querySelectorAll('.recommended-header');
-    recommended_elements.forEach(function (element) {
-        element.remove();
+    var drink_types = ['cocktails', 'mocktails', 'shots', 'coffee'];
+    drink_types.forEach(function (type) {
+        var elements = document.querySelectorAll('.' + type + '-other-drinks-header');
+        elements.forEach(function (element) {
+            element.remove();
+        });
+        var elements = document.querySelectorAll('.' + type + '-recommended-header');
+        elements.forEach(function (element) {
+            element.remove();
+        });
     });
 }
 
@@ -743,6 +742,8 @@ async function create_all() {
     // First process recommended drinks under "luck"
     for (const category in drinks) {
 
+        added_recommended_drinks = []
+
         if (drinks[category][0].recommended) {
             if (window.location.href.search("stauti") != -1) {
                 recommended_drinks = drinks[category][0].recommended.stauti
@@ -759,9 +760,9 @@ async function create_all() {
 
                 // Populate the drink container
                 if (window.location.href.search("stauti") != -1) {
-                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="recommended-header">Recommended`
+                    recommendedDiv.innerHTML = `<h1 id="stauti_recommended_text" class="${category.toLowerCase()}-recommended-header">Recommended`
                 } else {
-                    recommendedDiv.innerHTML = `<h1 id="recommended_text" class="recommended-header">Recommended`
+                    recommendedDiv.innerHTML = `<h1 id="recommended_text" class="${category.toLowerCase()}-recommended-header">Recommended`
                 }
 
                 recommendedDiv.style.display = 'flex'; // Use flex layout to display them side by side
@@ -793,15 +794,18 @@ async function create_all() {
                         if (!processedDrinks.has(recommended_drink)) {
                             processedDrinks.add(recommended_drink);
                             recommended_drink["category"] = category;
-                            Drink(recommended_drink);
+                            showing = Drink(recommended_drink);
+                            if (showing === true) {
+                                added_recommended_drinks.push(recommended_drink)
+                            }
                         }
                     }
                 });
 
                 add_odd_element(category);
 
-                if (processedDrinks.length == 0) {
-                    var recommended_elements = document.querySelectorAll('.recommended-header');
+                if (added_recommended_drinks.length == 0) {
+                    var recommended_elements = document.querySelectorAll(`.${category.toLowerCase()}-recommended-header`);
                     recommended_elements.forEach(function (element) {
                         element.remove();
                     });
@@ -811,7 +815,7 @@ async function create_all() {
                     other_drinks_div.classList.add("drink");
 
                     // Populate the drink container
-                    other_drinks_div.innerHTML = `<h1 id="other_drinks_text" class="other_drinks">Other Drinks`
+                    other_drinks_div.innerHTML = `<h1 id="other_drinks_text" class="${category.toLowerCase()}-other-drinks-header">Other Drinks`
 
                     other_drinks_div.style.display = 'flex'; // Use flex layout to display them side by side
                     other_drinks_div.style.width = '98%'; // Use flex layout to display them side by side
@@ -839,13 +843,28 @@ async function create_all() {
 
     // Now process the rest, skipping already processed drinks
     for (const category in drinks) {
+
+        added_other_drinks = []
+
         drinks[category].forEach(drink => {
             if (!processedDrinks.has(drink)) {
-                drink["category"] = category;
-                Drink(drink);
                 processedDrinks.add(drink);  // Mark as processed
+                drink["category"] = category;
+                showing = Drink(drink);
+                if (showing === true) {
+                    added_other_drinks.push(drink)
+                } else {
+                    console.log()
+                }
             }
         });
+
+        if (added_other_drinks.length == 0 & added_recommended_drinks.length > 0) {
+            var recommended_elements = document.querySelectorAll(`.${category.toLowerCase()}-other-drinks-header`);
+            recommended_elements.forEach(function (element) {
+                element.remove();
+            });
+        }
 
         add_odd_element(category);
         if (get_flavor_filter().size == 0) {
@@ -859,17 +878,17 @@ async function create_all() {
             availability_false = cocktails_availability_false
             cocktails_availability_true = document.getElementById(`${lower_category}-availability-dropdown`).checked
             cocktails_availability_false = document.getElementById(`${lower_category}-not-availability-dropdown`).checked
-        } else if (lower_category == "mocktails"){
+        } else if (lower_category == "mocktails") {
             availability_true = mocktails_availability_true
             availability_false = mocktails_availability_false
             mocktails_availability_true = document.getElementById(`${lower_category}-availability-dropdown`).checked
             mocktails_availability_false = document.getElementById(`${lower_category}-not-availability-dropdown`).checked
-        } else if (lower_category == "shots"){
+        } else if (lower_category == "shots") {
             availability_true = shots_availability_true
             availability_false = shots_availability_false
             shots_availability_true = document.getElementById(`${lower_category}-availability-dropdown`).checked
             shots_availability_false = document.getElementById(`${lower_category}-not-availability-dropdown`).checked
-        } else if (lower_category == "coffee"){
+        } else if (lower_category == "coffee") {
             availability_true = coffee_availability_true
             availability_false = coffee_availability_false
             coffee_availability_true = document.getElementById(`${lower_category}-availability-dropdown`).checked
