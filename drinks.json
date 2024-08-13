@@ -13,7 +13,10 @@
                     "Gin Basil Smash",
                     "Bramble",
                     "Italian Mule",
-                    "Tokyo Mule"
+                    "Tokyo Mule",
+                    "Zwetschgen Smash",
+                    "White Russian",
+                    "Enzoni"
                 ],
                 "stauti": [
                     "Zwetschgen Smash",
@@ -161,7 +164,7 @@
             "ingredients": [
                 "60ml Secco",
                 "¼ Lime -> 10ml Lime Juice",
-                "15ml Elderflower sirup",
+                "15ml Elderflower Sirup",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -175,9 +178,9 @@
         {
             "name": "Flavored beer",
             "options": [
-                "raspberry sirup",
-                "grenadine",
-                "elderflower sirup"
+                "Raspberry Sirup",
+                "Grenadine",
+                "Elderflower Sirup"
             ]
         },
         {
