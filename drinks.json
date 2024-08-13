@@ -1505,7 +1505,7 @@
                 "50ml Gin",
                 "15ml Passion Fruit Sirup",
                 "½ Lemon -> ½ Lime -> 15ml Lemon Juice -> 15ml Lime Juice",
-                "10ml Falernum",
+                "10ml Falernum Liqueur",
                 "10ml Orgeat Sirup"
             ],
             "garnishes": [
@@ -1742,7 +1742,7 @@
         {
             "name": "Irish Car Bomb",
             "ingredients": [
-                "20ml Whiskey (Irish)",
+                "20ml Whiskey // (Irish)",
                 "20ml Baileys",
                 "Guinness"
             ],

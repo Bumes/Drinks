@@ -81,7 +81,7 @@ function sortIngredients(arr) {
 }
 
 function format(text) {
-    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes", "").replace("dash", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes ", "").replace("dash ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
 }
 
 
@@ -354,7 +354,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     <ul>
                         ${flavor_profile.map(flavor => {
         let formatted_flavor = format(flavor);
-        let temp = flavor.replace(/[\d½|\d¼]+(ml|g)? /, '');
+        let temp = flavor.replace(/[\d½|\d¼]+(ml|cl|g)? /, '');
         let language_flavor = temp;
         if (language["flavor_profile"].hasOwnProperty(formatted_flavor)) {
             language_flavor = language["flavor_profile"][formatted_flavor];
