@@ -580,7 +580,7 @@ function add_all_ingredients(category) {
     delete_all_ingredients(category)
     for (let b = 0; b < language_ingredients.length; b++) {
         var newOption = document.createElement('label');   
-        newOption.innerHTML = `<input type="checkbox" name="${language_ingredients[b]}" onchange="create_all()"> ${language_ingredients[b]}`;
+        newOption.innerHTML = `<input class="filter-checkbox" type="checkbox" name="${language_ingredients[b]}" onchange="create_all()"> ${language_ingredients[b]}`;
         // newOption.addEventListener('change', (event) => {create_all()})
         document.getElementById(`${category}-ingredients-dropdown-content`).appendChild(newOption);
         document.getElementById(`${category}-ingredients-dropdown-content`).appendChild(document.createElement('br'));
@@ -650,7 +650,7 @@ function add_all_categories(category) {
             }
             name = name.replace(temp, language_flavor)
 
-            newOption.innerHTML = `<input type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${name}`;
+            newOption.innerHTML = `<input class="filter-checkbox" type="checkbox" name="${flavor_profile[f]}" onchange="create_all()"> ${name}`;
             document.getElementById(my_element_id).appendChild(newOption);
             document.getElementById(my_element_id).appendChild(document.createElement('br'));
         }
