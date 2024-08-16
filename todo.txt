@@ -3,3 +3,5 @@ einkaufsliste
 order option
 
 no recommended available but other - weird box (something to do with recommended-header)
+
+when resizing language lag

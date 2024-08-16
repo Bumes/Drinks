@@ -358,6 +358,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
 
     const horizontal = window.innerHeight < window.innerWidth ? "-horizontal" : "-portrait";
 
+
     // Populate the drink container
     drinkDiv.innerHTML = `
         <style>
@@ -1141,3 +1142,4 @@ function sendData(inputData) {
     xhr.send(data);
 }
 
+window.addEventListener('resize', create_all);

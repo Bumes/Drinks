@@ -120,6 +120,8 @@ h1 {
   background-color: #202720;
   min-width: 160px;
   z-index: 1;
+  border: 2px solid #659165;
+  border-radius: 2px;
 }
 
 .dropdown-content label {
@@ -143,11 +145,29 @@ h1 {
   border-color:#202720;
 }
 
-.dropdown-button {
-  height: 30px;
+@media (orientation: portrait) {
+  .filter .search {
+      display: flex;
+      flex-direction: row; /* Ensure items are in a row */
+      flex-wrap: wrap; /* Allow wrapping if necessary */
+      justify-content: space-between; /* Space between items */
+  }
+
+  .filter .search .dropdown, 
+  .filter .search .search_filter,
+  .filter .search .search_label {
+      flex: 1; /* Make each element take up equal space */
+      margin: 5px; /* Add some margin between elements */
+      box-sizing: border-box;
+  }
+
+  .filter .search .dropdown-button, 
+  .filter .search .search_filter,
+  .filter .search .search_label {
+      width: 100%;
+      padding: 10px;
+  }
 }
-
-
 
 
 input[type="checkbox"] {
@@ -178,5 +198,7 @@ input[type="checkbox"]::before {
 }
 
 input[type="checkbox"]:checked::before {
-  background-color: #ffffff;
+  border: 2px solid #fff;
+  width: 10px;
+  height: 10px;
 }
