@@ -1109,6 +1109,9 @@
             ],
             "garnishes": [
                 "Cherry"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1160,6 +1163,10 @@
             "garnishes": [
                 "Sugar Rim",
                 "Lemon Peel"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "strong"
             ]
         },
         {
@@ -1205,6 +1212,9 @@
             ],
             "garnishes": [
                 "Cherry"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1261,6 +1271,10 @@
             ],
             "garnishes": [
                 "Lime Wedge"
+            ],
+            "flavor_profile": [
+                "strong",
+                "ginger"
             ]
         },
         {
@@ -1284,7 +1298,8 @@
                 "30ml Honey Sirup -> 15ml Honey -> 30ml Agave Sirup -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"
             ],
             "flavor_profile": [
-                "honey"
+                "honey",
+                "citrus"
             ],
             "garnishes": [
                 "Lemon Twist"
@@ -1314,7 +1329,8 @@
                 "30ml Honey Sirup -> 15ml Honey -> 30ml Agave Sirup -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"
             ],
             "flavor_profile": [
-                "honey"
+                "honey",
+                "strong"
             ],
             "garnishes": [
                 "Lime Wedge"
@@ -1331,6 +1347,9 @@
             ],
             "garnishes": [
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1342,6 +1361,9 @@
             ],
             "garnishes": [
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1355,6 +1377,10 @@
             "garnishes": [
                 "Sugar Rim",
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -1367,7 +1393,8 @@
                 "1 Dash Orange Bitters"
             ],
             "flavor_profile": [
-                "fruity"
+                "fruity",
+                "strong"
             ],
             "garnishes": [
                 "Orange Twist"
@@ -1382,7 +1409,8 @@
                 "10ml Grenadine"
             ],
             "flavor_profile": [
-                "citrus"
+                "citrus",
+                "strong"
             ],
             "garnishes": [
                 "Lime Wheel",
@@ -1413,6 +1441,9 @@
             ],
             "garnishes": [
                 "Lemon Wheel"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1438,6 +1469,9 @@
             ],
             "garnishes": [
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1447,6 +1481,9 @@
                 "30ml Aperol",
                 "30ml Amaro Nonine -> 30ml Averna -> 30ml Jägermeister",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1460,6 +1497,10 @@
             ],
             "garnishes": [
                 "Cherry"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -1473,6 +1514,10 @@
             ],
             "garnishes": [
                 "Lime Twist"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -1500,7 +1545,8 @@
                 "2 Dashes Orange Bitters"
             ],
             "flavor_profile": [
-                "coffee"
+                "coffee",
+                "strong"
             ],
             "garnishes": [
                 "Flamed Orange Twist"
@@ -1518,6 +1564,9 @@
             "garnishes": [
                 "Lime Twist",
                 "Cherry"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         },
         {
@@ -1531,6 +1580,9 @@
             "garnishes": [
                 "Orange Twist",
                 "Sugar Rim"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         },
         {
@@ -1544,6 +1596,9 @@
             ],
             "garnishes": [
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong"
             ]
         },
         {
@@ -1555,7 +1610,8 @@
                 "15ml Grenadine"
             ],
             "flavor_profile": [
-                "fruity"
+                "fruity",
+                "strong"
             ],
             "garnishes": [
                 "Orange Twist"
@@ -1567,10 +1623,11 @@
                 "60ml Whiskey // (Bourbon)",
                 "1 Lemon -> 30ml Lemon Juice -> 1 Lime -> 30ml Lime Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
-                "// (1 Egg White -> Aquafaba)"
+                "1 Egg White -> Aquafaba"
             ],
             "flavor_profile": [
-                "strong"
+                "strong",
+                "creamy"
             ],
             "garnishes": [
                 "Lemon Wheel",
@@ -1603,6 +1660,40 @@
             ],
             "garnishes": [
                 "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "strong",
+                "creamy",
+                "citrus"
+        },
+        {
+            "name": "French Connection",
+            "ingredients": [
+                "50ml Cognac",
+                "30ml Amaretto"
+            ],
+            "garnishes": [
+                "Orange Peel"
+            ],
+            "flavor_profile": [
+                "nutty",
+                "strong"
+            ]
+        },
+        {
+            "name": "Gin Tonic Cold Fusion",
+            "ingredients": [
+                "60ml Gin",
+                ""½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "Orange Juice",
+                "Tonic Water"
+            ],
+            "garnishes": [
+                "Orange Peel",
+                "Mint"
+            ],
+            "flavor_profile": [
+                "fruity",
             ]
         }
     ],
