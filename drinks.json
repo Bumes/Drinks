@@ -1665,6 +1665,7 @@
                 "strong",
                 "creamy",
                 "citrus"
+            ]
         },
         {
             "name": "French Connection",
@@ -1684,7 +1685,7 @@
             "name": "Gin Tonic Cold Fusion",
             "ingredients": [
                 "60ml Gin",
-                ""½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
                 "Orange Juice",
                 "Tonic Water"
             ],
@@ -1693,7 +1694,7 @@
                 "Mint"
             ],
             "flavor_profile": [
-                "fruity",
+                "fruity"
             ]
         }
     ],
