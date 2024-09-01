@@ -154,8 +154,13 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 } else if (formatted_ingredient == "") {
                     j = j - 1
                     doreturn = false
-                    ingredients[i] = "Missing: " + ingredient.split(" -> ")[0]
-                    chosen_ingredient = "Missing: " + ingredient.split(" -> ")[0]
+                    if (current_ingredients.length <= 1) {
+                        ingredients[i] = current_ingredients[0].replace(/.*\/\/\s*/, '')
+                        chosen_ingredient = current_ingredients[0].replace(/.*\/\/\s*/, '')
+                    } else {
+                        ingredients[i] = "Missing: " + current_ingredients[0]
+                        chosen_ingredient = "Missing: " + current_ingredients[0]
+                    }
                     break
                 }
             }
@@ -319,7 +324,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         }
     }
 
-    ingredients = sortIngredients(ingredients);
+    // ingredients = sortIngredients(ingredients);
 
     for (let g = 0; g < garnishes.length; g++) {
         formatted_garnish = format(garnishes[g])
