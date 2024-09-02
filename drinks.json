@@ -97,6 +97,23 @@
             ]
         },
         {
+            "name": "Jägermeister Mojito",
+            "ingredients": [
+                "60ml Jägermeister",
+                "15g Brown Sugar -> 15g White Sugar -> 20ml Simple Sirup",
+                "½ Lime -> 30ml Lime Juice",
+                "Mint -> ",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Mint"
+            ],
+            "flavor_profile": [
+                "herbs",
+                "citrus"
+            ]
+        },
+        {
             "name": "Cuba Libre",
             "ingredients": [
                 "60ml Brown Rum -> 60ml White Rum",
@@ -114,8 +131,8 @@
         {
             "name": "Aperol Spritz",
             "ingredients": [
-                "60ml Secco",
                 "30ml Aperol",
+                "60ml Secco",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -130,8 +147,8 @@
         {
             "name": "Campari Spritz",
             "ingredients": [
-                "60ml Secco",
                 "30ml Campari",
+                "60ml Secco",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -146,8 +163,8 @@
         {
             "name": "Limoncello Spritz",
             "ingredients": [
-                "60ml Secco",
                 "30ml Limoncello",
+                "60ml Secco",
                 "Sparkling Water"
             ],
             "garnishes": [
@@ -157,6 +174,21 @@
                 "fresh",
                 "tart",
                 "citrus"
+            ]
+        },
+        {
+            "name": "Hot Girl Summer Spritz",
+            "ingredients": [
+                "30ml Lillet Rosé",
+                "90ml Secco",
+                "Grapefruit Soda"
+            ],
+            "garnishes": [
+                "Grapefruit or Lemon Peel"
+            ],
+            "flavor_profile": [
+                "fresh",
+                "tart"
             ]
         },
         {
@@ -244,6 +276,42 @@
             ]
         },
         {
+            "name": "Espresso Martini Souffle",
+            "ingredients": [
+                "30ml Vodka",
+                "50ml Coffee Liqueur",
+                "15g Instant Coffee",
+                "50ml Hot Water",
+                "50g Brown Sugar -> 50g White Sugar",
+                "300g Ice"
+            ],
+            "garnishes": [
+                "Coffee Beans"
+            ],
+            "flavor_profile": [
+                "strong",
+                "coffee",
+                "sweet"
+            ]
+        },
+        {
+            "name": "Affogato Martini",
+            "ingredients": [
+                "50ml Vodka",
+                "30ml Coffee Liqueur",
+                "Espresso",
+                "Vanilla Ice Cream"
+            ],
+            "garnishes": [
+                "Coffee Beans"
+            ],
+            "flavor_profile": [
+                "coffee",
+                "sweet",
+                "creamy"
+            ]
+        },
+        {
             "name": "Negroni",
             "ingredients": [
                 "30ml Gin",
@@ -271,6 +339,39 @@
             "flavor_profile": [
                 "strong",
                 "tart"
+            ]
+        },
+        {
+            "name": "Chocolate Negroni",
+            "ingredients": [
+                "30ml Gin",
+                "30ml Sweet Vermouth -> 30ml Lillet -> 30ml Dry Vermouth",
+                "30ml Campari",
+                "10ml Creme de Cacao",
+                "Chocolate Bitters"
+            ],
+            "garnishes": [
+                "Orange",
+                "Chocolate Powder"
+            ],
+            "flavor_profile": [
+                "strong",
+                "chocolate"
+            ]
+        },
+        {
+            "name": "Raspberry Negroni",
+            "ingredients": [
+                "30ml Gin",
+                "30ml Raspberry Liquer",
+                "15ml Campari -> 15ml Aperol",
+                "15ml Sweet Vermouth -> 15ml Lillet -> 15ml Dry Vermouth"
+            ],
+            "garnishes": [
+                "Raspberry"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         },
         {
@@ -304,11 +405,29 @@
             ]
         },
         {
+            "name": "Aperol Sour",
+            "ingredients": [
+                "30ml Gin",
+                "60ml Aperol -> 60ml Campari",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
+                "1 Egg White -> Aquafaba"
+            ],
+            "garnishes": [
+                "Dehydrated Orange"
+            ],
+            "flavor_profile": [
+                "strong",
+                "tart"
+            ]
+        },
+        {
             "name": "Margarita",
             "ingredients": [
                 "50ml Silver Tequila",
                 "30ml Triple Sec -> 30ml Cointreau -> 30ml Orange Liqueur",
-                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice"
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar"
             ],
             "garnishes": [
                 "Orange"
@@ -316,6 +435,88 @@
             "flavor_profile": [
                 "strong",
                 "sour"
+            ]
+        },
+        {
+            "name": "Breakfast Margarita",
+            "ingredients": [
+                "50ml Silver Tequila",
+                "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
+                "Orange Marmalade"
+
+            ],
+            "garnishes": [
+                "Orange"
+            ],
+            "flavor_profile": [
+                "strong",
+                "fruity"
+            ]
+        },
+        {
+            "name": "Aperol Margarita",
+            "ingredients": [
+                "50ml Silver Tequila",
+                "30ml Aperol -> 30ml Campari",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar"
+
+            ],
+            "garnishes": [
+                "Lime Wheel"
+            ],
+            "flavor_profile": [
+                "strong"
+            ]
+        },
+        {
+            "name": "Blueberry Coconut Margarita",
+            "ingredients": [
+                "50ml Silver Tequila",
+                "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Coconut Cream",
+                "Blueberry"
+            ],
+            "garnishes": [
+                "Passion Fruit"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "creamy"
+            ]
+        },
+        {
+            "name": "Colarita",
+            "ingredients": [
+                "50ml Silver Tequila",
+                "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "Dr. Pepper -> Coca Cola -> Sodastream Cola"
+            ],
+            "garnishes": [
+                "Orange"
+            ],
+            "flavor_profile": [
+                "sweet"
+            ]
+        },
+        {
+            "name": "Caramelized Passion Fruit Mezcalita",
+            "ingredients": [
+                "50ml Mezcal -> 50ml Silver Tequila",
+                "15ml Orange Curaçao -> 15ml Orange Liqueur",
+                "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
+                "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
+                "½ Passion Fruit"
+            ],
+            "garnishes": [
+                "Passion Fruit"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         },
         {
@@ -331,6 +532,54 @@
             "flavor_profile": [
                 "strong",
                 "citrus"
+            ]
+        },
+        {
+            "name": "Hemingway Daiquiri",
+            "ingredients": [
+                "50ml White Rum -> 50ml Brown Rum",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Grapefruit Juice",
+                "15ml Maraschino Liqueur"
+            ],
+            "garnishes": [
+                "Lime"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
+            ]
+        },
+        {
+            "name": "Miso Cherry Daiquiri",
+            "ingredients": [
+                "60ml White Rum -> 60ml Brown Rum",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "15ml Cherry Juice",
+                "20ml Miso Sirup"
+            ],
+            "garnishes": [
+                "Cocktail Cherry"
+            ],
+            "flavor_profile": [
+                "strong",
+                "fruity"
+            ]
+        },
+        {
+            "name": "Piña Daiquiri",
+            "ingredients": [
+                "60ml Malibu",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "20ml Pineapple Sirup",
+                "20ml Miso Sirup"
+            ],
+            "garnishes": [
+                "Ananas Leave"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "savory"
             ]
         },
         {
@@ -353,8 +602,24 @@
             "name": "Moscow Mule",
             "ingredients": [
                 "60ml Vodka",
-                "90ml Ginger Beer -> 90ml Ginger Ale",
-                "1 Lime -> 30ml Lime Juice -> 1 Lemon -> 30ml Lemon Juice"
+                "1 Lime -> 30ml Lime Juice -> 1 Lemon -> 30ml Lemon Juice",
+                "90ml Ginger Beer -> 90ml Ginger Ale"
+            ],
+            "garnishes": [
+                "Lime"
+            ],
+            "flavor_profile": [
+                "ginger",
+                "citrus"
+            ]
+        },
+        {
+            "name": "Peach Ring Mule",
+            "ingredients": [
+                "60ml Vodka",
+                "1 Lime -> 30ml Lime Juice -> 1 Lemon -> 30ml Lemon Juice",
+                "20ml Peach Nectar",
+                "90ml Ginger Beer -> 90ml Ginger Ale"
             ],
             "garnishes": [
                 "Lime"
@@ -404,7 +669,7 @@
             ],
             "garnishes": [
                 "Rosmary",
-                "Citrus peel"
+                "Lemon Peel"
             ],
             "flavor_profile": [
                 "tart"
@@ -412,6 +677,41 @@
             "options": [
                 "Citrus",
                 "Rosemary"
+            ]
+        },
+        {
+            "name": "Matcha Yuzu Gin Tonic",
+            "ingredients": [
+                "30ml Gin",
+                "30ml Yuzu Juice -> 1 Lemon -> 30ml Lemon Juice -> 1 Lime -> 30ml Lime Juice",
+                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
+                "4g Matcha",
+                "Hot Water",
+                "Tonic Water"
+            ],
+            "garnishes": [
+                "Rosemary"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus",
+                "herbs"
+            ]
+        },
+        {
+            "name": "Gin Tonic Cold Fusion",
+            "ingredients": [
+                "60ml Gin",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "Orange Juice",
+                "Tonic Water"
+            ],
+            "garnishes": [
+                "Orange Peel",
+                "Mint"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         },
         {
@@ -477,7 +777,7 @@
             "name": "Blue Finch",
             "ingredients": [
                 "50ml Gin",
-                "15 Creme de Violette -> 15ml Crème de Mûre",
+                "15ml Crème de Violette -> 15ml Crème de Mûre",
                 "20ml Lavender Sirup",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
                 "20ml Aquafaba -> egg white",
@@ -508,7 +808,7 @@
                 "60ml Blended Rum -> 60ml Brown Rum -> 60ml White Rum",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Orgeat Sirup",
-                "15ml Irabge Curacao -> 15ml Orange Liqueur",
+                "15ml Irabge Curaçao -> 15ml Orange Liqueur",
                 "Mint -> "
             ],
             "garnishes": [
@@ -596,6 +896,24 @@
             "flavor_profile": [
                 "strong",
                 "bubbly"
+            ]
+        },
+        {
+            "name": "Limoncello Gin Fizz",
+            "ingredients": [
+                "30ml Gin",
+                "30ml Limoncello",
+                "1 Lime -> 1 Lemon -> 60ml Lime Juice -> 60ml Lemon Juice",
+                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
+                "// (1 Egg White)",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Rosemary"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
             ]
         },
         {
@@ -687,7 +1005,26 @@
                 "60ml Gin",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
+                "Basil",
+                "// (Sparkling Water)"
+            ],
+            "garnishes": [
                 "Basil"
+            ],
+            "flavor_profile": [
+                "strong",
+                "herbs"
+            ]
+        },
+        {
+            "name": "Kiwi Basil Gin Smash",
+            "ingredients": [
+                "60ml Gin",
+                "½ Lime -> ½ Lemon -> 15ml Lime Juice Lime -> 15ml Lemon Juice",
+                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
+                "Kiwi",
+                "Basil",
+                "Sparkling Water"
             ],
             "garnishes": [
                 "Basil"
@@ -806,7 +1143,7 @@
             ]
         },
         {
-            "name": "The Godfather",
+            "name": "Godfather",
             "ingredients": [
                 "60ml Whiskey // (Irish)",
                 "30ml Amaretto"
@@ -816,7 +1153,37 @@
             ]
         },
         {
-            "name": "Passion fruit skinny bitch",
+            "name": "Tequila Soda",
+            "ingredients": [
+                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Lemon Wheel"
+            ],
+            "flavor_profile": [
+                "strong",
+                "fresh"
+            ]
+        },
+        {
+            "name": "Skinny Bitch",
+            "ingredients": [
+                "60ml Vodka",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Lemon Wheel"
+            ],
+            "flavor_profile": [
+                "strong",
+                "fresh"
+            ]
+        },
+        {
+            "name": "Passionfruit Skinny Bitch",
             "ingredients": [
                 "60ml Vodka",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
@@ -1158,7 +1525,7 @@
             "ingredients": [
                 "60ml Cognac",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
-                "15ml Dry Curacao -> 15ml Orange Curacao -> 15ml Orange Liqueur",
+                "15ml Dry Curaçao -> 15ml Orange Curaçao -> 15ml Orange Liqueur",
                 "10ml Maraschino Liqueur // (Luxardo)",
                 "2 Dashes Angostura Bitters"
             ],
@@ -1191,7 +1558,7 @@
             "name": "Cable Car",
             "ingredients": [
                 "50ml Spiced Rum",
-                "30ml Orange Curacao",
+                "30ml Orange Curaçao",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup"
             ],
@@ -1208,7 +1575,7 @@
             "ingredients": [
                 "60ml Gin",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
-                "15ml Maraschino Liqueur -> 15ml Orange Liqueur",
+                "15ml Maraschino Liqueur",
                 "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup",
                 "2 Dashes Angostura Bitters"
             ],
@@ -1509,10 +1876,10 @@
             "name": "Pegu Club",
             "ingredients": [
                 "60ml Gin",
-                "30ml Orange Curacao -> 30ml Orange Liqueur",
+                "30ml Orange Curaçao -> 30ml Orange Liqueur",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
-                "1 Dashes Angostura Bitters",
-                "1 Dashes Orange Bitters"
+                "1 Dash Angostura Bitters",
+                "1 Dash Orange Bitters"
             ],
             "garnishes": [
                 "Lime Twist"
@@ -1592,7 +1959,7 @@
             "ingredients": [
                 "60ml Gin",
                 "15ml Blanc Vermouth -> 15ml Dry Vermouth -> 15ml Sweet Vermouth -> 15ml Lillet",
-                "10ml Maraschino Liqueur -> 15ml Orange Liqueur",
+                "10ml Maraschino Liqueur",
                 "2 Dashes Angostura Bitters",
                 "2 Dashes Absinthe"
             ],
@@ -1626,6 +1993,40 @@
                 "1 Lemon -> 30ml Lemon Juice -> 1 Lime -> 30ml Lime Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
                 "1 Egg White -> Aquafaba"
+            ],
+            "flavor_profile": [
+                "strong",
+                "creamy"
+            ],
+            "garnishes": [
+                "Lemon Wheel",
+                "Cherry"
+            ]
+        },
+        {
+            "name": "Passionfruit Coconut Whiskey Sour",
+            "ingredients": [
+                "60ml Whiskey",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup",
+                "Passion Fruit",
+                "1 Egg White -> Aquafaba"
+            ],
+            "garnishes": [
+                "Passion Fruit"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Blinker",
+            "ingredients": [
+                "45ml Whiskey // (Rye)",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "8ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar -> 8ml Agave Sirup",
+                "8ml Raspberry Sirup",
+                "30ml Grapefruit Juice"
             ],
             "flavor_profile": [
                 "strong",
@@ -1684,16 +2085,244 @@
             ]
         },
         {
-            "name": "Gin Tonic Cold Fusion",
+            "name": "Little Boots",
             "ingredients": [
-                "60ml Gin",
+                "30ml White Rum -> 30ml Brown Rum",
+                "30ml Montenegro -> 30ml Averna -> 30ml Ramazotti -> 30ml Jägermeister",
                 "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
-                "Orange Juice",
-                "Tonic Water"
+                "15ml Orgeat Sirup",
+                "2 Dashes Tiki Bitters"
             ],
             "garnishes": [
-                "Orange Peel",
-                "Mint"
+                "Lemon Twist"
+            ],
+            "flavor_profile": [
+                "herbs",
+                "strong"
+            ]
+        },
+        {
+            "name": "Iz Bananaz",
+            "ingredients": [
+                "50ml Cachaca -> 50ml White Rum -> 50ml Brown Rum",
+                "30ml Montenegro -> 30ml Averna -> 30ml Ramazotti -> 30ml Jägermeister",
+                "20ml Banana Liqueur",
+                "½ Lemon -> 20ml Lemon Juice -> ½ Lime -> 20ml Lime Juice",
+                "15ml Orgeat Sirup",
+                "1 Dash Angostura Bitters"
+            ],
+            "garnishes": [
+                "Orange Peel"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Bare Grills Sour",
+            "ingredients": [
+                "60ml Whiskey // (Scotch)",
+                "½ Lemon // (Grilled) -> ½ Lime // (Grilled) -> 15ml Lemon Juice -> 15ml Lime Juice",
+                "15ml Honey Sirup -> 15ml Agave Sirup -> 10ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
+                "Pineapple // (Grilled)"
+            ],
+            "garnishes": [
+                "Grilled Pineapple"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "honey"
+            ]
+        },
+        {
+            "name": "When The Smoke Cleared",
+            "ingredients": [
+                "45ml Mezcal -> 45ml White Tequila",
+                "15ml Aperol -> 15ml Campari",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "15ml Ginger Sirup",
+                "25ml Pineapple Juice",
+                "2 Dashes Saline Solution -> 1 Pinch Salt"
+            ],
+            "garnishes": [
+                "Orange Peel"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Whiskey Sunrise",
+            "ingredients": [
+                "60ml Whiskey",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "20ml Orange Juice",
+                "10ml Grenadine // (Float)"
+            ],
+            "garnishes": [
+                "Orange Slice",
+                "Cocktail Cherry"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Yuzu Skakerato",
+            "ingredients": [
+                "50ml Aperol -> 50ml Campari",
+                "20ml Yuzu Sake",
+                "15ml Yuzu Juice -> ½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "// (10ml Simple Sirup)",
+                "Shiso Bitters -> "
+            ],
+            "garnishes": [
+                "Cocktail Cherry"
+            ],
+            "flavor_profile": [
+                "tart",
+                "citrus"
+            ]
+        },
+        {
+            "name": "Matcha Yuzu",
+            "ingredients": [
+                "100ml Whiskey // (Japanese)",
+                "30ml Vanilla Sirup",
+                "15ml Yuzu Juice -> ½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "2g Matcha"
+            ],
+            "flavor_profile": [
+                "herbs",
+                "strong"
+            ]
+        },
+        {
+            "name": "Miso Gold Rush",
+            "ingredients": [
+                "60ml Whiskey",
+                "½ Lemon -> 20ml Lemon Juice -> ½ Lime -> 20ml Lime Juice",
+                "30ml Miso Honey Sirup -> 30ml Miso Sirup"
+            ],
+            "garnishes": [
+                "Orange Slice",
+                "Cocktail Cherry"
+            ],
+            "flavor_profile": [
+                "strong",
+                "savory"
+            ]
+        },
+        {
+            "name": "Bicycle Thief",
+            "ingredients": [
+                "30ml London Dry Gin -> 30ml Gin",
+                "30ml Campari -> 30ml Aperol",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
+                "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
+                "45ml Grapefruit Juice",
+                "Sparkling Water"
+            ],
+            "garnishes": [
+                "Orange Slice",
+                "Cocktail Cherry"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Blue Lady",
+            "ingredients": [
+                "45ml Gin",
+                "25ml Blue Curaçao -> 25ml Orange Curaçao -> 25ml Orange Liqueur",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "8ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar -> 8ml Agave Sirup",
+                "1 Egg White -> Aquafaba",
+                "Orange Bitters"
+            ],
+            "garnishes": [
+                "Lemon Peel"
+            ],
+            "flavor_profile": [
+                "fruity",
+                "creamy"
+            ]
+        },
+        {
+            "name": "Water Lily",
+            "ingredients": [
+                "50ml Gin",
+                "30ml Crème de Violette -> 30ml Crème de Mûre",
+                "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice"
+            ],
+            "garnishes": [
+                "Lemon Peel"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Aperol Whitebeer",
+            "ingredients": [
+                "30ml Aperol",
+                "30ml Orange Juice",
+                "White Beer"
+            ],
+            "garnishes": [
+                "Orange Slice"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Olivia",
+            "ingredients": [
+                "60ml Gin",
+                "15ml Amaretto",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "15ml Honey Sirup -> 15ml Agave Sirup -> 10ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
+                "15ml Olive Oil",
+                "1 Egg White -> Aquafaba"
+            ],
+            "garnishes": [
+                "Basil"
+            ],
+            "flavor_profile": [
+                "nutty",
+                "creamy",
+                "savory"
+            ]
+        },
+        {
+            "name": "French Blonde",
+            "ingredients": [
+                "30ml Gin",
+                "30ml Lillet -> 30ml Sweet Vermouth -> 30ml Dry Vermouth",
+                "20ml Elderflower Liqueur",
+                "60ml Grapefruit Juice"
+            ],
+            "garnishes": [
+                "Lemon or Grapefruit peel"
+            ],
+            "flavor_profile": [
+                "fruity"
+            ]
+        },
+        {
+            "name": "Flirtibird",
+            "ingredients": [
+                "60ml Shochu",
+                "30ml Yuzu Juice -> 1 Lemon -> 30ml Lemon Juice -> 1 Lime -> 30ml Lime Juice",
+                "10ml Agave Sirup -> 5ml Honey -> 10ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar",
+                "// Shiso Leaf"
+            ],
+            "garnishes": [
+                "Plumb",
+                "Shiso Leaf"
             ],
             "flavor_profile": [
                 "fruity"
@@ -1862,6 +2491,20 @@
             "flavor_profile": [
                 "fruity",
                 "sour"
+            ]
+        },
+        {
+            "name": "Duck Fart",
+            "ingredients": [
+                "10ml Whiskey // (Bourbon)",
+                "10ml Coffee Liqueur",
+                "10ml Baileys"
+            ],
+            "garnishes": [
+                "Lemon Peel"
+            ],
+            "flavor_profile": [
+                "fruity"
             ]
         }
     ],

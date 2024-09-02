@@ -93,7 +93,7 @@ function sortIngredients(arr) {
 }
 
 function format(text) {
-    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes ", "").replace("dash ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes ", "").replace("dash ", "").replace("pinch ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
 }
 
 
@@ -407,7 +407,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
         <div class="image-area${horizontal}">
 
             <div class="image-container">
-                <img src="${picture_folder}${name.toLowerCase().replace(/ *\([^)]*\)/g, "").trim().replace(/\s+$/g, "").replace("ñ", "n").replace("é", "e").replace("’", "").split(' ').join('-').split("'").join('') + ".png"}" alt="${name + " Picture"}">
+                <img src="${picture_folder}${name.toLowerCase().replace(/ *\([^)]*\)/g, "").trim().replace(/\s+$/g, "").replace("ñ", "n").replace("é", "e").replace("ç", "c").replace("’", "").split(' ').join('-').split("'").join('') + ".png"}" alt="${name + " Picture"}">
             </div>
 
             ${flavor_profile.length > 0 || ingredients.length > 0 || options.length > 0 ? `
