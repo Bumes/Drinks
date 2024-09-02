@@ -93,7 +93,7 @@ function sortIngredients(arr) {
 }
 
 function format(text) {
-    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes ", "").replace("dash ", "").replace("pinch ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '')
+    return text.toLowerCase().split(" // ")[0].split("// ")[0].split(" //")[0].split("//")[0].replace("double ", "").replace("steamed ", "").replace("dashes ", "").replace("dash ", "").replace("pinch ", "").replace(/[\d½|\d¼]+(ml|g)? /, '').replace(/ /g, '_').replace(/[()]/g, '').replace("ç", "c").replace("ñ", "n").replace("é", "e")
 }
 
 
@@ -163,12 +163,12 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                     }
                     break
                 } else {
-                    ingredients[i] = current_ingredients[0].replace("// ", "")
                     chosen_ingredient = current_ingredients[0].replace("// ", "")
                 }
             }
 
             chosen_ingredients[i] = chosen_ingredient;
+            formatted_ingredient = format(chosen_ingredient)
 
 
             if (doreturn) {

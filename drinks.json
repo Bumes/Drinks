@@ -118,7 +118,7 @@
             "ingredients": [
                 "60ml Brown Rum -> 60ml White Rum",
                 "½ Lime -> 15ml Lime Juice",
-                "Coca Cola -> Soda Stream Cola"
+                "Coca Cola -> SodaStream Cola"
             ],
             "garnishes": [
                 "Lime"
@@ -283,7 +283,7 @@
                 "15g Instant Coffee",
                 "50ml Hot Water",
                 "50g Brown Sugar -> 50g White Sugar",
-                "300g Ice"
+                "// 300g Ice"
             ],
             "garnishes": [
                 "Coffee Beans"
@@ -363,7 +363,7 @@
             "name": "Raspberry Negroni",
             "ingredients": [
                 "30ml Gin",
-                "30ml Raspberry Liquer",
+                "30ml Raspberry Liqueur",
                 "15ml Campari -> 15ml Aperol",
                 "15ml Sweet Vermouth -> 15ml Lillet -> 15ml Dry Vermouth"
             ],
@@ -651,7 +651,7 @@
                 "60ml Pisco",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup",
-                "// (1 Egg White / Aquafaba)"
+                "// (1 Egg White /// Aquafaba)"
             ],
             "garnishes": [
                 "(Angostura Bitters)"
@@ -2137,7 +2137,7 @@
         {
             "name": "When The Smoke Cleared",
             "ingredients": [
-                "45ml Mezcal -> 45ml White Tequila",
+                "45ml Mezcal -> 45ml Silver Tequila",
                 "15ml Aperol -> 15ml Campari",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Ginger Sirup",

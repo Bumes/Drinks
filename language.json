@@ -19,7 +19,6 @@
         "other_drinks_text": "Other Drinks",
         "order_button": "Order",
         "pre_order_button": "Pre-Order",
-        "flavored_beer": "Flavored Beer",
         "ingredients": {
             "beer": "Beer",
             "white_beer": "White Beer",
@@ -27,6 +26,7 @@
             "edelstoff": "Edelstoff",
             "urtyp": "Urtyp",
             "kloster_gold": "Kloster Gold",
+            "flavored_beer": "Flavored Beer",
             "vodka": "Vodka",
             "vodka_citron": "Vodka Citron",
             "gin": "Gin",
@@ -44,6 +44,7 @@
             "shochu": "Shochu",
             "angostura_bitters": "Angostura Bitters",
             "orange_bitters": "Orange Bitters",
+            "shiso_bitters": "Shiso Bitters",
             "absinthe": "Absinthe",
             "lillet": "Lillet",
             "sweet_vermouth": "Sweet Vermouth",
@@ -129,7 +130,11 @@
             "oat_milk": "Oat Milk",
             "soy_milk": "Soy Milk",
             "almond_milk": "Almond Milk",
-            "amaretti": "Amaretti"
+            "amaretti": "Amaretti",
+            "ice": "Ice",
+            "vanilla_ice_cream": "Vanilla Ice Cream",
+            "olive_oil": "Olive Oil",
+            "shiso_leaf": "Shiso Leaf"
         },
         "flavor_profile": {
             "strong": "Strong",
@@ -151,7 +156,8 @@
             "honey": "Honey",
             "matcha": "Matcha",
             "weird": "Weird",
-            "flowery": "Flowery"
+            "flowery": "Flowery",
+            "savory": "Savory"
         }
     },
     "de": {
@@ -174,7 +180,6 @@
         "other_drinks_text": "Andere Getränke",
         "order_button": "Bestellen",
         "pre_order_button": "Vorbestellen",
-        "flavored_beer": "Beer-Cocktail",
         "ingredients": {
             "beer": "Bier",
             "white_beer": "Weißbier",
@@ -182,6 +187,7 @@
             "edelstoff": "Edelstoff",
             "urtyp": "Urtyp",
             "kloster_gold": "Kloster Gold",
+            "flavored_beer": "Beer-Cocktail",
             "vodka": "Vodka",
             "vodka_citron": "Vodka Citron",
             "gin": "Gin",
@@ -199,6 +205,7 @@
             "shochu": "Shochu",
             "angostura_bitters": "Angostura Bitters",
             "orange_bitters": "Orangen Bitters",
+            "shiso_bitters": "Shiso Bitters",
             "absinthe": "Absinth",
             "lillet": "Lillet",
             "sweet_vermouth": "Süßer Wermut",
@@ -284,7 +291,11 @@
             "oat_milk": "Hafermilch",
             "soy_milk": "Sojamilch",
             "almond_milk": "Mandelmilch",
-            "amaretti": "Amaretti"
+            "amaretti": "Amaretti",
+            "ice": "Eiswürfel",
+            "vanilla_ice_cream": "Vanille Eiscreme",
+            "olive_oil": "Oliven Öl",
+            "shiso_leaf": "Shiso Blatt"
         },
         "flavor_profile": {
             "strong": "Stark",
@@ -306,7 +317,8 @@
             "honey": "Honig",
             "matcha": "Matcha",
             "weird": "Komisch",
-            "flowery": "Blumig"
+            "flowery": "Blumig",
+            "savory": "Herzhaft"
         }
     }
 }
