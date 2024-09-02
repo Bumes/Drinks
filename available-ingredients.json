@@ -88,7 +88,7 @@
   "tonic_water": true,
   "club_mate": false,
   "grapefruit_soda": false,
-  "orange_juice": true,
+  "orange_juice": false,
   "pineapple_juice": false,
   "cranberry_juice": false,
   "maracuja_juice": false,

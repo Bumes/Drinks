@@ -3,20 +3,15 @@
         {
             "recommended": {
                 "luck": [
-                    "Whitebeer Mojito",
-                    "Kentucky Buck",
-                    "Espresso Martini",
-                    "Penicillin",
-                    "Gin Espresso Tonic",
-                    "Amaretto Sour",
-                    "Jungle Bird",
-                    "Gin Basil Smash",
-                    "Bramble",
-                    "Italian Mule",
-                    "Tokyo Mule",
-                    "Zwetschgen Smash",
-                    "White Russian",
-                    "Enzoni"
+                    "Caramelized Passion Fruit Mezcalita",
+                    "Affogato Martini",
+                    "Olivia",
+                    "Kiwi Basil Gin Smash",
+                    "Revolver",
+                    "Blinker",
+                    "Yuzu Shakerato", 
+                    "Bare Grills Sour",
+                    "Flirtibird"
                 ],
                 "stauti": [
                     "Zwetschgen Smash",
@@ -2168,7 +2163,7 @@
             ]
         },
         {
-            "name": "Yuzu Skakerato",
+            "name": "Yuzu Shakerato",
             "ingredients": [
                 "50ml Aperol -> 50ml Campari",
                 "20ml Yuzu Sake",
