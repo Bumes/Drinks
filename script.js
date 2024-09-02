@@ -162,6 +162,9 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                         chosen_ingredient = "Missing: " + current_ingredients[0]
                     }
                     break
+                } else {
+                    ingredients[i] = current_ingredients[0].replace("// ", "")
+                    chosen_ingredient = current_ingredients[0].replace("// ", "")
                 }
             }
 
@@ -175,7 +178,7 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 } else {
                     missing[formatted_ingredient][1] = missing[formatted_ingredient][1].replace(/\d+/, match => (parseInt(match) + 1).toString())
                 }
-                ingredients[i] = current_ingredients[0]
+                ingredients[i] = current_ingredients[0].replace("// ", "")
             } else {
                 if (chosen_ingredient.search("Missing: ") != -1) {
                     temp = chosen_ingredient.replace("Missing: ", "").replace(/[\d½|\d¼]+(ml|g)? /, '')
@@ -187,12 +190,15 @@ function Drink({ category = "Cocktails", name = "No Name given", ingredients = [
                 try {
                     if (language["ingredients"].hasOwnProperty(formatted_temp)) {
                         language_ingredient = language["ingredients"][formatted_temp]
+                        if (temp.search("//") != -1 ) {
+                            language_ingredient += temp.replace(/.*\/\/\s*/, ' ')
+                        }
                     } else if (formatted_temp != "") {
                         console.log("Language is missing " + formatted_temp + " as an ingredient.")
                     }
                 } catch {
                 }
-                ingredients[i] = chosen_ingredient.replace(temp, language_ingredient)
+                ingredients[i] = chosen_ingredient.replace(temp, language_ingredient).replace("// ", "")    // not
             }
         }
 
