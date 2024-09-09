@@ -514,7 +514,7 @@
             "name": "Caramelized Passion Fruit Mezcalita",
             "ingredients": [
                 "50ml Mezcal -> 50ml Silver Tequila",
-                "15ml Orange Curaçao -> 15ml Orange Liqueur",
+                "15ml Orange Curaçao -> 15ml Blue Curaçao -> 15ml Orange Liqueur",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
                 "½ Passion Fruit"
@@ -1532,7 +1532,7 @@
             "ingredients": [
                 "60ml Cognac",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
-                "15ml Dry Curaçao -> 15ml Orange Curaçao -> 15ml Orange Liqueur",
+                "15ml Dry Curaçao -> 15ml Orange Curaçao -> 15ml Blue Curaçao -> 15ml Orange Liqueur",
                 "10ml Maraschino Liqueur // (Luxardo)",
                 "2 Dashes Angostura Bitters"
             ],
@@ -1565,7 +1565,7 @@
             "name": "Cable Car",
             "ingredients": [
                 "50ml Spiced Rum",
-                "30ml Orange Curaçao",
+                "30ml Orange Curaçao -> 30ml Blue Curaçao -> 30ml Orange Liqueur",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup"
             ],
@@ -1883,7 +1883,7 @@
             "name": "Pegu Club",
             "ingredients": [
                 "60ml Gin",
-                "30ml Orange Curaçao -> 30ml Orange Liqueur",
+                "30ml Orange Curaçao -> 30ml Blue Curaçao -> 30ml Orange Liqueur",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "1 Dash Angostura Bitters",
                 "1 Dash Orange Bitters"
@@ -2242,7 +2242,7 @@
             "name": "Blue Lady",
             "ingredients": [
                 "45ml Gin",
-                "25ml Blue Curaçao -> 25ml Orange Curaçao -> 25ml Orange Liqueur",
+                "25ml Blue Curaçao -> 25ml Orange Curaçao -> 25ml Blue Curaçao -> 25ml Orange Liqueur",
                 "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
                 "8ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar -> 8ml Agave Sirup",
                 "1 Egg White -> Aquafaba",
