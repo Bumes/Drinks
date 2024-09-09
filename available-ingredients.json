@@ -129,7 +129,7 @@
   "kiwi": false,
   "cranberry": false,
   "plumb": false,
-  "grape": false,
+  "grape": true,
   "mint": false,
   "basil": false,
   "rosmary": false,
