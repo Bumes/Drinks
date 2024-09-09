@@ -1063,7 +1063,7 @@
             "name": "Bramble",
             "ingredients": [
                 "50ml Gin",
-                "15ml Lemon Juice -> 15ml Lime Juice",
+                "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
                 "20ml Crème de Mûre"
             ],
@@ -1612,7 +1612,7 @@
             "ingredients": [
                 "30ml Gin",
                 "30ml Campari -> 30ml Aperol",
-                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "½ Lemon -> 20ml Lemon Juice -> ½ Lime -> 20ml Lime Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
                 "5 Grape"
             ],
@@ -2180,10 +2180,10 @@
         {
             "name": "Matcha Yuzu",
             "ingredients": [
-                "100ml Whiskey // (Japanese)",
+                "60ml Whiskey // (Japanese)",
                 "30ml Vanilla Sirup",
                 "15ml Yuzu Juice -> ½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
-                "2g Matcha"
+                "3g Matcha"
             ],
             "flavor_profile": [
                 "herbs",
