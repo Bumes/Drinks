@@ -1153,4 +1153,12 @@ function sendData(inputData) {
     xhr.send(data);
 }
 
-window.addEventListener('resize', create_all);
+let previousWidth = window.innerWidth;
+
+window.addEventListener('resize', () => {
+    let currentWidth = window.innerWidth;
+    if (currentWidth !== previousWidth) {
+        create_all();
+        previousWidth = currentWidth;
+    }
+});
