@@ -3,15 +3,27 @@
         {
             "recommended": {
                 "luck": [
-                    "Caramelized Passion Fruit Mezcalita",
                     "Affogato Martini",
                     "Olivia",
                     "Kiwi Basil Gin Smash",
                     "Revolver",
                     "Blinker",
-                    "Yuzu Shakerato", 
                     "Bare Grills Sour",
-                    "Flirtibird"
+                    "Flirtibird",
+                    "Whitebeer Mojito",
+                    "Kentucky Buck",
+                    "Espresso Martini",
+                    "Penicillin",
+                    "Gin Espresso Tonic",
+                    "Amaretto Sour",
+                    "Jungle Bird",
+                    "Gin Basil Smash",
+                    "Bramble",
+                    "Italian Mule",
+                    "Tokyo Mule",
+                    "Zwetschgen Smash",
+                    "White Russian",
+                    "Enzoni"
                 ],
                 "stauti": [
                     "Zwetschgen Smash",
@@ -1329,7 +1341,7 @@
             ]
         },
         {
-            "name": "Japan Mule",
+            "name": "Tokyo Mule",
             "ingredients": [
                 "60ml Shochu",
                 "1 Lime -> 30ml Lime Juice Lime -> 1 Lemon -> 30ml Lemon Juice",

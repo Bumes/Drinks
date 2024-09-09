@@ -21,18 +21,3 @@ gin tonic cold fusion
 
 
 
-,
-                    "Whitebeer Mojito",
-                    "Kentucky Buck",
-                    "Espresso Martini",
-                    "Penicillin",
-                    "Gin Espresso Tonic",
-                    "Amaretto Sour",
-                    "Jungle Bird",
-                    "Gin Basil Smash",
-                    "Bramble",
-                    "Italian Mule",
-                    "Tokyo Mule",
-                    "Zwetschgen Smash",
-                    "White Russian",
-                    "Enzoni"
