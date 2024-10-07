@@ -7,9 +7,22 @@
                     "Kojito",
                     "Matcha Yuzu",
                     "Gin Tonic Cold Fusion",
-                    "Aperol Margarita",
                     "Bramble",
-                    "Revolver"
+                    "Bare Grills Sour",
+                    "Flirtibird",
+                    "Whitebeer Mojito",
+                    "Kentucky Buck",
+                    "Espresso Martini",
+                    "Penicillin",
+                    "Gin Espresso Tonic",
+                    "Jungle Bird",
+                    "Gin Basil Smash",
+                    "Bramble",
+                    "Italian Mule",
+                    "Tokyo Mule",
+                    "Zwetschgen Smash",
+                    "White Russian",
+                    "Olivia"
                 ],
                 "stauti": [
                     "Zwetschgen Smash",
@@ -2382,6 +2395,18 @@
                 "tart",
                 "fresh"
             ]
+        },
+        {
+            "name": "Cola Float",
+            "ingredients": [
+                "Coca Cola -> SodaStream Cola",
+                "Vanilla Ice Cream"
+            ],
+            "garnishes": [],
+            "flavor_profile": [
+                "sweet",
+                "creamy"
+            ]
         }
     ],
     "Shots": [
@@ -2743,6 +2768,20 @@
                 "Milk",
                 "Soy Milk",
                 "Almond Milk"
+            ]
+        },
+        {
+            "name": "Espresso Cola",
+            "ingredients": [
+                "Espresso",
+                "Coca Cola -> SodaStream Cola"
+            ],
+            "flavor_profile": [
+                "coffee",
+                "sweet"
+            ],
+            "options": [
+                "Vanilla Ice Cream"
             ]
         }
     ]

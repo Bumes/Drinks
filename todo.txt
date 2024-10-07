@@ -8,38 +8,4 @@ when resizing language lag
 
 ingredients not only yes but no option
 
-caramelized passion fruit mescalita
-Mezcal bug
-
-whiskey sunrise wrong wrong marking
-
 flavor bright
-
-pictures:
-peach ring mule
-matcha yuzu gin tonic
-gin tonic cold fusion
-
-
-
-,
-                    "Affogato Martini",
-                    "Olivia",
-                    "Kiwi Basil Gin Smash",
-                    "Revolver",
-                    "Blinker",
-                    "Bare Grills Sour",
-                    "Flirtibird",
-                    "Whitebeer Mojito",
-                    "Kentucky Buck",
-                    "Espresso Martini",
-                    "Penicillin",
-                    "Gin Espresso Tonic",
-                    "Amaretto Sour",
-                    "Jungle Bird",
-                    "Gin Basil Smash",
-                    "Bramble",
-                    "Italian Mule",
-                    "Tokyo Mule",
-                    "Zwetschgen Smash",
-                    "White Russian"
