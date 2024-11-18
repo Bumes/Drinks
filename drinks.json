@@ -561,8 +561,8 @@
             "ingredients": [
                 "60ml White Rum -> 60ml Brown Rum",
                 "½ Lemon -> 15ml Lemon Juice -> ½ Lime -> 15ml Lime Juice",
-                "15ml Cherry Juice",
-                "20ml Miso Sirup"
+                "30ml Cherry Juice",
+                "20ml Miso Sirup -> 8g Miso Paste // + Water + Simple Sirup"
             ],
             "garnishes": [
                 "Cocktail Cherry"
@@ -2332,6 +2332,20 @@
             ],
             "flavor_profile": [
                 "fruity"
+            ]
+        },
+        {
+            "name": "Body and Soul",
+            "ingredients": [
+                "60ml Mezcal -> 60ml Repasado Tequila -> 60ml Blanco Tequila -> 60 Brown Tequila",
+                "60ml Grape Juice // (Red)",
+                 "Tonka Bean"
+            ],
+            "garnishes": [
+                "Tonka"
+            ],
+            "flavor_profile": [
+                "Strong"
             ]
         }
     ],
