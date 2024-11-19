@@ -430,7 +430,7 @@
         {
             "name": "Margarita",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "30ml Triple Sec -> 30ml Cointreau -> 30ml Orange Liqueur",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar"
@@ -446,7 +446,7 @@
         {
             "name": "Breakfast Margarita",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
@@ -464,7 +464,7 @@
         {
             "name": "Aperol Margarita",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "30ml Aperol -> 30ml Campari",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar"
@@ -480,7 +480,7 @@
         {
             "name": "Blueberry Coconut Margarita",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "30ml Cointreau -> 30ml Triple Sec -> 30ml Orange Liqueur",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Coconut Cream",
@@ -497,7 +497,7 @@
         {
             "name": "Colarita",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Dr. Pepper -> Coca Cola -> Sodastream Cola"
@@ -512,7 +512,7 @@
         {
             "name": "Caramelized Passion Fruit Mezcalita",
             "ingredients": [
-                "50ml Mezcal -> 50ml Silver Tequila",
+                "50ml Mezcal -> 50ml Blanco Tequila",
                 "15ml Orange Curaçao -> 15ml Blue Curaçao -> 15ml Orange Liqueur",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
@@ -573,9 +573,23 @@
             ]
         },
         {
+            "name": "Coconut Daiquiri",
+            "ingredients": [
+                "60ml Coconut Rum",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "30ml Honey Sirup -> 15ml Honey -> 30ml Agave Sirup -> 30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar"
+            ],
+            "garnishes": [
+                "Coconut"
+            ],
+            "flavor_profile": [
+                "Strong"
+            ]
+        },
+        {
             "name": "Piña Daiquiri",
             "ingredients": [
-                "60ml Malibu",
+                "60ml Coconut Rum -> Malibu",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "20ml Pineapple Sirup",
                 "20ml Miso Sirup"
@@ -736,7 +750,7 @@
         {
             "name": "Paloma",
             "ingredients": [
-                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "60ml Blanco Tequila -> 60ml Reposado Tequila",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Grapefruit Soda",
                 "Salt"
@@ -752,7 +766,7 @@
         {
             "name": "Paloma 2",
             "ingredients": [
-                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "60ml Blanco Tequila -> 60ml Reposado Tequila",
                 "30ml Grapefruit Juice",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
@@ -1161,7 +1175,7 @@
         {
             "name": "Tequila Soda",
             "ingredients": [
-                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "60ml Blanco Tequila -> 60ml Reposado Tequila",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "Sparkling Water"
             ],
@@ -1639,7 +1653,7 @@
         {
             "name": "El Diablo",
             "ingredients": [
-                "50ml Silver Tequila",
+                "50ml Blanco Tequila",
                 "15ml Crème de Cassis",
                 "½ Lime -> 15ml Lime Juice Lime -> ½ Lemon -> 15ml Lemon Juice",
                 "Ginger Beer -> Ginger Ale"
@@ -1778,7 +1792,7 @@
         {
             "name": "Mexican Firing Squad",
             "ingredients": [
-                "60ml Blanco Tequila -> 60ml Silver Tequila -> 60ml Brown Tequila",
+                "60ml Blanco Tequila -> 60ml Reposado Tequila",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar -> 15ml Agave Sirup",
                 "10ml Grenadine"
@@ -2143,7 +2157,7 @@
         {
             "name": "When The Smoke Cleared",
             "ingredients": [
-                "45ml Mezcal -> 45ml Silver Tequila",
+                "45ml Mezcal -> 45ml Blanco Tequila",
                 "15ml Aperol -> 15ml Campari",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Ginger Sirup",
@@ -2337,7 +2351,7 @@
         {
             "name": "Body and Soul",
             "ingredients": [
-                "60ml Mezcal -> 60ml Repasado Tequila -> 60ml Blanco Tequila -> 60 Brown Tequila",
+                "60ml Mezcal -> 60ml Reposado Tequila -> 60ml Blanco Tequila -> 60 Reposado Tequila",
                 "60ml Grape Juice // (Red)",
                  "Tonka Bean"
             ],
