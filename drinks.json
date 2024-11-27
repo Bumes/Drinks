@@ -557,6 +557,22 @@
             ]
         },
         {
+            "name": "Coconut Daiquiri",
+            "ingredients": [
+                "30ml Coconut Rum",
+                "30ml White Rum -> 30ml Brown Rum",
+                "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
+                "30ml Simple Sirup -> 20g White Sugar -> 20g Brown Sugar -> 30ml Agave Sirup"
+            ],
+            "garnishes": [
+                "Lime"
+            ],
+            "flavor_profile": [
+                "strong",
+                "citrus"
+            ]
+        },
+        {
             "name": "Miso Cherry Daiquiri",
             "ingredients": [
                 "60ml White Rum -> 60ml Brown Rum",
@@ -1763,7 +1779,7 @@
             "ingredients": [
                 "60ml Gin",
                 "30ml Sweet Vermouth -> 30ml Dry Vermouth -> 30ml Lillet",
-                "10ml Maraschino Liqueur -> 15ml Orange Liqueur",
+                "10ml Maraschino Liqueur",
                 "2 Dashes Angostura Bitters",
                 "1 Dash Orange Bitters"
             ],
@@ -2322,9 +2338,9 @@
             "name": "Flirtibird",
             "ingredients": [
                 "60ml Shochu",
-                "30ml Yuzu Juice -> 1 Lemon -> 30ml Lemon Juice -> 1 Lime -> 30ml Lime Juice",
+                "30ml Orange Juice",
                 "10ml Agave Sirup -> 5ml Honey -> 10ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar",
-                "Shiso Leaf -> "
+                "Shiso Leave -> "
             ],
             "garnishes": [
                 "Plumb",
@@ -2332,6 +2348,38 @@
             ],
             "flavor_profile": [
                 "fruity"
+            ]
+        },
+        {
+            "name": "Apple Pie",
+            "ingredients": [
+                "50ml Whiskey",
+                "30ml Orange Juice",
+                "15ml Maple Sirup -> 15ml Agave Sirup -> 5ml Honey -> 15ml Simple Sirup -> 5g White Sugar -> 5g Brown Sugar",
+                "Cinammon",
+                "2 Dashes Saline Solution -> 1 Pinch Salt -> "
+            ],
+            "flavor_profile": [
+                "fruity",
+                "sweet"
+            ]
+        },
+        {
+            "name": "Long Island Iced Coffee",
+            "ingredients": [
+                "10ml Vanilla Vodka -> 10ml Vodka // (Vanilla)",
+                "10ml Gin",
+                "10ml White Rum -> 10ml Brown Rum",
+                "10ml Blanco Tequila",
+                "10ml Maraschino Liqueur",
+                "10ml Averna Amaro -> 10ml Ramazotti -> 10ml Jägermeister",
+                "1 Lemon -> 1 Lime -> 30ml Lemon Juice -> 30ml Lime Juice",
+                "25ml Cola Reduction -> 100ml Coca Cola // (replaced Reduction)",
+                "50ml Cold Brew // (Concentrate)"
+            ],
+            "flavor_profile": [
+                "strong",
+                "coffee"
             ]
         }
     ],
