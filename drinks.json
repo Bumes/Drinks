@@ -303,7 +303,7 @@
                 "Espresso",
                 "Vanilla Ice Cream"
             ],
-            "garnishes": 
+            "garnishes": [
                 "Coffee Beans"
             ],
             "flavor_profile": [
@@ -463,7 +463,6 @@
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar",
                 "Orange Marmalade"
-
             ],
             "garnishes": [
                 "Orange"
@@ -480,7 +479,6 @@
                 "30ml Aperol -> 30ml Campari",
                 "1 Lime -> 1 Lemon -> 30ml Lime Juice -> 30ml Lemon Juice",
                 "15ml Agave Sirup -> 15ml Honey Sirup -> 15ml Honey -> 15ml Simple Sirup -> 10g White Sugar -> 10g Brown Sugar"
-
             ],
             "garnishes": [
                 "Lime Wheel"
@@ -2395,7 +2393,7 @@
             "ingredients": [
                 "60ml Mezcal -> 60ml Reposado Tequila -> 60ml Blanco Tequila -> 60 Reposado Tequila",
                 "60ml Grape Juice // (Red)",
-                 "Tonka Bean"
+                "Tonka Bean"
             ],
             "garnishes": [
                 "Tonka"
