@@ -4,6 +4,7 @@
             "recommended": {
                 "luck": [
                     "Carajillo",
+                    "Stout Old Fashioned",
                     "Enzoni",
                     "Bramble",
                     "Flirtibird",
@@ -1868,6 +1869,20 @@
                 "60ml Whiskey // (Bourbon)",
                 "10ml Demarara Sirup -> 10ml Simple Sirup -> 5g White Sugar -> 10ml Agave Sirup",
                 "2 Dashes Angostura Bitters"
+            ],
+            "flavor_profile": [
+                "strong"
+            ],
+            "garnishes": [
+                "Orange Twist"
+            ]
+        },
+        {
+            "name": "Stout Old Fashioned",
+            "ingredients": [
+                "60ml Whiskey // (Single Malt)",
+                "20ml Stout Sirup",
+                "2 Dashes Orange Bitters"
             ],
             "flavor_profile": [
                 "strong"
