@@ -3,21 +3,15 @@
         {
             "recommended": {
                 "luck": [
+                    "Carajillo",
                     "Enzoni",
-                    "Kojito",
-                    "Matcha Yuzu",
-                    "Gin Tonic Cold Fusion",
                     "Bramble",
-                    "Bare Grills Sour",
                     "Flirtibird",
                     "Whitebeer Mojito",
                     "Kentucky Buck",
                     "Espresso Martini",
-                    "Penicillin",
-                    "Gin Espresso Tonic",
                     "Jungle Bird",
                     "Gin Basil Smash",
-                    "Bramble",
                     "Italian Mule",
                     "Tokyo Mule",
                     "Zwetschgen Smash",
@@ -307,6 +301,23 @@
                 "30ml Coffee Liqueur",
                 "Espresso",
                 "Vanilla Ice Cream"
+            ],
+            "garnishes": 
+                "Coffee Beans"
+            ],
+            "flavor_profile": [
+                "coffee",
+                "sweet",
+                "creamy"
+            ]
+        },
+        {
+            "name": "Carajillo",
+            "ingredients": [
+                "30ml Reposado Tequila -> 30ml Blanco Tequila",
+                "30ml Licor 43",
+                "Espresso",
+                "//Orange Wedge"
             ],
             "garnishes": [
                 "Coffee Beans"
@@ -1307,7 +1318,7 @@
             ]
         },
         {
-            "name": "Italien Mule",
+            "name": "Italian Mule",
             "ingredients": [
                 "50ml Amaretto",
                 "30ml Lime Juice -> ½ Lime -> ½ Lemon -> 30ml Lemon Juice",
@@ -1323,7 +1334,7 @@
             ]
         },
         {
-            "name": "Italien Mule (Aperol Version)",
+            "name": "Italian Mule (Aperol Version)",
             "ingredients": [
                 "50ml Aperol -> 50ml Campari",
                 "20ml Lime Juice -> ½ Lime -> ½ Lemon -> 20ml Lemon Juice",
